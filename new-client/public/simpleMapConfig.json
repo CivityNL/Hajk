@@ -236,6 +236,22 @@
                 "infobox": null
               }
             ]
+          },
+          {
+            "id": "9938c969-590c-8683-435c-1ecaca274839",
+            "parent": "-1",
+            "name": "CBS wijken en buurten",
+            "toggled": true,
+            "expanded": false,
+            "layers": [
+              {
+                "id": "cbs-wijken-en-buurten-2022",
+                "visibleAtStart": false,
+                "drawOrder": 4,
+                "visibleForGroups": null,
+                "infobox": null
+              }
+            ]
           }
         ],
         "active": true,

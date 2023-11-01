@@ -328,6 +328,59 @@
       "version": "1.1.1",
       "visibleAtStart": false,
       "zIndex": null
+    },
+    {
+      "id": "cbs-wijken-en-buurten-2022",
+      "attribution": "",
+      "caption": "CBS wijken en buurten 2022",
+      "content": "",
+      "date": 1698698282109,
+      "displayFields": null,
+      "imageFormat": "image/png",
+      "infoClickSortDesc": true,
+      "infoClickSortProperty": "",
+      "infoClickSortType": "string",
+      "infoFormat": "application/json",
+      "infoOwner": "Källa: Stadsbyggnadskontoret Varberg",
+      "infoText": "Visar alla aktiva medlemsorganisationer i HAJK-samverkan.",
+      "infoTitle": "",
+      "infoUrl": "https://hajkmap.github.io/Hajk/",
+      "infoUrlText": "Välkomstsida",
+      "infoVisible": true,
+      "layers": [
+        "ckan_wijken-en-buurten-2022"
+      ],
+      "layersInfo": [
+        {
+          "id": "ckan_wijken-en-buurten-2022",
+          "caption": "CBS wijken en buurten 2022",
+          "legend": null,
+          "legendIcon": null,
+          "infobox": null,
+          "style": "",
+          "queryable": true
+        }
+      ],
+      "legend": "",
+      "legendIcon": "",
+      "maxZoom": -1,
+      "minZoom": -1,
+      "opacity": 1.0,
+      "owner": "",
+      "projection": "EPSG:3006",
+      "searchDisplayName": "",
+      "searchFields": null,
+      "searchGeometryField": "",
+      "searchOutputFormat": "",
+      "searchPropertyName": "",
+      "searchUrl": "",
+      "serverType": "geoserver",
+      "singleTile": true,
+      "tiled": false,
+      "url": "/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_wijken-en-buurten-2022/ows",
+      "version": "1.1.1",
+      "visibleAtStart": false,
+      "zIndex": null
     }
   ],
   "wfslayers": [
