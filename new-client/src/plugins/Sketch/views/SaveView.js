@@ -328,7 +328,7 @@ const SavedSketchList = ({ model, savedSketches, setSavedSketches }) => {
         contentDescription={
           "Är du säker på att du vill radera arbetsytan? Detta går inte att ångra."
         }
-        cancel={"Avbryt"}
+        cancel={"Annuleren"}
         confirm={"Radera"}
         handleConfirm={handleRemoveConfirmation}
         handleAbort={handleRemoveConfirmationAbort}

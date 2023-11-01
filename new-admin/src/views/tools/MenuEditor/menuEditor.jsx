@@ -387,7 +387,7 @@ class ToolOptions extends Component {
               className="btn"
               onClick={this.onCloseMenuEditorClick}
             >
-              <Typography variant="button">Avbryt</Typography>
+              <Typography variant="button">Annuleren</Typography>
             </ColorButtonRed>
           </Grid>
         </Grid>

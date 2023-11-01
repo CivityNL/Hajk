@@ -96,7 +96,7 @@ class PrintView extends React.PureComponent {
     props.localObserver.subscribe("print-failed-to-save", () => {
       this.props.closeSnackbar(this.snackbarKey);
       this.props.enqueueSnackbar(
-        "Utskriften gick inte att spara, kontakta systemadministratören.",
+        "Afdruk kan niet worden opgeslagen, neem contact op met uw systeembeheerder.",
         {
           variant: "error",
         }
@@ -105,13 +105,13 @@ class PrintView extends React.PureComponent {
     });
 
     this.localObserver.subscribe("error-loading-logo-image", () => {
-      this.props.enqueueSnackbar("Logotypbilden kunde inte laddas in.", {
+      this.props.enqueueSnackbar("Logo kan niet geladen worden.", {
         variant: "warning",
       });
     });
 
     this.localObserver.subscribe("error-loading-arrow-image", () => {
-      this.props.enqueueSnackbar("Norrpilen kunde inte laddas in.", {
+      this.props.enqueueSnackbar("Noordpijl kan niet geladen worden.", {
         variant: "warning",
       });
     });
@@ -134,7 +134,7 @@ class PrintView extends React.PureComponent {
     // Print starts, tell the user
     this.setState({ printInProgress: true });
     this.snackbarKey = this.props.enqueueSnackbar(
-      "Utskrift pågår – var god vänta…",
+      "Bezig met afdrukken - een ogenblik geduld a.u.b…",
       {
         variant: "info",
         persist: true,
@@ -180,7 +180,7 @@ class PrintView extends React.PureComponent {
     // Print done, hide messages
     this.props.closeSnackbar(this.valuesToRestoreFrom.snackbarKey);
     this.props.enqueueSnackbar(
-      "Du avbröt utskriften – ingen data har sparats",
+      "U heeft het afdrukken geannuleerd - er zijn geen gegevens opgeslagen",
       {
         variant: "warning",
       }

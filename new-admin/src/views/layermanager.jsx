@@ -744,7 +744,7 @@ class Manager extends Component {
             onClick={(e) => this.abort(e)}
             startIcon={<CancelIcon />}
           >
-            Avbryt
+            Annuleren
           </ColorButtonRed>
         ) : null,
       url = this.props.config.url_import, // "/mapservice/export/importimage"

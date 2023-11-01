@@ -567,7 +567,7 @@ class Page extends Component {
           });
         }}
       >
-        Stäng
+        Sluiten
       </Button>
     );
 

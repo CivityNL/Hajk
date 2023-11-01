@@ -201,7 +201,7 @@ const TextAreaInput = ({ editorState, updateEditorState, onCancelClick }) => {
           </ColorButtonGreen>
 
           <ColorButtonRed variant="contained" onMouseDown={onCancelClick}>
-            Avbryt
+            Annuleren
           </ColorButtonRed>
         </Grid>
       </Grid>

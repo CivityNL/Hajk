@@ -273,7 +273,7 @@ const BookmarksView = (props) => {
           open={showRemovalConfirmation === true}
           titleName={"Radera bokmärke"}
           contentDescription={`Är du säker på att du vill radera bokmärket "${bookmarkToDelete}"?`}
-          cancel={"Avbryt"}
+          cancel={"Annuleren"}
           confirm={"Radera"}
           handleConfirm={handleRemoveConfirmation}
           handleAbort={handleRemoveConfirmationAbort}

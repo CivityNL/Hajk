@@ -153,7 +153,7 @@ function MeasurerView(props) {
         contentDescription={
           "Är du säker på att du vill rensa bort alla mätningar?"
         }
-        cancel={"Avbryt"}
+        cancel={"Annuleren"}
         confirm={"Ja rensa"}
         handleConfirm={deleteAll}
         handleAbort={() => {

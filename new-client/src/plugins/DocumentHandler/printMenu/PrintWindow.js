@@ -1010,7 +1010,7 @@ class PrintWindow extends React.PureComponent {
           </StyledDialogContent>
           <DialogActions>
             <Button variant="contained" onClick={() => closeAttachmentModal()}>
-              <Typography variant="body2">Stäng</Typography>
+              <Typography variant="body2">Sluiten</Typography>
             </Button>
           </DialogActions>
         </Dialog>

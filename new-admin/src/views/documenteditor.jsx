@@ -716,7 +716,7 @@ class DocumentEditor extends Component {
           <DialogContent>{this.state.modalContent}</DialogContent>
           <DialogActions>
             <Button onClick={() => this.hideModal()} color="primary">
-              Avbryt
+              Annuleren
             </Button>
             <ColorButtonGreen
               variant="contained"

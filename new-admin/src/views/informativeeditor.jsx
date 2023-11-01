@@ -520,7 +520,7 @@ class InformativeEditor extends Component {
         onClick={(e) => this.hideModal()}
         startIcon={<CancelIcon />}
       >
-        Avbryt
+        Annuleren
       </ColorButtonRed>
     ) : (
       ""

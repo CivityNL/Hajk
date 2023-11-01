@@ -89,7 +89,7 @@ class LayerAlert extends Component {
                 onClick={(e) => this._onCancelClick(e)}
                 startIcon={<CancelIcon />}
               >
-                Avbryt
+                Annuleren
               </ColorButtonBlue>
               <ColorButtonBlue
                 variant="contained"
@@ -160,7 +160,7 @@ class Alert extends Component {
                   onClick={options.denyAction}
                   startIcon={<CancelIcon />}
                 >
-                  Avbryt
+                  Annuleren
                 </ColorButtonBlue>
               </div>
             </div>

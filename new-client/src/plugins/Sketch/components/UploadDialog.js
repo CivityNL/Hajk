@@ -43,7 +43,7 @@ const UploadDialog = ({ open, setOpen, handleUploadedFile }) => {
       options={{
         headerText: "Ladda upp .kml-filer",
         buttonText: filesChosen ? "Ladda upp" : null,
-        abortText: "Avbryt",
+        abortText: "Annuleren",
         text: (
           <input
             type="file"

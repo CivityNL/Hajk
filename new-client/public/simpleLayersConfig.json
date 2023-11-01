@@ -275,6 +275,59 @@
       "version": "1.1.1",
       "infoFormat": "application/json",
       "zIndex": null
+    },
+    {
+      "id": "geboorde-putten",
+      "attribution": "",
+      "caption": "Geboorde putten",
+      "content": "",
+      "date": 1698698282109,
+      "displayFields": null,
+      "imageFormat": "image/png",
+      "infoClickSortDesc": true,
+      "infoClickSortProperty": "",
+      "infoClickSortType": "string",
+      "infoFormat": "application/json",
+      "infoOwner": "Källa: Stadsbyggnadskontoret Varberg",
+      "infoText": "Visar alla aktiva medlemsorganisationer i HAJK-samverkan.",
+      "infoTitle": "",
+      "infoUrl": "https://hajkmap.github.io/Hajk/",
+      "infoUrlText": "Välkomstsida",
+      "infoVisible": true,
+      "layers": [
+        "ckan_geboorde-putten"
+      ],
+      "layersInfo": [
+        {
+          "id": "ckan_geboorde-putten",
+          "caption": "Geboorde putten",
+          "legend": null,
+          "legendIcon": null,
+          "infobox": null,
+          "style": "",
+          "queryable": true
+        }
+      ],
+      "legend": "",
+      "legendIcon": "",
+      "maxZoom": -1,
+      "minZoom": -1,
+      "opacity": 1.0,
+      "owner": "",
+      "projection": "EPSG:3006",
+      "searchDisplayName": "",
+      "searchFields": null,
+      "searchGeometryField": "",
+      "searchOutputFormat": "",
+      "searchPropertyName": "",
+      "searchUrl": "",
+      "serverType": "geoserver",
+      "singleTile": true,
+      "tiled": false,
+      "url": "/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+      "version": "1.1.1",
+      "visibleAtStart": false,
+      "zIndex": null
     }
   ],
   "wfslayers": [

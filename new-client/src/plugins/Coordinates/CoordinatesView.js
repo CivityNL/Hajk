@@ -57,7 +57,7 @@ class CoordinatesView extends React.PureComponent {
                 this.props.model.closeSnackbar();
               }}
             >
-              Stäng
+              Sluiten
             </Button>
           ),
         }

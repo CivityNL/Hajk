@@ -30,7 +30,7 @@ const SketchRemovalConfirmation = ({ open, handleConfirm, handleAbort }) => {
       <DialogActions>
         <Button onClick={handleConfirm}>Radera</Button>
         <Button onClick={handleAbort} variant="contained">
-          Avbryt
+          Annuleren
         </Button>
       </DialogActions>
     </Dialog>,

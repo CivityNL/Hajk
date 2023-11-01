@@ -1187,7 +1187,7 @@ export default class DocumentTextEditor extends React.Component {
                 variant="contained"
                 onMouseDown={this.closeURLInput}
               >
-                Avbryt
+                Annuleren
               </ColorButtonRed>
             </Grid>
           </Grid>
@@ -1258,7 +1258,7 @@ export default class DocumentTextEditor extends React.Component {
               variant="contained"
               onMouseDown={this.closeLinkInput}
             >
-              Avbryt
+              Annuleren
             </ColorButtonRed>
           </Grid>
         </Grid>

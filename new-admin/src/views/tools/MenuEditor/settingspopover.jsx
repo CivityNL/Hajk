@@ -155,7 +155,7 @@ class SettingsPopover extends React.Component {
             </Grid>
             <Grid xs={2} container item>
               <ColorButtonRed onClick={this.resetAndClosePopover}>
-                <Typography variant="button">AVBRYT</Typography>
+                <Typography variant="button">Annuleren</Typography>
               </ColorButtonRed>
             </Grid>
           </Grid>

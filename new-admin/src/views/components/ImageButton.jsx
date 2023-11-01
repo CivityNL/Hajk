@@ -227,7 +227,7 @@ class ImageButton extends Component {
               data-dismiss="modal"
               onClick={(e) => this.closeImageDialog()}
             >
-              Avbryt
+              Annuleren
             </button>
           </div>
         </div>

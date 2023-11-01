@@ -1178,7 +1178,7 @@ class Edit extends Component {
           onClick={(e) => this.abort(e)}
           startIcon={<CancelIcon />}
         >
-          Avbryt
+          Annuleren
         </ColorButtonBlue>
       ) : null;
 

@@ -57,7 +57,7 @@ const FeatureTextSetter = ({ drawModel, localObserver }) => {
             prompt: true,
             headerText: "Ange text",
             buttonText: "Ok",
-            abortText: "Avbryt",
+            abortText: "Annuleren",
           }}
           open={feature !== null}
           onClose={handleCloseClick}

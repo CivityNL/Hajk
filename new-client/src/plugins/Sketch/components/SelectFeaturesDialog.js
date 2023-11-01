@@ -154,7 +154,7 @@ export default function SelectFeaturesDialog({
         >
           OK
         </Button>
-        <Button onClick={handleAbort}>Avbryt</Button>
+        <Button onClick={handleAbort}>Annuleren</Button>
       </DialogActions>
     </Dialog>,
     document.getElementById("map")

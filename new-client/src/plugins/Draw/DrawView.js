@@ -55,7 +55,7 @@ class DrawView extends React.PureComponent {
         dialogPrompt: true,
         dialogText: "",
         dialogButtonText: "OK",
-        dialogAbortText: "Avbryt",
+        dialogAbortText: "Annuleren",
         dialogCloseCallback: this.onCloseTextDialog,
         dialogAbortCallback: this.onAbortTextDialog,
       });
@@ -290,7 +290,7 @@ class DrawView extends React.PureComponent {
       dialogPrompt: false,
       dialogHeaderText: "Ladda upp innehåll",
       dialogText: this.renderImport(),
-      dialogButtonText: "Avbryt",
+      dialogButtonText: "Annuleren",
       dialogCloseCallback: this.onCloseUploadDialog,
     });
   };

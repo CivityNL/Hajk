@@ -199,7 +199,7 @@ class Preset extends React.PureComponent {
             text: "Alla tända lager i kartan kommer nu att släckas. Snabbvalets fördefinierade lager tänds istället.",
             headerText: "Visa snabbval",
             buttonText: "OK",
-            abortText: "Avbryt",
+            abortText: "Annuleren",
             useLegacyNonMarkdownRenderer: true,
           }}
           open={this.state.dialogOpen}

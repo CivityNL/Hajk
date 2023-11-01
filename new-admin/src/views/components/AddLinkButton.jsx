@@ -199,7 +199,7 @@ class AddLinkButton extends Component {
               data-dismiss="modal"
               onClick={(e) => this.closeDocumentLinkDialog()}
             >
-              Avbryt
+              Annuleren
             </button>
           </div>
         </div>
@@ -261,7 +261,7 @@ class AddLinkButton extends Component {
               data-dismiss="modal"
               onClick={(e) => this.closeMapLinkDialog()}
             >
-              Avbryt
+              Annuleren
             </button>
           </div>
         </div>
@@ -326,7 +326,7 @@ class AddLinkButton extends Component {
               data-dismiss="modal"
               onClick={(e) => this.closeLinkDialog()}
             >
-              Avbryt
+              Annuleren
             </button>
           </div>
         </div>

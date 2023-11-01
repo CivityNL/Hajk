@@ -718,7 +718,7 @@ class Search extends Component {
           onClick={(e) => this.abort(e)}
           startIcon={<CancelIcon />}
         >
-          Avbryt
+          Annuleren
         </ColorButtonRed>
       ) : null;
 

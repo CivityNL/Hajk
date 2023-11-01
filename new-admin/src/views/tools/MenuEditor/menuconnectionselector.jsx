@@ -147,7 +147,7 @@ class MenuConnectionSelector extends React.Component {
               <Typography variant="button">OK</Typography>
             </ColorButtonGreen>
             <ColorButtonRed onClick={this.reset}>
-              <Typography variant="button">Avbryt</Typography>
+              <Typography variant="button">Annuleren</Typography>
             </ColorButtonRed>
           </Grid>
         </Grid>

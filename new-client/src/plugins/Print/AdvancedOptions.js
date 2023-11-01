@@ -147,7 +147,7 @@ class AdvancedOptions extends React.PureComponent {
         }}
       >
         <MenuItem value={true}>Ja</MenuItem>
-        <MenuItem value={false}>Nej</MenuItem>
+        <MenuItem value={false}>Nee</MenuItem>
       </Select>
     );
   };

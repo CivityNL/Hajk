@@ -453,7 +453,7 @@ class RichEditor extends Component {
             onClick={() => this.cancel()}
             startIcon={<CancelIcon />}
           >
-            Avbryt
+            Annuleren
           </ColorButtonRed>
           <div className="RichEditor-root">
             <ImageButton addImage={(url) => this.addImage(url)} />

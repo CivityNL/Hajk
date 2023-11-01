@@ -113,7 +113,7 @@ class AddGeoObject extends Component {
             onClick={() => this.cancel()}
             startIcon={<CancelIcon />}
           >
-            Avbryt
+            Annuleren
           </ColorButtonBlue>
         </div>
       );

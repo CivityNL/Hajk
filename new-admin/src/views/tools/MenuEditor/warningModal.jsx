@@ -41,7 +41,7 @@ class WarningModal extends React.Component {
             className="btn"
             onClick={handleCancelClick}
           >
-            <Typography variant="button">Nej</Typography>
+            <Typography variant="button">Nee</Typography>
           </ColorButtonRed>
         </DialogActions>
       </Dialog>

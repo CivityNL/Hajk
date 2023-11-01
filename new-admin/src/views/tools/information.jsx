@@ -24,7 +24,7 @@ var defaultState = {
   title: "Visa informationsruta",
   headerText: "Om kartan",
   text: "Information om kartan",
-  buttonText: "Stäng",
+  buttonText: "Sluiten",
   visibleForGroups: [],
 };
 

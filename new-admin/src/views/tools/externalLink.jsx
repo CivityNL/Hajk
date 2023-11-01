@@ -298,7 +298,7 @@ class ToolOptions extends Component {
                   onClick={() => this.editLink(t)}
                   startIcon={<CancelIcon />}
                 >
-                  Avbryt
+                  Annuleren
                 </ColorButtonBlue>&nbsp;&nbsp;
                 <ColorButtonRed
                   variant="contained"

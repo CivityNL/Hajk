@@ -13708,7 +13708,7 @@
                             },
                             className: "btn btn-default",
                           },
-                          "Avbryt"
+                          "Annuleren"
                         ),
                         "\xa0",
                         s.a.createElement(
@@ -13809,7 +13809,7 @@
                                   onClick: t.denyAction,
                                   className: "btn btn-default",
                                 },
-                                "Avbryt"
+                                "Annuleren"
                               ),
                               "\xa0",
                               s.a.createElement(
@@ -35022,7 +35022,7 @@
                               return t.abort(e);
                             },
                           },
-                          "Avbryt"
+                          "Annuleren"
                         )
                       : null;
                 return l.a.createElement(
@@ -35916,7 +35916,7 @@
                               return t.abort(e);
                             },
                           },
-                          "Avbryt"
+                          "Annuleren"
                         )
                       : null,
                   n = this.props.config.url_import,
@@ -48352,7 +48352,7 @@
                             return t.hideModal();
                           },
                         },
-                        "Avbryt"
+                        "Annuleren"
                       )
                     : "";
                 return s.a.createElement(
@@ -49807,7 +49807,7 @@
                                 return t.cancel();
                               },
                             },
-                            "Avbryt"
+                            "Annuleren"
                           ),
                           u.a.createElement(
                             "div",
@@ -56632,7 +56632,7 @@
                             return t.cancel();
                           },
                         },
-                        "Avbryt"
+                        "Annuleren"
                       )
                     )
                   : s.a.createElement(
@@ -67169,8 +67169,8 @@
           b = h()("<div></div>"),
           _ = h()("<div></div>"),
           x = h()("<div></div>"),
-          E = h()('<span class="btn btn-default">Avbryt</span>'),
-          w = h()('<span class="btn btn-default">Avbryt</span>'),
+          E = h()('<span class="btn btn-default">Annuleren</span>'),
+          w = h()('<span class="btn btn-default">Annuleren</span>'),
           S = h()('<label for="' + l + '">Expanderad vid start&nbsp;</label>'),
           C = h()('<label for="' + u + '">Toggla alla-knapp&nbsp;</label>'),
           T = h()(
@@ -75444,7 +75444,7 @@
                                   return t.editPreset(e);
                                 },
                               },
-                              "Avbryt"
+                              "Annuleren"
                             ),
                             u.a.createElement(
                               "button",
@@ -77316,7 +77316,7 @@
                               return t.abort(e);
                             },
                           },
-                          "Avbryt"
+                          "Annuleren"
                         )
                       : null;
                 return l.a.createElement(

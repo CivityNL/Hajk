@@ -114,7 +114,7 @@ class GeneralOptions extends React.PureComponent {
         }}
       >
         <MenuItem value={true}>Ja</MenuItem>
-        <MenuItem value={false}>Nej</MenuItem>
+        <MenuItem value={false}>Nee</MenuItem>
       </Select>
     );
   };
@@ -133,7 +133,7 @@ class GeneralOptions extends React.PureComponent {
         }}
       >
         <MenuItem value={true}>Ja</MenuItem>
-        <MenuItem value={false}>Nej</MenuItem>
+        <MenuItem value={false}>Nee</MenuItem>
       </Select>
     );
   };
@@ -150,8 +150,8 @@ class GeneralOptions extends React.PureComponent {
           id: "orientation",
         }}
       >
-        <MenuItem value={"landscape"}>Liggande</MenuItem>
-        <MenuItem value={"portrait"}>Stående</MenuItem>
+        <MenuItem value={"landscape"}>Liggend</MenuItem>
+        <MenuItem value={"portrait"}>Staand</MenuItem>
       </Select>
     );
   };
@@ -167,7 +167,7 @@ class GeneralOptions extends React.PureComponent {
       ...scales.map((s) => {
         return { value: s, label: model.getUserFriendlyScale(s) };
       }),
-      { value: "CUSTOM_SCALE", label: "Ange annan skala" },
+      { value: "CUSTOM_SCALE", label: "Voer een andere schaal in" },
     ];
     return (
       <Select
@@ -243,45 +243,45 @@ class GeneralOptions extends React.PureComponent {
         <Root>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="format">
-              Format
+              Formaat
             </InputLabel>
             {this.renderPaperSizeSelector()}
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="useMargin">
-              Marginaler runt kartbilden
+              Kantlijnen rond het kaartbeeld
             </InputLabel>
             {this.renderUseMarginSelector()}
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="useMargin">
-              Rubriktext m.m. i marginalerna
+              Titeltekst enz. in de kantlijn
             </InputLabel>
             {this.renderTextIconInMarginsSelector()}
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="orientation">
-              Orientering
+              Orientatie
             </InputLabel>
             {this.renderOrientationSelector()}
           </StyledFormControl>
           <StyledFormControl error={!printOptionsOk}>
             <InputLabel variant="standard" htmlFor="scale">
-              Skala
+              Schaal
             </InputLabel>
             {this.state.useCustomScale
               ? this.renderScaleInput()
               : this.renderScaleSelector()}
             {!printOptionsOk && (
               <FormHelperText>
-                Bilden kommer inte kunna skrivas ut korrekt. Testa med en lägre
-                upplösning eller mindre skala.
+                De afbeelding wordt niet correct afgedrukt. Probeer het eens met
+                een lagere resolutie of kleinere schaal.
               </FormHelperText>
             )}
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="saveAsType">
-              Spara som
+              Opslaan als
             </InputLabel>
             {this.renderSaveAsTypeSelector()}
           </StyledFormControl>
