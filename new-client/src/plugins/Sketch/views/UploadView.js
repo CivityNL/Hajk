@@ -28,7 +28,8 @@ const ButtonPanel = ({ kmlModel, setDialogOpen }) => {
       <Grid item xs={12}>
         <Tooltip
           disableInteractive
-          title="Klicka för att öppna en dialog där du kan välja en .kml-fil från din dator."
+          title="Klik hierop om een dialoogvenster te openen waarmee u een
+          .kml-bestand op uw computer kunt selecteren."
         >
           <Button
             fullWidth
@@ -36,14 +37,15 @@ const ButtonPanel = ({ kmlModel, setDialogOpen }) => {
             onClick={() => setDialogOpen(true)}
             startIcon={<FolderOpenIcon />}
           >
-            Importera ritobjekt
+            Objecten importeren
           </Button>
         </Tooltip>
       </Grid>
       <Grid item xs={12}>
         <Tooltip
           disableInteractive
-          title="Klicka för att exportera alla ritobjekt till en .kml-fil."
+          title="Klik hierop om alle tekenobjecten naar een .kml-bestand te
+          exporteren."
         >
           <Button
             fullWidth
@@ -51,7 +53,7 @@ const ButtonPanel = ({ kmlModel, setDialogOpen }) => {
             onClick={() => kmlModel.export()}
             startIcon={<SaveAltIcon />}
           >
-            Exportera ritobjekt
+            Objecten exporteren
           </Button>
         </Tooltip>
       </Grid>

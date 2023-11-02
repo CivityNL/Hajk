@@ -69,7 +69,7 @@ const SketchSaver = (props) => {
 
   const [saveButtonStateTest, setSaveButtonStateTest] = React.useState({
     disabled: true,
-    message: "Klicka för att spara de ritobjekt som finns i kartan.",
+    message: "Klik om de objecten op de kaart op te slaan.",
   });
 
   // We're gonna want to prompt the user with a snackbar when a sketch is saved.
@@ -119,7 +119,7 @@ const SketchSaver = (props) => {
           ? props.sketchName.substring(0, 15) + "..."
           : props.sketchName,
       text: exists
-        ? `Namnet upptaget. Ersätt arbetsyta "${replaceWarning.truncatedSketchName}"?`
+        ? `Naam gebruikt. Werkruimte vervangen "${replaceWarning.truncatedSketchName}"?`
         : " ",
       show: exists ? true : false,
     });
@@ -151,7 +151,8 @@ const SketchSaver = (props) => {
         ...saveButtonStateTest,
         disabled: true,
         message:
-          "Minst fyra tecken måste anges för att en arbetsyta ska kunna skapas.",
+          "Er moeten minimaal vier tekens worden ingevoerd om een werkruimte te " +
+          "kunnen maken.",
       });
     }
     // If the name does not already exist, and we've already saved the maximum number of sketches,
@@ -203,7 +204,7 @@ const SketchSaver = (props) => {
                 disabled={saveButtonStateTest.disabled}
                 onClick={handleSaveSketchClick}
               >
-                {replaceWarning.show ? "Ersätt" : "Spara"}
+                {replaceWarning.show ? "Vervangen" : "Opslaan"}
               </Button>
             </span>
           </Tooltip>
@@ -308,8 +309,8 @@ const SavedSketchList = ({ model, savedSketches, setSavedSketches }) => {
       <Grid item xs={12}>
         <Typography variant="caption">
           {savedSketches.length === 0
-            ? "Inga sparade arbetsytor hittades."
-            : "Sparade arbetsytor:"}
+            ? "Er zijn geen opgeslagen werkruimten gevonden."
+            : "Opgeslagen werkruimten:"}
         </Typography>
       </Grid>
       <Grid item xs={12}>
