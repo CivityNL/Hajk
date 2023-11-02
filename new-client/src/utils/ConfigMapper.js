@@ -143,7 +143,7 @@ export default class ConfigMapper {
         infoClickSortProperty: args.infoClickSortProperty,
         information: args.infobox,
         resolutions: properties.mapConfig.map.allResolutions,
-        projection: projection || "EPSG:3006",
+        projection: projection || "EPSG:28992",
         origin: properties.mapConfig.map.origin,
         extent: properties.mapConfig.map.extent,
         singleTile: args.singleTile || false,
@@ -173,7 +173,7 @@ export default class ConfigMapper {
           FORMAT: args.imageFormat,
           INFO_FORMAT: args.infoFormat,
           VERSION: args.version || "1.1.1",
-          [srsOrCrs]: projection || "EPSG:3006",
+          [srsOrCrs]: projection || "EPSG:28992",
           TILED: args.tiled,
           STYLES: Array.isArray(args.layersInfo)
             ? args.layersInfo.map((l) => l.style || "").join(",")
@@ -202,7 +202,7 @@ export default class ConfigMapper {
         displayName: args.displayFields
           ? args.displayFields
           : args.searchFields[0] || "Sökträff",
-        srsName: properties.mapConfig.map.projection || "EPSG:3006",
+        srsName: properties.mapConfig.map.projection || "EPSG:28992",
         serverType: config.options.serverType,
       };
     }

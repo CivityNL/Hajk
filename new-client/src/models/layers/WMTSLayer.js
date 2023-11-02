@@ -7,10 +7,10 @@ import { overrideLayerSourceParams } from "utils/FetchWrapper";
 
 var wmtsLayerProperties = {
   url: "",
-  projection: "EPSG:3006",
+  projection: "EPSG:28992",
   layer: "",
   opacity: 1,
-  matrixSet: "3006",
+  matrixSet: "28992",
   style: "default",
   axisMode: "natural",
   origin: [-1200000, 8500000],

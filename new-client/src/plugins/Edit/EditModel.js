@@ -43,7 +43,7 @@ class EditModel {
           layers: [
             "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
           ],
-          projection: "EPSG:3006",
+          projection: "EPSG:28992",
           caption: "Geboorde putten",
           uri: "http://www.opengis.net/wfs",
         },
@@ -479,7 +479,7 @@ class EditModel {
           "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
         ],
         editPoint: true,
-        projection: "EPSG:3006",
+        projection: "EPSG:28992",
         caption: "Geboorde putten",
         uri: "http://workspace_datastore_ckan_dataplatform_sandbox",
         editableFields: [

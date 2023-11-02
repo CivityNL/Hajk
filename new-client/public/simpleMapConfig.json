@@ -2,18 +2,6 @@
   "version": "3.12.1",
   "projections": [
     {
-      "code": "EPSG:3006",
-      "definition": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
-      "extent": [181896.33, 6101648.07, 864416.0, 7689478.3],
-      "units": null
-    },
-    {
-      "code": "http://www.opengis.net/gml/srs/epsg.xml#3006",
-      "definition": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
-      "extent": [181896.33, 6101648.07, 864416.0, 7689478.3],
-      "units": null
-    },
-    {
       "code": "EPSG:28992",
       "definition": "+proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.4171,50.3319,465.5524,1.9342,-1.6677,9.1019,4.0725 +units=m +no_defs +type=crs",
       "extent": [482.06, 306602.42, 284182.97, 637049.52],
@@ -34,6 +22,27 @@
           {
             "id": "1",
             "visibleAtStart": true,
+            "drawOrder": 0,
+            "visibleForGroups": null,
+            "infobox": null
+          },
+          {
+            "id": "2",
+            "visibleAtStart": false,
+            "drawOrder": 0,
+            "visibleForGroups": null,
+            "infobox": null
+          },
+          {
+            "id": "3",
+            "visibleAtStart": false,
+            "drawOrder": 0,
+            "visibleForGroups": null,
+            "infobox": null
+          },
+          {
+            "id": "4",
+            "visibleAtStart": false,
             "drawOrder": 0,
             "visibleForGroups": null,
             "infobox": null
@@ -78,9 +87,9 @@
         "visibleAtStartMobile": false,
         "backgroundSwitcherBlack": true,
         "backgroundSwitcherWhite": true,
-        "enableOSM": true,
+        "enableOSM": false,
         "showBreadcrumbs": true,
-        "target": "left",
+        "target": "toolbar",
         "position": "left",
         "width": 0,
         "height": 0,
@@ -110,21 +119,21 @@
     {
       "type": "sketch",
       "options": {
-        "target": "toolbar",
+        "target": "left",
         "position": "left",
         "visibleForGroups": [],
         "title": "Schetsen",
-        "description": "Creëer je eigen geometrieën (redlining)."
+        "description": "Schets uw eigen geometrieën."
       },
       "index": 3
     },
     {
       "type": "edit",
       "options": {
-        "target": "toolbar",
+        "target": "left",
         "instruction": "",
         "title": "Bewerken",
-        "description": "Bewerk object in de kaart (WFS)",
+        "description": "Bewerk objecten in de geodatabase.",
         "sources": [
           {
             "url": "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
@@ -164,7 +173,7 @@
     {
       "type": "anchor",
       "options": {
-        "target": "left",
+        "target": "toolbar",
         "position": "left",
         "instruction": "",
         "visibleForGroups": [],
@@ -248,36 +257,12 @@
       "options": {
         "presetList": [
           {
-            "name": "Halmstad",
-            "presetUrl": "?m=simpleMapConfig&x=368494.9197547268&y=6282312.7413127115&z=6.7339618545565125&l=1&f=%7B%7D&clean=false"
+            "name": "Gemeente Rotterdam",
+            "presetUrl": "?m=simpleMapConfig&x=78266.29790000057&y=437823.7200000006&z=6.7339618545565125&l=1&f=%7B%7D&clean=false"
           },
           {
-            "name": "Alingsås",
-            "presetUrl": "?m=simpleMapConfig&x=354049.24452326825&y=6424217.248216377&z=7.903686478656474&l=1&f=%7B%7D&clean=false"
-          },
-          {
-            "name": "Göteborg",
-            "presetUrl": "?m=simpleMapConfig&x=315850.5321760868&y=6398503.693206446&z=6.502756678859521&l=1&f=%7B%7D&clean=false"
-          },
-          {
-            "name": "Jönköping",
-            "presetUrl": "?m=simpleMapConfig&x=450214.34373580024&y=6403315.750951234&z=6.7931556775514546&l=1&f=%7B%7D&clean=false"
-          },
-          {
-            "name": "Karlstad",
-            "presetUrl": "?m=simpleMapConfig&x=416370.6129169631&y=6583095.470395488&z=6.221222447365537&l=1&f=%7B%7D&clean=false"
-          },
-          {
-            "name": "Stockholm",
-            "presetUrl": "?m=simpleMapConfig&x=671675.4989296548&y=6570377.474044046&z=4.9236065968776375&l=1&f=%7B%7D&clean=false"
-          },
-          {
-            "name": "Umeå",
-            "presetUrl": "?m=simpleMapConfig&x=758454.9972847599&y=7084504.860998487&z=6.739288215480473&l=1&f=%7B%7D&clean=false"
-          },
-          {
-            "name": "Varberg",
-            "presetUrl": "?m=simpleMapConfig&x=337544.0333333551&y=6331254.569479619&z=6.502756678859521&ss=ss&f=%7B%7D&clean=false"
+            "name": "Veiligheidsregio Brabant-Noord",
+            "presetUrl": "?m=simpleMapConfig&x=165442.5&y=409840.0&z=6.7339618545565125&l=1&f=%7B%7D&clean=false"
           }
         ],
         "visibleForGroups": [],
@@ -337,7 +322,7 @@
     {
       "type": "print",
       "options": {
-        "target": "left",
+        "target": "toolbar",
         "position": "left",
         "scales": "200, 400, 1000, 2000, 5000, 10000, 25000, 50000, 100000, 200000, 400000, 800000, 1000000, 5000000, 10000000",
         "logo": "/logoLight.png",
@@ -380,7 +365,7 @@
           "visibleForGroups": []
         },
         {
-          "target": "left",
+          "target": "toolbar",
           "name": "announcements",
           "headerText": "Nieuws",
           "icon": "announcement",
@@ -401,7 +386,7 @@
     "target": "map",
     "center": [155000.0, 463000.0],
     "title": "Civity/Argaleo 2D kaart",
-    "projection": "EPSG:3006",
+    "projection": "EPSG:28992",
     "zoom": 1.33,
     "maxZoom": 16,
     "minZoom": 0,
