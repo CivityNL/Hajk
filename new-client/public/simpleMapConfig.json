@@ -308,7 +308,7 @@
         "description": "Bewerk object in de kaart (WFS)",
         "sources": [
           {
-            "url": "/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+            "url": "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
             "layers": ["workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten"],
             "projection": "EPSG:28992",
             "caption": "Geboorde putten"

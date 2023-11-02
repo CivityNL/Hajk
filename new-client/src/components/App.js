@@ -448,8 +448,8 @@ class App extends React.PureComponent {
             this.globalObserver.publish("core.addDrawerToggleButton", {
               value: "plugins",
               ButtonIcon: MapIcon,
-              caption: "Kartverktyg",
-              drawerTitle: "Kartverktyg",
+              caption: "Kaartgereedschappen",
+              drawerTitle: "Kaartgereedschappen",
               order: 0,
               // If no plugins render **directly** in Drawer, but some **might**
               // render there occasionally, let's ensure to hide the Tools button on
