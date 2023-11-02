@@ -9,50 +9,58 @@ import SettingsIcon from "@mui/icons-material/Settings";
 export const ACTIVITIES = [
   {
     id: "ADD",
-    tooltip: "Lägg till nya objekt.",
+    tooltip: "Voeg nieuwe objecten toe.",
     information:
-      "Lägg till objekt genom att rita i kartan. Börja med att välja vilken typ av objekt du vill rita nedan.",
+      "Voeg objecten toe door op de kaart te tekenen. Begin hieronder met het" +
+      "kiezen van het type object dat u wilt tekenen.",
     icon: <EditIcon />,
   },
   {
     id: "EDIT",
-    tooltip: "Redigera existerande objekt.",
+    tooltip: "Bewerk bestaande objecten.",
     information:
-      "Redigera noder, byt ritordning, eller ändra färg på ritade objekt.",
+      "Bewerk nodes, wijzig de tekenvolgorde of wijzig de kleur van getekende" +
+      "objecten.",
     icon: <FormatShapesIcon />,
   },
   {
     id: "MOVE",
-    tooltip: "Flytta existerande objekt.",
+    tooltip: "Verplaats bestaande objecten.",
     information:
-      'Klicka på det objekt i kartan som du vill flytta för att aktivera "flytt-läge". Dra sedan objektet till rätt plats.',
+      "Klik op het object op de kaart dat u wilt verplaatsen om de " +
+      "verplaatsingmodus te activeren. Sleep het object vervolgens naar de " +
+      "juiste locatie.",
     icon: <OpenWithIcon />,
   },
   {
     id: "DELETE",
-    tooltip: "Ta bort objekt.",
+    tooltip: "Verwijder objecten.",
     information:
-      "Klicka på det rit-objekt som du vill ta bort, eller klicka på knappen nedan för att ta bort alla rit-objekt.",
+      "Klik op het object dat u wilt verwijderen, of klik op de onderstaande" +
+      "knop om alle objecten te verwijderen.",
     icon: <DeleteIcon />,
   },
   {
     id: "SAVE",
-    tooltip: "Spara ritade objekt.",
+    tooltip: "Objecten bewaren.",
     information:
-      "Behöver du ta en paus? Spara det du har ritat och fortsätt senare. Tänk på att enbart de objekt som syns i kartan sparas.",
+      "Bewaar de objecten en ga later verder. Houd er rekening mee dat alleen " +
+      "objecten die zichtbaar zijn op d ekaart worden opgeslagen. .",
     icon: <SaveIcon />,
   },
   {
     id: "UPLOAD",
-    tooltip: "Ladda ned eller ladda upp ritade objekt.",
+    tooltip: "Download of upload objecten",
     information:
-      "Importera eller exportera ritobjekt i .kml-format. Använd knapparna nedan, eller dra in en .KML-fil direkt till kartan.",
+      "Download of upload objecten in .KML-formaat. Gebruik de " +
+      "onderstaande knoppen of sleep een .KML-bestand rechtstreeks naar de " +
+      "kaart. ",
     icon: <ImportExportIcon />,
   },
   {
     id: "SETTINGS",
-    tooltip: "Ändra om objektens mått ska synas etc.",
-    information: "Här kan du ändra verktygets inställningar.",
+    tooltip: "Instellingen.",
+    information: "Hier kunt u de instellingen van het de teken-tool wijzigen.",
     icon: <SettingsIcon />,
   },
 ];
@@ -76,48 +84,56 @@ export const DRAW_TYPES = [
     type: "Circle",
     label: "Cirkel",
     tooltip:
-      "Rita en cikel i kartan genom att klicka en gång där cikeln ska börja, dra sedan till önskad storlek och släpp.",
+      "Teken een circel op de kaart door één keer te klikken waar de circel moet" +
+      " beginnen, vervolgens naar de gewenste grootte te slepen en los te laten.",
   },
   {
     type: "LineString",
-    label: "Linje",
+    label: "Lijn",
     tooltip:
-      "Rita en linje i kartan genom att klicka en gång per nod, avlsuta med ett dubbelklick.",
+      "Teken een lijn in de kaart door één keer per knooppunt te klikken, " +
+      "eindig een dubbelklik.",
   },
   {
     type: "Rectangle",
-    label: "Rektangel",
+    label: "Rechthoek",
     tooltip:
-      "Rita en rektangel i kartan genom att klicka en gång där rektangeln ska börja, dra sedan till önskad storlek och släpp.",
+      "Teken een rechthoek op de kaart door eenmaal te klikken waar de rechthoek" +
+      " moet beginnen, sleep vervolgens naar de gewenste grootte en laat los.",
   },
   {
     type: "Arrow",
-    label: "Pil",
+    label: "Pijl",
     tooltip:
-      "Rita en pil i kartan genom att klicka en gång per nod, avlsuta med ett dubbelklick.",
+      "Teken een pijl in de kaart door één keer per knooppunt te klikken, " +
+      "eindig met een dubbelklik.",
   },
   {
     type: "Select",
-    label: "Välj i kartan",
+    label: "Selecteer op de kaart",
     tooltip:
-      "Klicka på ett existerande objekt i kartan och kopiera in det i ritlagret.",
+      "Klik op een bestaand object op de kaart en kopieer het naar de tekenlaag.",
   },
   {
     type: "Polygon",
     label: "Polygon",
     tooltip:
-      "Rita en polygon i kartan genom att klicka en gång per nod, avlsuta med ett dubbelklick.",
+      "Teken een polygoon op de kaart door één keer per knooppunt te klikken, " +
+      "eindig met een dubbelklik.",
   },
   {
     type: "Point",
-    label: "Punkt",
+    label: "Punt",
     tooltip:
-      "Infoga en punkt i kartan genom att klicka där du vill ha punkten.",
+      "Voeg een punt in de kaart in door te klikken op de plek waar u het punt " +
+      "wilt hebben.",
   },
   {
     type: "Text",
-    label: "Text",
-    tooltip: "Infoga text i kartan genom att klicka där du vill ha texten.",
+    label: "Tekst",
+    tooltip:
+      "Voeg tekst in de kaart in door te klikken op de plek waar u de " +
+      "tekst wilt hebben.",
   },
 ];
 
@@ -127,18 +143,18 @@ export const PLUGIN_MARGIN = 10;
 export const STROKE_TYPES = [
   {
     type: "solid",
-    label: "Heldragen",
-    tooltip: "Heldragen linje.",
+    label: "Ononderbroken",
+    tooltip: "Ononderbroken lijn.",
   },
   {
     type: "dotted",
-    label: "Punktad",
-    tooltip: "Punktad linje.",
+    label: "Stippellijn",
+    tooltip: "Stippellijn (stippen).",
   },
   {
     type: "dashed",
-    label: "Streckad",
-    tooltip: "Streckad linje.",
+    label: "Stippellijn",
+    tooltip: "Stippellijn (strepen).",
   },
 ];
 
@@ -167,49 +183,56 @@ export const STORAGE_KEY = "sketch";
 export const MAX_LS_CHARS = 1e6;
 
 export const PROMPT_TEXTS = {
-  saveOverflow: "Objekten kunde inte sparas. Arbetsytan för många objekt.",
-  saveNoFeatures: "Kunde inte skapa arbetsyta, inga ritobjekt hittades.",
-  saveSuccess: "Arbetsytan sparades utan problem.",
+  saveOverflow:
+    "De items konden niet worden opgeslagen. Werkruimte voor veel objecten.",
+  saveNoFeatures: "Kan canvas niet maken, geen tekenobjecten gevonden.",
+  saveSuccess: "De werkruimte werd zonder problemen opgeslagen.",
   CircleHelp:
-    "Du kan skapa en cirkel genom att klicka med en bestämd radie, eller dra för att få en önskad radie.",
+    "U kunt een cirkel maken door met een ingestelde straal te klikken, of te " +
+    "slepen om de gewenste straal te krijgen.",
   LineStringHelp:
-    "Skapa linjer genom att klicka på en position för varje nod, avsluta med dubbelklick.",
+    "Maak lijnen door voor elk knooppunt op een positie te klikken en eindig met" +
+    " dubbelklikken.",
   RectangleHelp:
-    "Skapa en rektangel genom att hålla vänsterklick med musen och dra över en yta för att få en önskad storlek.",
+    "Maak een rechthoek door met de linkermuisknop te klikken en over een gebied" +
+    " te slepen om de gewenste grootte te krijgen.",
   ArrowHelp:
-    "En pil skapas genom att klicka på en position för varje nod, avsluta med dubbelklick.",
+    "Er wordt een pijl gemaakt door voor elk knooppunt op een positie te " +
+    "klikken, en eindig met een dubbelklik.",
   SelectHelp:
-    "Klicka på ett existerande objekt i kartan och kopiera in det i ritlagret.",
+    "Klik op een bestaand object op de kaart en kopieer het naar de tekenlaag.",
   PolygonHelp:
-    "Skapa en polygon genom att klicka på en position för varje nod, avsluta med dubbelklick.",
-  PointHelp: "Klicka på en position för att infoga en punkt.",
-  TextHelp: "Klicka på en position för att infoga text.",
+    "Maak een polygoon door voor elk knooppunt op een positie te klikken en " +
+    "eindig met een dubbelklik.",
+  PointHelp: "Klik op een positie om een ​​punt in te voegen.",
+  TextHelp: "Klik op een positie om tekst in te voegen.",
   EDITHelp:
-    "Klicka på ett objekt för att ändra dess utseende eller ritordning.",
-  MOVEHelp: "Klicka på ett objekt för att förflytta det.",
-  DELETEHelp: "Klicka på ett objekt för att radera det från din skiss.",
+    "Klik op een object om het uiterlijk of de tekenvolgorde te wijzigen.",
+  MOVEHelp: "Klik op een object om het te verplaatsen.",
+  DELETEHelp: "Klik op een object om het uit uw schets te verwijderen.",
   SAVEHelp:
-    "Här kan du spara en arbetsyta för att fortsätta ditt arbete senare. För att spara över en äldre arbetsyta, ange samma namn.",
+    "Hier kunt u een werkruimte opslaan om later verder te werken. Als u een " +
+    "oudere werkruimte wilt opslaan, voert u dezelfde naam in.",
 };
 
 export const AREA_MEASUREMENT_UNITS = [
-  { type: "AUTO", name: "Automatisk" },
-  { type: "M2", name: "Kvadratmeter (m²)" },
-  { type: "KM2", name: "Kvadratkilometer (km²)" },
-  { type: "HECTARE", name: "Hektar (ha)" },
+  { type: "AUTO", name: "Automatisch" },
+  { type: "M2", name: "Vierkante meter (m²)" },
+  { type: "KM2", name: "Vierkante kilometer (km²)" },
+  { type: "HECTARE", name: "Hactare (ha)" },
 ];
 
 export const LENGTH_MEASUREMENT_UNITS = [
-  { type: "AUTO", name: "Automatisk" },
+  { type: "AUTO", name: "Automatisch" },
   { type: "M", name: "Meter (m)" },
   { type: "KM", name: "Kilometer (km)" },
 ];
 
 export const MEASUREMENT_PRECISIONS = [
-  { value: 0, name: "0 decimaler" },
-  { value: 1, name: "1 decimal" },
-  { value: 2, name: "2 decimaler" },
-  { value: 3, name: "3 decimaler" },
+  { value: 0, name: "0 decimalen" },
+  { value: 1, name: "1 decimaal" },
+  { value: 2, name: "2 decimalen" },
+  { value: 3, name: "3 decimalen" },
 ];
 
 export const DEFAULT_DRAW_STYLE_SETTINGS = {

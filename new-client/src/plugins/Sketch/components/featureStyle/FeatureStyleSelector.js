@@ -93,7 +93,7 @@ export default function FeatureStyleSelector(props) {
     return (
       <Grid item xs={12} style={{ marginTop: 16 }}>
         <Grid item xs={12} style={{ marginBottom: 4 }}>
-          <Typography align="center">Textstorlek</Typography>
+          <Typography align="center">Lettergrootte</Typography>
         </Grid>
         <Grid item xs={12}>
           <TextField
@@ -115,7 +115,7 @@ export default function FeatureStyleSelector(props) {
       <Grid container>
         <Grid item xs={12}>
           <FeatureStyleAccordion
-            title="Fyllnad"
+            title="Vulling"
             showOpacitySlider
             color={props.drawStyle.fillColor}
             handleColorChange={handleFillColorChange}
@@ -125,7 +125,7 @@ export default function FeatureStyleSelector(props) {
         </Grid>
         <Grid item xs={12}>
           <FeatureStyleAccordion
-            title="Linje"
+            title="Lijn"
             showStrokeWidthSlider
             color={props.drawStyle.strokeColor}
             strokeWidth={props.drawStyle.strokeWidth}
@@ -147,7 +147,7 @@ export default function FeatureStyleSelector(props) {
       <Grid container>
         <Grid item xs={12}>
           <FeatureStyleAccordion
-            title="Färg - förgrund"
+            title="Kleur - voorgrond"
             color={props.textStyle.foregroundColor}
             handleColorChange={handleForegroundColorChange}
             drawModel={props.drawModel}
@@ -155,7 +155,7 @@ export default function FeatureStyleSelector(props) {
         </Grid>
         <Grid item xs={12}>
           <FeatureStyleAccordion
-            title="Färg - bakgrund"
+            title="Kleur - achtergrond"
             color={props.textStyle.backgroundColor}
             handleColorChange={handleBackgroundColorChange}
             drawModel={props.drawModel}
@@ -170,7 +170,7 @@ export default function FeatureStyleSelector(props) {
   const renderArrowStyleSettings = () => {
     return (
       <FeatureStyleAccordion
-        title="Färg"
+        title="Kleur"
         color={props.drawStyle.strokeColor}
         handleColorChange={handleStrokeColorChange}
         drawModel={props.drawModel}
@@ -183,7 +183,7 @@ export default function FeatureStyleSelector(props) {
   const renderLineStyleSettings = () => {
     return (
       <FeatureStyleAccordion
-        title="Bredd och färg"
+        title="Breedte en kleur"
         showStrokeWidthSlider
         color={props.drawStyle.strokeColor}
         strokeWidth={props.drawStyle.strokeWidth}
@@ -216,7 +216,7 @@ export default function FeatureStyleSelector(props) {
     return (
       <Grid item xs={12} style={{ marginTop: 16 }}>
         <Grid item xs={12} style={{ marginBottom: 4 }}>
-          <Typography align="center">Radie (m)</Typography>
+          <Typography align="center">Radius (m)</Typography>
         </Grid>
         <Grid item xs={12}>
           <TextField
@@ -241,7 +241,7 @@ export default function FeatureStyleSelector(props) {
       {props.activeDrawType === "Circle" && renderCircleRadiusSelector()}
       <Grid item xs={12} style={{ marginTop: 16 }}>
         <Grid item xs={12} style={{ marginBottom: 4 }}>
-          <Typography align="center">Utseende</Typography>
+          <Typography align="center">Symbolisatie</Typography>
         </Grid>
         <Grid item xs={12}>
           {renderColorSelectors()}

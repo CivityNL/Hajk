@@ -27,7 +27,9 @@ const StyledTypography = styled(Typography)(() => ({
 class SearchResultsDatasetFeature extends React.PureComponent {
   renderShowInMapCheckbox = () => {
     const { visibleInMap } = this.props;
-    const helpText = !visibleInMap ? "Lägg till i urval" : "Ta bort från urval";
+    const helpText = !visibleInMap
+      ? "Toevoegen aan selectie"
+      : "Verwijderen uit selectie";
 
     return (
       <Tooltip disableInteractive title={helpText}>

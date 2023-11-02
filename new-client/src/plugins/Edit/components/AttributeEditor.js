@@ -629,13 +629,13 @@ class AttributeEditor extends React.Component {
           <Chip
             variant="outlined"
             color="primary"
-            label="Ange objektets attribut:"
+            label="Voer het attribuut van het object in:"
           />
         </StyledGrid>
         <StyledGrid item xs={12}>
-          <p>Editerbara fält:</p>
+          <p>Bewerkbare velden:</p>
           {markup}
-          {markupNonEdit?.length > 2 ? "Icke-editerbara fält:" : ""}
+          {markupNonEdit?.length > 2 ? "Niet-bewerkbare velden:" : ""}
           {markupNonEdit}
         </StyledGrid>
         <StyledGrid item xs={12}>

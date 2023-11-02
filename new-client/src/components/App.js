@@ -1009,7 +1009,7 @@ class App extends React.PureComponent {
             open={this.state.alert}
             message={this.state.alertMessage}
             parent={this}
-            title="Meddelande"
+            title="Bericht"
           />
           <SrShortcuts globalObserver={this.globalObserver}></SrShortcuts>
           <AppBox

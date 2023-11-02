@@ -55,6 +55,7 @@ class EditView extends React.PureComponent {
   };
 
   setLayer(serviceId) {
+    console.log("Achterlijke teringzooi " + serviceId);
     this.props.model.reset();
     this.setState({
       loading: true,
@@ -96,14 +97,15 @@ class EditView extends React.PureComponent {
     if (!data) {
       return (
         <Typography>
-          Uppdateringen lyckades men det upptäcktes inte några ändringar.
+          De update is succesvol verlopen, maar er zijn geen wijzigingen
+          gedetecteerd.
         </Typography>
       );
     }
     if (data.ExceptionReport) {
       return (
         <Typography>
-          Uppdateringen misslyckades:{" "}
+          De update is mislukt:{" "}
           {data.ExceptionReport.Exception.ExceptionText.toString()}
         </Typography>
       );
@@ -114,19 +116,19 @@ class EditView extends React.PureComponent {
     ) {
       return (
         <div>
-          <Typography>Uppdateringen lyckades.</Typography>
+          <Typography>De update is succesvol verlopen.</Typography>
           <Typography>
-            Antal skapade objekt:{" "}
+            Aantal aangemaakte objecten:{" "}
             {data.TransactionResponse.TransactionSummary.totalInserted?.toString() ||
               0}
           </Typography>
           <Typography>
-            Antal borttagna objekt:{" "}
+            Aantal verwijderde objecten:{" "}
             {data.TransactionResponse.TransactionSummary.totalDeleted?.toString() ||
               0}
           </Typography>
           <Typography>
-            Antal uppdaterade objekt:{" "}
+            Aantal bijgewerkte objecten:{" "}
             {data.TransactionResponse.TransactionSummary.totalUpdated?.toString() ||
               0}
           </Typography>
@@ -135,7 +137,8 @@ class EditView extends React.PureComponent {
     } else {
       return (
         <Typography>
-          Status för uppdateringen kunde inte avläsas ur svaret från servern.
+          De status van de update kon niet worden bepaald aan de hand van het
+          antwoord van de server.
         </Typography>
       );
     }
@@ -173,7 +176,7 @@ class EditView extends React.PureComponent {
     return (
       <FormControl variant="standard" error={loadingError} fullWidth>
         <InputLabel variant="standard" id="select-source-label">
-          Datakälla
+          Databron
         </InputLabel>
         <Select
           id="select-source"
@@ -194,7 +197,8 @@ class EditView extends React.PureComponent {
         </Select>
         {loadingError && (
           <FormHelperText>
-            Fel vid laddning av data. Kontakta systemadministratören.
+            Fout bij het laden van de data. Neem contact op met uw
+            systeembeheerder.
           </FormHelperText>
         )}
       </FormControl>
@@ -235,7 +239,7 @@ class EditView extends React.PureComponent {
       <>
         <Stepper activeStep={activeStep} orientation="vertical">
           <Step key="1">
-            <StepLabel>Välj datamängd att redigera</StepLabel>
+            <StepLabel>Selecteer de dataset die u wilt bewerken</StepLabel>
             <StepContent>
               <Grid container spacing={2} direction="row">
                 <Grid item xs={12}>
@@ -246,9 +250,7 @@ class EditView extends React.PureComponent {
           </Step>
           <Step key="2">
             <StepLabel>
-              {activeStep === 1
-                ? `Redigerar ${editSource?.caption}`
-                : `Redigera`}
+              {activeStep === 1 ? `Bewerk ${editSource?.caption}` : `Bewerking`}
             </StepLabel>
             <StepContent>
               <Grid container spacing={2} direction="row">
@@ -264,7 +266,7 @@ class EditView extends React.PureComponent {
                         onClick={this.handlePrev}
                         variant="contained"
                       >
-                        Bakåt
+                        Vorige
                       </Button>
                     </Grid>
                     <Grid item xs={6}>
@@ -276,7 +278,7 @@ class EditView extends React.PureComponent {
                         color="primary"
                         onClick={this.onSaveClicked}
                       >
-                        Spara
+                        Opslaan
                       </Button>
                     </Grid>
                   </>
@@ -285,7 +287,7 @@ class EditView extends React.PureComponent {
             </StepContent>
           </Step>
           <Step key="3">
-            <StepLabel>Klart!</StepLabel>
+            <StepLabel>Klaar!</StepLabel>
             <StepContent>
               <Grid container spacing={2} direction="row">
                 <Grid item xs={12}>
@@ -295,7 +297,7 @@ class EditView extends React.PureComponent {
                     color="primary"
                     onClick={this.handlePrev}
                   >
-                    Fortsätt redigera
+                    Ga door met bewerken
                   </Button>
                 </Grid>
               </Grid>

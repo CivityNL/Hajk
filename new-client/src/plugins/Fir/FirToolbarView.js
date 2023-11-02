@@ -346,7 +346,7 @@ class FirToolbarView extends React.PureComponent {
               />
             </IconButton>
             <IconButton
-              title="Ta bort objekt"
+              title="Verwijder objecten"
               on={"" + this.state.tools.Delete.selected}
               invert={"" + false}
               color={this.state.tools.Delete.selected ? "primary" : "secondary"}

@@ -15,6 +15,13 @@ class Edit extends React.PureComponent {
 
   constructor(props) {
     super(props);
+
+    if (!props.options.sources) {
+      console.log("F*ckin hell " + props.options.title);
+    } else {
+      console.log("Huh?");
+    }
+
     this.localObserver = Observer();
     this.editModel = new EditModel({
       map: props.map,

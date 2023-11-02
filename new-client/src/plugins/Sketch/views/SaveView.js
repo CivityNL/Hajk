@@ -162,14 +162,16 @@ const SketchSaver = (props) => {
         ...saveButtonStateTest,
         disabled: true,
         message:
-          "Maximalt antal arbetsytor har sparats. Ta bort eller skriv över en genom att ange ett av namnen i listan nedan.",
+          "Het maximale aantal werkruimten is opgeslagen. Verwijder of " +
+          "overschrijf er één door een van de namen in de onderstaande lijst " +
+          "in te voeren.",
       });
     }
     // If we've made it this far, it is OK to save!
     setSaveButtonStateTest({
       ...saveButtonStateTest,
       disabled: false,
-      message: "Klicka för att spara de ritobjekt som finns i kartan.",
+      message: "Klik om de tekenobjecten op de kaart op te slaan.",
     });
   };
 
@@ -326,7 +328,7 @@ const SavedSketchList = ({ model, savedSketches, setSavedSketches }) => {
         open={sketchToRemove !== null}
         titleName={"Radera arbetsyta"}
         contentDescription={
-          "Är du säker på att du vill radera arbetsytan? Detta går inte att ångra."
+          "Är du säker på att du vill radera arbetsytan? Detta går inte att ongedaan maken."
         }
         cancel={"Annuleren"}
         confirm={"Radera"}

@@ -393,7 +393,7 @@ class FirSearchResultsView extends React.PureComponent {
                     this.state.addFeatureByMapClickActive === true
                   }
                   edge="end"
-                  title="Ta bort"
+                  title="Verwijderen"
                   color={
                     this.state.removeFeatureByMapClickActive
                       ? "primary"
@@ -439,7 +439,7 @@ class FirSearchResultsView extends React.PureComponent {
                       <ListItemSecondaryAction>
                         <StyledIconButton
                           edge="end"
-                          title="Ta bort"
+                          title="Verwijderen"
                           onClick={(e) => {
                             this.handleDeleteClick(e, data);
                           }}

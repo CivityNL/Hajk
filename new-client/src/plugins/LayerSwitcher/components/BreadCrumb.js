@@ -206,7 +206,7 @@ class BreadCrumb extends Component {
             <IconButton
               size="small"
               onClick={this.setLayerVisibility(layer)}
-              aria-label="Ta bort lagret från kartan"
+              aria-label="Verwijder de laag van de kaart"
             >
               <CloseIcon />
             </IconButton>

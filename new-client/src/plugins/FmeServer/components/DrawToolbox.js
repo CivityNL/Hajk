@@ -13,12 +13,13 @@ const DrawToolbox = (props) => {
     {
       type: "Polygon", // Open-layers does not like all caps!
       tooltip:
-        "Rita en yta i kartan genom att klicka en gång per nod, avlsuta med ett dubbelklick.",
+        "Teken een gebied op de kaart door één keer per knooppunt te klikken, " +
+        "eindig met een dubbelklik.",
       icon: <EditIcon />,
     },
     {
       type: "Rectangle",
-      tooltip: "Rita en rektangel i kartan.",
+      tooltip: "Teken een rechthoek op de kaart.",
       icon: <Crop54Icon />,
     },
     {
@@ -28,12 +29,12 @@ const DrawToolbox = (props) => {
     },
     {
       type: "Select",
-      tooltip: "Välj från befintliga objekt i kartan.",
+      tooltip: "Kies uit bestaande objecten op de kaart.",
       icon: <TouchAppIcon />,
     },
     {
       type: "Reset",
-      tooltip: "Blev du inte nöjd? Ta bort alla objekt från kartan.",
+      tooltip: "Was u niet tevreden? Verwijder alle objecten van de kaart.",
       icon: <RotateLeftIcon />,
     },
   ];

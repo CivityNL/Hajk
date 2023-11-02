@@ -260,7 +260,7 @@ const BookmarksView = (props) => {
                 <ItemNameSpan>{id}</ItemNameSpan>
               </BookmarkButton>
               <DeleteButton
-                aria-label="Ta bort"
+                aria-label="Verwijderen"
                 size="large"
                 onClick={() => deleteBookmark(id)}
               >

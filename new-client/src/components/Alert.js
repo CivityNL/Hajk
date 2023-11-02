@@ -17,8 +17,8 @@ class AlertView extends React.PureComponent {
   };
 
   static defaultProps = {
-    message: "Meddelande saknas",
-    title: "Titel saknas",
+    message: "Bericht ontbreekt",
+    title: "Titel ontbreekt",
   };
 
   handleClose = (e) => {
@@ -37,7 +37,7 @@ class AlertView extends React.PureComponent {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {dialogTitle || "Meddelande"}
+          {dialogTitle || "Bericht"}
         </DialogTitle>
         <DialogContent>{message}</DialogContent>
         <DialogActions>

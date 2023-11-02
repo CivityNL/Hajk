@@ -351,7 +351,7 @@ class PrintView extends React.PureComponent {
                 onClick={this.initiatePrint}
                 disabled={printInProgress || !printOptionsOk}
               >
-                Skriv ut
+                Afdrukken
               </Button>
             </PrintButtonContainer>
           </TabContent>

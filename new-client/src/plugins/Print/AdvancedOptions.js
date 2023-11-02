@@ -125,12 +125,12 @@ class AdvancedOptions extends React.PureComponent {
           id: name,
         }}
       >
-        <MenuItem value={"topLeft"}>Uppe till vänster</MenuItem>
-        <MenuItem value={"topRight"}>Uppe till höger</MenuItem>
+        <MenuItem value={"topLeft"}>Linksboven</MenuItem>
+        <MenuItem value={"topRight"}>Rechtsboven</MenuItem>
         {this.allowBottomRightPlacement() && (
-          <MenuItem value={"bottomRight"}>Nere till höger</MenuItem>
+          <MenuItem value={"bottomRight"}>Rechtsonder</MenuItem>
         )}
-        <MenuItem value={"bottomLeft"}>Nere till vänster</MenuItem>
+        <MenuItem value={"bottomLeft"}>Linksonder</MenuItem>
       </Select>
     );
   };
@@ -177,8 +177,8 @@ class AdvancedOptions extends React.PureComponent {
                 value={mapTitle}
                 fullWidth={true}
                 onChange={handleChange}
-                label="Valfri titel"
-                placeholder="Kan lämnas tomt"
+                label="Optionele titel"
+                placeholder="Kan leeggelaten worden"
                 variant="standard"
                 InputProps={{
                   id: "mapTitle",
@@ -196,7 +196,9 @@ class AdvancedOptions extends React.PureComponent {
                       >
                         <Tooltip
                           disableInteractive
-                          title="Titelfärg påverkar inte kartans etiketter utan styr endast färgen för kringliggande texter, så som titel, copyrighttext, etc."
+                          title="De titelkleur heeft geen invloed op de labels
+                          van de kaart, maar bepaalt alleen de kleur van
+                          omringende teksten, zoals titel, copyrighttekst, enz."
                         >
                           <IconButton
                             id="mapTextColor"
@@ -221,8 +223,8 @@ class AdvancedOptions extends React.PureComponent {
                 value={printComment}
                 fullWidth={true}
                 onChange={handleChange}
-                label="Valfri kommentar"
-                placeholder="Kan lämnas tomt"
+                label="Optionele toelichting"
+                placeholder="Kan leggelaten worden"
                 variant="standard"
                 InputProps={{
                   id: "printComment",
@@ -234,7 +236,7 @@ class AdvancedOptions extends React.PureComponent {
           <FormControlContainer item xs={12}>
             <FormControl fullWidth={true} error={!printOptionsOk}>
               <InputLabel variant="standard" htmlFor="resolution">
-                Upplösning (DPI)
+                Resolutie (DPI)
               </InputLabel>
               <Select
                 variant="standard"
@@ -255,8 +257,8 @@ class AdvancedOptions extends React.PureComponent {
               </Select>
               {!printOptionsOk && (
                 <FormHelperText>
-                  Bilden kommer inte kunna skrivas ut korrekt. Testa med en
-                  lägre upplösning eller mindre skala.
+                  De afbeelding wordt niet correct afgedrukt. Test met een
+                  lagere resolutie of kleinere schaal.
                 </FormHelperText>
               )}
             </FormControl>
@@ -265,7 +267,7 @@ class AdvancedOptions extends React.PureComponent {
             <Grid item xs={6} sx={{ paddingRight: "10px" }}>
               <FormControl fullWidth={true}>
                 <InputLabel variant="standard" htmlFor="includeNorthArrow">
-                  Inkludera norrpil
+                  Noordpijl toevoegen
                 </InputLabel>
                 {this.renderIncludeSelect(
                   includeNorthArrow,
@@ -295,7 +297,7 @@ class AdvancedOptions extends React.PureComponent {
             <Grid item xs={6} sx={{ paddingRight: "10px" }}>
               <FormControl fullWidth={true}>
                 <InputLabel variant="standard" htmlFor="includeScaleBar">
-                  Inkludera skalstock
+                  Schaalstol toevoegen
                 </InputLabel>
                 {this.renderIncludeSelect(
                   includeScaleBar,
@@ -310,7 +312,7 @@ class AdvancedOptions extends React.PureComponent {
                 error={this.placementOverlaps.scaleBar}
               >
                 <InputLabel variant="standard" htmlFor="scaleBarPlacement">
-                  Placering
+                  Plaats schaalstok
                 </InputLabel>
                 {this.renderPlacementSelect(
                   scaleBarPlacement,
@@ -325,7 +327,7 @@ class AdvancedOptions extends React.PureComponent {
             <Grid item xs={6} sx={{ paddingRight: "10px" }}>
               <FormControl fullWidth={true}>
                 <InputLabel variant="standard" htmlFor="includeLogo">
-                  Inkludera logotyp
+                  Logo toevoegen
                 </InputLabel>
                 {this.renderIncludeSelect(
                   includeLogo,
@@ -340,7 +342,7 @@ class AdvancedOptions extends React.PureComponent {
                 error={this.placementOverlaps.logoType}
               >
                 <InputLabel variant="standard" htmlFor="logoPlacement">
-                  Placering
+                  Plaats logo
                 </InputLabel>
                 {this.renderPlacementSelect(
                   logoPlacement,
@@ -353,8 +355,8 @@ class AdvancedOptions extends React.PureComponent {
             <Grid item xs={12}>
               {showOverlapWarning && (
                 <FormHelperText error={true}>
-                  Bilden kommer inte kunna skrivas ut korrekt. Placeringsvalen
-                  överlappar.
+                  De afbeelding wordt niet correct afgedrukt. De locaties van de
+                  verschillende objecten overlappen.
                 </FormHelperText>
               )}
             </Grid>

@@ -100,7 +100,7 @@ const DeleteView = ({
           onClick={drawModel.removeDrawnFeatures}
           startIcon={<DeleteIcon />}
         >
-          Ta bort alla ritobjekt
+          Verwijder alle objecten
         </Button>
       </Grid>
       <Grid container item>

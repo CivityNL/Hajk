@@ -882,7 +882,7 @@ class PrintWindow extends React.PureComponent {
             style={{ marginRight: "20px", marginLeft: "20px" }}
             justify="center"
           >
-            Skriv ut
+            Afdrukken
           </Typography>
         </Button>
       </GridFooterContainer>

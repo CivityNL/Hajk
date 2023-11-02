@@ -303,10 +303,10 @@ class ToolOptions extends Component {
           this.handleInputChange(e);
         }}
       >
-        <MenuItem value={"topLeft"}>Uppe till vänster</MenuItem>
-        <MenuItem value={"topRight"}>Uppe till höger</MenuItem>
-        <MenuItem value={"bottomRight"}>Nere till höger</MenuItem>
-        <MenuItem value={"bottomLeft"}>Nere till vänster</MenuItem>
+        <MenuItem value={"topLeft"}>Linksboven</MenuItem>
+        <MenuItem value={"topRight"}>Rechtsboven</MenuItem>
+        <MenuItem value={"bottomRight"}>Naar rechts</MenuItem>
+        <MenuItem value={"bottomLeft"}>Linksonder</MenuItem>
       </Select>
     );
   };

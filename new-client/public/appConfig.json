@@ -7,8 +7,8 @@
   "defaultMap": "map_1",
   "experimentalNewApi": false,
   "noLayerSwitcherMessage": "This map has no layer switcher, which indicates that you are not allowed to use this map!",
-  "networkErrorMessage": "Nätverksfel. Försök att ladda om sidan genom att trycka på F5.",
-  "parseErrorMessage": "Konfigurationsfel. Försök att ladda om sidan genom att trycka på F5.",
+  "networkErrorMessage": "Netwerkfout. Probeer de pagina opnieuw te laden door op F5 te drukken.",
+  "parseErrorMessage": "Configuratiefout. Probeer de pagina opnieuw te laden door op F5 te drukken.",
   "announcements": [
     {
       "id": 1,

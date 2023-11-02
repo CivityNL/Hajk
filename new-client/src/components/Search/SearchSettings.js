@@ -36,14 +36,17 @@ class SearchSettings extends React.PureComponent {
       <Grid container spacing={2} direction="column">
         <Grid item xs>
           <FormControl component="fieldset">
-            <FormLabel component="legend">Generella sökinställningar</FormLabel>
+            <FormLabel component="legend">Algemene zoekinstellingen</FormLabel>
             <FormGroup>
               <Tooltip
                 disableInteractive
-                title="Slå på för att välja vilka datakällor som sökningen kommer göras i. Om reglaget är i off-läget kommer sökningen att ske i alla tillgänliga sökkällor."
+                title="Schakel dit in om te selecteren in welke gegevensbronnen
+                de zoekopdracht wordt uitgevoerd. Als de schuifregelaar in de
+                uit-positie staat, wordt er gezocht in alle beschikbare
+                zoekbronnen."
               >
                 <FormControlLabel
-                  label="Begränsa sökkällor"
+                  label="Beperk zoekbronnen"
                   control={
                     <Switch
                       checked={this.state.showSearchSourcesFilter}
@@ -104,9 +107,13 @@ class SearchSettings extends React.PureComponent {
               )}
             </FormGroup>
             <FormGroup>
-              <Tooltip title="Om aktivt kommer sökningen att ske i lager som är inställda för sökning av systemadministratören och som är synliga.">
+              <Tooltip
+                title="Indien actief zal het zoeken plaatsvinden in lagen die
+                  zijn ingesteld om door de systeembeheerder te worden doorzocht
+                  en die zichtbaar zijn."
+              >
                 <FormControlLabel
-                  label="Sök endast i synliga lager"
+                  label="Alleen in zichtbare lagen zoeken"
                   control={
                     <Switch
                       checked={searchOptions.searchInVisibleLayers}
@@ -128,12 +135,13 @@ class SearchSettings extends React.PureComponent {
         <Grid item xs>
           <FormControl component="fieldset">
             <FormLabel component="legend">
-              Inställningar för textsökning
+              Instellingen voor tekst zoeken
             </FormLabel>
             <FormGroup>
               <Tooltip
                 disableInteractive
-                title="Om aktivt kommer en sökning på 'väg' även ge träffar på exempelvis 'storväg'."
+                title="Indien actief zal een zoekopdracht naar 'weg' ook hits
+                opleveren als bijvoorbeeld 'snelweg'."
               >
                 <FormControlLabel
                   label="Wildcard före"

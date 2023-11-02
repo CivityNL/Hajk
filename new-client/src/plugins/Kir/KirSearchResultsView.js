@@ -389,7 +389,7 @@ class KirSearchResultsView extends React.PureComponent {
                       <ListItemSecondaryAction>
                         <StyledIconButton
                           edge="end"
-                          title="Ta bort"
+                          title="Verwijderen"
                           onClick={(e) => {
                             this.handleDeleteClick(e, data);
                           }}

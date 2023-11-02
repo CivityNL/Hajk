@@ -71,7 +71,7 @@ const UploadedFile = (props) => {
             <Grid item>
               <Tooltip
                 disableInteractive
-                title="Klicka för att ta bort de importerade objekten."
+                title="Klik om de geïmporteerde items te verwijderen."
               >
                 <IconButton size="small" onClick={props.onRemoveClick}>
                   <DeleteIcon />

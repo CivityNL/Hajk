@@ -291,13 +291,31 @@
     {
       "type": "sketch",
       "options": {
-        "target": "left",
+        "target": "toolbar",
         "position": "left",
         "visibleForGroups": [],
-        "title": "Tekenen",
-        "description": "Creëer je eigen geometrieën."
+        "title": "Schetsen",
+        "description": "Creëer je eigen geometrieën (redlining)."
       },
       "index": 3
+    },
+    {
+      "type": "edit",
+      "options": {
+        "target": "toolbar",
+        "instruction": "",
+        "title": "Bewerken",
+        "description": "Bewerk object in de kaart (WFS)",
+        "sources": [
+          {
+            "url": "/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+            "layers": ["workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten"],
+            "projection": "EPSG:28992",
+            "caption": "Geboorde putten"
+          }
+        ]
+      },
+      "index": 4
     },
     {
       "type": "measure",
@@ -341,7 +359,7 @@
       "options": {
         "layers": [
           {
-            "id": "4",
+            "id": "geboorde-putten-wfs",
             "visibleForGroups": []
           }
         ],

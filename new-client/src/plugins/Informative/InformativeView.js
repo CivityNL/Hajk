@@ -406,7 +406,7 @@ class Informative extends React.PureComponent {
         {this.state.loading && <LinearProgressLoader />}
         <Alert
           open={this.state.alert}
-          dialogTitle="Felmeddelande"
+          dialogTitle="Foutmelding"
           message="Det gick inte att skriva ut för tillfället, försök igen senare"
           parent={this}
         />
@@ -416,11 +416,11 @@ class Informative extends React.PureComponent {
             <MenuIconRightIcon color="primary" />
           </Button>
           <IconButtonButton
-            aria-label="Skriv ut"
+            aria-label="Afdrukken"
             onClick={this.print}
             size="large"
           >
-            <PrintIcon color="primary" title="Skriv ut" />
+            <PrintIcon color="primary" title="Afdrukken" />
           </IconButtonButton>
         </DivTocHeader>
         <div>

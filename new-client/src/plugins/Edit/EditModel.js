@@ -11,6 +11,7 @@ import { hfetch } from "utils/FetchWrapper";
 
 class EditModel {
   constructor(settings) {
+    console.log("Hello from EditModel: " + settings.options.title);
     this.map = settings.map;
     this.app = settings.app;
     this.observer = settings.observer;
@@ -33,8 +34,27 @@ class EditModel {
     this.filty = false;
     this.removalToolMode = "off";
 
+    if (!this.options.sources || this.options.sources.length === 0) {
+      console.log("Fucking hell! Waarom?");
+      this.options.sources = [
+        {
+          id: "wat-een-ongelofelijke-klerezooi",
+          url: "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+          layers: [
+            "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
+          ],
+          projection: "EPSG:3006",
+          caption: "Geboorde putten",
+          uri: "http://www.opengis.net/wfs",
+        },
+      ];
+    } else {
+      console.log("Blub");
+    }
+
     // Normalize the sources that come from options.
     this.options.sources = this.options.sources.map((s) => {
+      console.log("Godverdomme " + s.caption);
       // Namespace URI is required for insert. QGIS Server tends to accept this value.
       if (s.uri.trim().length === 0) {
         s.uri = "http://www.opengis.net/wfs";
@@ -451,6 +471,26 @@ class EditModel {
 
   setLayer(serviceId, done) {
     this.source = this.sources.find((source) => source.id === serviceId);
+    if (!this.source) {
+      this.source = {
+        id: serviceId,
+        url: "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+        layers: [
+          "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
+        ],
+        projection: "EPSG:3006",
+        caption: "Geboorde putten",
+        uri: "http://www.opengis.net/wfs",
+        editableFields: [
+          {
+            alias: "x_coordinaat",
+            name: "http://workspace_datastore_ckan_dataplatform_sandbox:x_coordinaat",
+            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+            textType: "", // heltal | nummer | datum | date-time | boolean
+          },
+        ],
+      };
+    }
     this.filty = true;
     this.vectorSource = new VectorSource({
       loader: (extent) => this.loadData(this.source, extent, done),

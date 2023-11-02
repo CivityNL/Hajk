@@ -28,13 +28,18 @@ const ModifyNodeToggler = ({ modifyEnabled, setModifyEnabled }) => {
   return (
     <Paper style={{ padding: 8, marginTop: 8 }}>
       <Grid container justifyContent="space-between" alignItems="center">
-        <Typography variant="body2">Tillåt redigering av noder</Typography>
+        <Typography variant="body2">
+          Bewerken van knooppunten toestaan
+        </Typography>
         <Tooltip
           disableInteractive
           title={
             modifyEnabled
-              ? "Avaktivera redigering av noder för att enklare kunna selektera objekt i kartan för redigering av färg etc."
-              : "Aktivera för att kunna redigera objektens utbredning i kartan."
+              ? "Deactiveer het bewerken van knooppunten om gemakkelijker " +
+                "objecten op de kaart te kunnen selecteren om kleuren enz. te " +
+                "bewerken."
+              : "Activeer om de verdeling van objecten op de kaart te kunnen " +
+                "bewerken."
           }
         >
           <Switch
@@ -84,8 +89,8 @@ const EditView = (props) => {
         <Grid item xs={12}>
           {props.editFeature === null ? (
             <Typography align="center" style={{ marginTop: 24 }}>
-              Klicka på ett objekt i kartan för att ändra dess utseende eller
-              för att byta dess ritordning.
+              Klik op een object op de kaart om het uiterlijk ervan te wijzigen
+              of om de tekenvolgorde te wijzigen.
             </Typography>
           ) : (
             <Grid item xs={12}>

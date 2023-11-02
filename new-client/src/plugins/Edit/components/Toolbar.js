@@ -117,7 +117,7 @@ class Toolbar extends Component {
     return (
       <Grid container spacing={1}>
         <Grid item xs={12}>
-          <Typography>Lägg till</Typography>
+          <Typography>Toevoegen</Typography>
         </Grid>
         <Grid item xs={4}>
           <StyledButton
@@ -129,9 +129,9 @@ class Toolbar extends Component {
             }}
             selected={this.props.activeTool === "point"}
             type="button"
-            title="Lägg till punkt"
+            title="Punt toevoegen"
           >
-            Punkt
+            Punt
             <ScatterPlotIcon sx={{ marginLeft: 1 }} />
           </StyledButton>
         </Grid>
@@ -144,10 +144,10 @@ class Toolbar extends Component {
               this.onAddLineClicked();
             }}
             type="button"
-            title="Lägg till linje"
+            title="Lijn toevoegen"
             selected={this.props.activeTool === "linestring"}
           >
-            Linje
+            Lijn
             <LinearScaleIcon sx={{ marginLeft: 1 }} />
           </StyledButton>
         </Grid>
@@ -160,10 +160,10 @@ class Toolbar extends Component {
               this.onAddPolygonClicked();
             }}
             type="button"
-            title="Lägg till yta"
+            title="Vlak toevoegen"
             selected={this.props.activeTool === "polygon"}
           >
-            Yta
+            Vlak
             <BorderStyleIcon sx={{ marginLeft: 1 }} />
           </StyledButton>
         </Grid>
@@ -179,10 +179,10 @@ class Toolbar extends Component {
               this.onMoveClicked();
             }}
             type="button"
-            title="Flytta geometri"
+            title="Geometrie verplaatsen"
             selected={this.props.activeTool === "move"}
           >
-            Flytta
+            Verplaatsen
             <ZoomOutMapIcon sx={{ marginLeft: 1 }} />
           </StyledButton>
         </Grid>
@@ -194,10 +194,10 @@ class Toolbar extends Component {
               this.onRemoveClicked();
             }}
             type="button"
-            title="Ta bort geometri"
+            title="Geometrie verwijderen"
             selected={this.props.activeTool === "remove"}
           >
-            Radera
+            Verwijderen
             <DeleteIcon sx={{ marginLeft: 1 }} />
           </StyledButton>
         </Grid>
@@ -209,10 +209,10 @@ class Toolbar extends Component {
               this.onModifyClicked();
             }}
             type="button"
-            title="Ändra geometri"
+            title="Geometrie aanpassen"
             selected={this.props.activeTool === "modify"}
           >
-            Ändra
+            Aanpassen
             <FormatShapesIcon sx={{ marginLeft: 1 }} />
           </StyledButton>
         </Grid>

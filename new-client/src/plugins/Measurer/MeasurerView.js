@@ -117,19 +117,22 @@ function MeasurerView(props) {
             variant="contained"
             aria-label="outlined button group"
           >
-            <StyledToggleButton value="Point" title="Punkt">
+            <StyledToggleButton value="Point" title="Punt">
               <SvgImg src={IconPoint()} />
             </StyledToggleButton>
-            <StyledToggleButton value="LineString" title="Sträcka">
+            <StyledToggleButton value="LineString" title="Lijn">
               <SvgImg src={IconLine()} />
             </StyledToggleButton>
-            <StyledToggleButton value="Polygon" title="Areal">
+            <StyledToggleButton value="Polygon" title="Vlak">
               <SvgImg src={IconPolygon()} />
             </StyledToggleButton>
             <StyledToggleButton value="Circle" title="Cirkel">
               <SvgImg src={IconCircle()} />
             </StyledToggleButton>
-            <StyledToggleButton value="Delete" title="Ta bort enskild mätning">
+            <StyledToggleButton
+              value="Delete"
+              title="Verwijder individuele meting"
+            >
               <DeleteIcon />
             </StyledToggleButton>
           </StyledToggleButtonGroup>
@@ -141,20 +144,20 @@ function MeasurerView(props) {
             onClick={() => {
               setShowDeleteConfirmation(true);
             }}
-            title="Rensa bort alla mätningar"
+            title="Wis alle metingen"
           >
-            Rensa
+            Wis
           </Button>
         </Grid>
       </Grid>
       <ConfirmationDialog
         open={showDeleteConfirmation === true}
-        titleName={"Rensa"}
+        titleName={"Wis"}
         contentDescription={
-          "Är du säker på att du vill rensa bort alla mätningar?"
+          "Weet u zeker dat u alle metingen wilt verwijderen?"
         }
         cancel={"Annuleren"}
-        confirm={"Ja rensa"}
+        confirm={"OK"}
         handleConfirm={deleteAll}
         handleAbort={() => {
           setShowDeleteConfirmation(false);

@@ -24,7 +24,7 @@ const SketchRemovalConfirmation = ({ open, handleConfirm, handleAbort }) => {
       <DialogContent>
         <Typography>
           Är du säker på att du vill radera arbetsytan? Detta går inte att
-          ångra.
+          ongedaan maken.
         </Typography>
       </DialogContent>
       <DialogActions>

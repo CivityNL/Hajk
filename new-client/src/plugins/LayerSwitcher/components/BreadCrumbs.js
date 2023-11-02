@@ -194,7 +194,7 @@ class BreadCrumbs extends Component {
                 sx={{ marginTop: 1, marginBottom: 1 }}
               >
                 <Button variant="contained" onClick={this.clear}>
-                  Ta bort allt innehåll
+                  Verwijder alle inhoud
                   <VisibilityOffIcon sx={{ marginLeft: 2 }} />
                 </Button>
               </Grid>

@@ -231,9 +231,9 @@ class DrawView extends React.PureComponent {
       return (
         <>
           <Typography>
-            Klicka på ett ritobjekt i kartan som du vill editera. Du kan editera
-            dina egna ritobjekt. För att editera andra objekt använd
-            editeraverktyget.
+            Klik op het object op de kaart dat u wilt bewerken. U kunt uw eigen
+            tekenobjecten bewerken. Gebruik het bewerkingshulpmiddel om andere
+            objecten te bewerken.
           </Typography>
         </>
       );
@@ -243,9 +243,9 @@ class DrawView extends React.PureComponent {
       return (
         <>
           <Typography>
-            Klicka på ett ritobjekt i kartan som du vill ta bort. Du kan ta bort
-            dina egna ritobjekt. För att ta bort andra objekt använd
-            editeraverktyget.
+            Klik op een tekenobject op de kaart dat u wilt verwijderen. U kunt
+            uw eigen tekenobjecten verwijderen. Gebruik het bewerkingshulpmiddel
+            om andere items te verwijderen.
           </Typography>
         </>
       );
@@ -358,7 +358,7 @@ class DrawView extends React.PureComponent {
               onClick={this.props.model.clear}
             >
               <DeleteIcon />
-              Ta bort alla ritobjekt
+              Verwijder alle objecten
             </Button>
           </Row>
           <Row>
@@ -389,12 +389,12 @@ class DrawView extends React.PureComponent {
               onChange={this.handleChange("drawMethod")}
               input={<Input name="drawMethod" id="drawMethod-native-helper" />}
             >
-              <option value="abort">Ingen</option>
-              <option value="add">Lägg till objekt</option>
-              <option value="remove">Ta bort objekt</option>
-              <option value="edit">Editera objekt</option>
-              <option value="move">Flytta objekt</option>
-              <option value="import">Importera/Exportera</option>
+              <option value="abort">Nee</option>
+              <option value="add">Voeg object toe</option>
+              <option value="remove">Verwijder object</option>
+              <option value="edit">Bewerk object</option>
+              <option value="move">Verplaats object</option>
+              <option value="import">Importeren/exporteren</option>
             </NativeSelect>
           </StyledFormControl>
         </Row>

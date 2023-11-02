@@ -7,13 +7,15 @@ const TranslateToggler = ({ translateEnabled, setTranslateEnabled }) => {
   return (
     <Paper style={{ padding: 8, marginTop: 8 }}>
       <Grid container justifyContent="space-between" alignItems="center">
-        <Typography variant="body2">Tillåt fri förflyttning</Typography>
+        <Typography variant="body2">Laat verslepen toe</Typography>
         <Tooltip
           disableInteractive
           title={
             translateEnabled
-              ? "Avaktivera för att inte tillåta förflyttning av objekten i kartan."
-              : "Aktivera för att tillåta förflyttning av objekten i kartan."
+              ? "Deactiveer om verslepen objecten op de kaart niet toe te " +
+                "staan."
+              : "Activeer om beweging van de objecten op de kaart mogelijk te " +
+                "maken."
           }
         >
           <Switch
@@ -76,16 +78,16 @@ const FeatureMoveSelector = (props) => {
       <Grid container item justifyContent="center" alignItems="center">
         <Grid item xs={12}>
           <Typography variant="body2" align="center">
-            Fast förflyttning
+            Vaste verplaatsing
           </Typography>
         </Grid>
         <Grid item xs={12} style={{ marginTop: 16 }}>
           <Tooltip
             disableInteractive
-            title="Ange hur många meter du vill flytta objekten."
+            title="Voer in hoeveel meter u de objecten wilt verplaatsen."
           >
             <TextField
-              label="Förflyttningsavstånd (meter)"
+              label="Verplaatsingsafstand (meter)"
               variant="outlined"
               fullWidth
               type="number"
@@ -98,10 +100,12 @@ const FeatureMoveSelector = (props) => {
         <Grid item xs={12} style={{ marginTop: 16 }}>
           <Tooltip
             disableInteractive
-            title="Ange i vilken riktning du vill flytta objekten. 0 grader är rakt norrut, 90 grader är rakt åt öster, osv."
+            title="Geef de richting op waarin u de objecten wilt verplaatsen. 0
+              graden is pal naar het noorden, 90 graden is pal naar het oosten,
+              enz."
           >
             <TextField
-              label="Förflyttningsriktning (grader)"
+              label="Verplaatsingsafstand (graden)"
               variant="outlined"
               fullWidth
               type="number"
@@ -120,7 +124,7 @@ const FeatureMoveSelector = (props) => {
               onClick={handleUndoClick}
               disabled={props.lastMoves.length === 0}
             >
-              Ångra
+              Ongedaan maken
             </Button>
           </Grid>
           <Grid item xs={6}>
@@ -130,7 +134,7 @@ const FeatureMoveSelector = (props) => {
               size="small"
               onClick={handleMoveClick}
             >
-              Flytta
+              Verplaatsen
             </Button>
           </Grid>
         </Grid>
