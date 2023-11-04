@@ -55,7 +55,6 @@ class EditView extends React.PureComponent {
   };
 
   setLayer(serviceId) {
-    console.log("Achterlijke teringzooi " + serviceId);
     this.props.model.reset();
     this.setState({
       loading: true,
