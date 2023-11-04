@@ -137,7 +137,7 @@
         "description": "Bewerk objecten in de geodatabase.",
         "sources": [
           {
-            "url": "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+            "url": "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
             "layers": ["workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten"],
             "projection": "EPSG:28992",
             "caption": "Geboorde putten"

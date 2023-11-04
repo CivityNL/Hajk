@@ -159,7 +159,7 @@
       "serverType": "geoserver",
       "singleTile": true,
       "tiled": false,
-      "url": "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+      "url": "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
       "version": "1.1.1",
       "visibleAtStart": false,
       "zIndex": null
@@ -212,7 +212,7 @@
       "serverType": "geoserver",
       "singleTile": true,
       "tiled": false,
-      "url": "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_wijken-en-buurten-2022/ows",
+      "url": "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_wijken-en-buurten-2022/ows",
       "version": "1.1.1",
       "visibleAtStart": false,
       "zIndex": null
@@ -275,7 +275,7 @@
     {
       "id": "geboorde-putten-wfs",
       "caption": "Geboorde putten WFS",
-      "url": "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+      "url": "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
       "layers": ["workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten"],
       "searchFields": ["putnummer", "plaats"],
       "infobox": "**Straatnaam:** {straatnaam}, **huisnummer:** {huisnummer}, **plaats:** {plaats}",

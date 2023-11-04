@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[6134],{36134:(e,t,h)=>{h.r(t),h.d(t,{DEFAULT_MEASUREMENT_SETTINGS:()=>s});const s=Object.freeze({showText:!0,showArea:!0,showLength:!0,showPerimeter:!0,areaUnit:"AUTO",lengthUnit:"AUTO",precision:1})}}]);
-//# sourceMappingURL=6134.ce2252af.chunk.js.map

@@ -37,7 +37,7 @@ class EditModel {
       this.options.sources = [
         {
           id: "geboorde-putten-source",
-          url: "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+          url: "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
           layers: [
             "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
           ],
@@ -469,7 +469,7 @@ class EditModel {
     if (!this.source) {
       this.source = {
         id: serviceId,
-        url: "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+        url: "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
         layers: [
           "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
         ],

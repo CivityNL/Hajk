@@ -1,10 +1,10 @@
 {
   "appName": "Hajk",
   "version": "3.12.1",
-  "mapserviceBase": "",
+  "mapserviceBase": "/api/1.0/sandbox/hajkmap/",
   "proxy": "",
   "searchProxy": "",
-  "defaultMap": "map_1",
+  "defaultMap": "sandbox",
   "experimentalNewApi": false,
   "noLayerSwitcherMessage": "This map has no layer switcher, which indicates that you are not allowed to use this map!",
   "networkErrorMessage": "Netwerkfout. Probeer de pagina opnieuw te laden door op F5 te drukken.",

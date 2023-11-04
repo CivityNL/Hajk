@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[7959],{77959:(t,e,a)=>{a.r(e),a.d(e,{LOCATION_DENIED_SNACK_MESSAGE:()=>i,LOCATION_DENIED_SNACK_OPTIONS:()=>n});const i="Du beh\xf6ver till\xe5ta att applikationen visar din position. F\xf6r datorer: De flesta webbl\xe4sare har en l\xe5s-ikon i adressf\xe4ltet som du kan klicka p\xe5 f\xf6r att till\xe5ta Plats/Position.",n=Object.freeze({variant:"info",persist:!1,anchorOrigin:{vertical:"top",horizontal:"center"}})}}]);
-//# sourceMappingURL=7959.fe9a88a8.chunk.js.map

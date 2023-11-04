@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[4673],{84673:(e,t,n)=>{n.r(t);n(72791);var a=n(35527),l=n(20890),i=n(80184);t.default=e=>{let{text:t}=e;return(0,i.jsx)(a.Z,{style:{width:"100%",padding:8},children:(0,i.jsx)(l.Z,{align:"center",variant:"body2",children:t})})}}}]);
-//# sourceMappingURL=4673.bfe333ef.chunk.js.map

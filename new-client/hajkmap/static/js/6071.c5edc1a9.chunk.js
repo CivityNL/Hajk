@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[6071],{16071:(o,l,c)=>{c.r(l);c(72791);var e=c(49877),s=c(68870),i=c(42847),n=c(12065),r=c(95573),a=c(80184);l.default=o=>(0,a.jsxs)(e.Z,{size:"small",onClick:o.onClick,sx:{position:"fixed",bottom:o=>o.spacing(2),right:o=>o.spacing(3),...o.color&&{backgroundColor:o.color,"&:hover":{backgroundColor:(0,n._j)(o.color,.3)}}},children:[(0,a.jsx)(s.Z,{sx:r.Z,children:"Scrolla till toppen av dokumentet"}),(0,a.jsx)(i.Z,{})]})}}]);
-//# sourceMappingURL=6071.c5edc1a9.chunk.js.map

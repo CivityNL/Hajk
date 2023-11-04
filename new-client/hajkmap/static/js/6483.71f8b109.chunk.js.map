@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/6483.71f8b109.chunk.js","mappings":"6IAAO,MAAMA,EAAW,W","sources":["plugins/Bookmarks/constants/index.js"],"sourcesContent":["export const STORAGE_KEY = `bookmarks`;\n"],"names":["STORAGE_KEY"],"sourceRoot":""}
