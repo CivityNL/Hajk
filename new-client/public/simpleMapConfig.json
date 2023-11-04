@@ -385,7 +385,7 @@
   "map": {
     "target": "map",
     "center": [155000.0, 463000.0],
-    "title": "Civity/Argaleo 2D kaart",
+    "title": "2D viewer",
     "projection": "EPSG:28992",
     "zoom": 1.33,
     "maxZoom": 16,
@@ -396,7 +396,7 @@
     "extent": [482.06, 306602.42, 284182.97, 637049.52],
     "constrainOnlyCenter": false,
     "constrainResolution": false,
-    "logo": "/logoLight.png",
+    "logo": "/civity.png",
     "geoserverLegendOptions": "",
     "mapselector": false,
     "mapcleaner": false,
