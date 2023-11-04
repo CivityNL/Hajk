@@ -11,7 +11,6 @@ import { hfetch } from "utils/FetchWrapper";
 
 class EditModel {
   constructor(settings) {
-    console.log("Hello from EditModel: " + settings.options.title);
     this.map = settings.map;
     this.app = settings.app;
     this.observer = settings.observer;
@@ -537,12 +536,14 @@ class EditModel {
           {
             alias: "x_coordinaat",
             name: "x_coordinaat",
+            defaultValue: 155000,
             dataType: "integer", // int | integer | number | decimal | date | date-time | dateTime | boolean
             textType: "heltal", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
           },
           {
             alias: "y_coordinaat",
             name: "y_coordinaat",
+            defaultValue: 463000,
             dataType: "integer", // int | integer | number | decimal | date | date-time | dateTime | boolean
             textType: "heltal", // heltal | nummer | datum | date-time | boolean
           },

@@ -57,18 +57,18 @@ const CustomControlButtonView = React.memo(
       // Prepare an output array that contains end-user text
       const output = [
         ...(formattedData.accuracy
-          ? [`Nogranhet: ${formattedData.accuracy} m\n`]
+          ? [`Nauwkeurigheid: ${formattedData.accuracy} m\n`]
           : []),
         ...(formattedData.altitude && formattedData.altitudeAccuracy
           ? [
-              `Höjd: ${formattedData.altitude} (+/- ${formattedData.altitudeAccuracy}) m\n`,
+              `Hoogte: ${formattedData.altitude} (+/- ${formattedData.altitudeAccuracy}) m\n`,
             ]
           : []),
         ...(formattedData.speed
-          ? [`Hastighet: ${formattedData.speed} km/h\n`]
+          ? [`Snelheid: ${formattedData.speed} km/h\n`]
           : []),
         ...(formattedData.heading
-          ? [`Riktning: ${formattedData.heading} rad\n`]
+          ? [`Richting: ${formattedData.heading} rad\n`]
           : []),
       ];
 
@@ -102,7 +102,7 @@ const CustomControlButtonView = React.memo(
             break;
           case "error":
             setCurrentIcon(<LocationDisabledIcon />);
-            setTooltip("Positionera: position ej tillgänglig");
+            setTooltip("Locatie niet beschikbaar");
             break;
           case "off":
           default:
@@ -126,7 +126,7 @@ const CustomControlButtonView = React.memo(
           );
         } else {
           enqueueSnackbar(
-            `Kunde inte fastställa din plats. Felkod: ${error.code}. Detaljer: "${error.message}".`,
+            `Kan uw locatie niet bepalen. Foutcode: ${error.code}. Details: "${error.message}".`,
             {
               variant: "error",
             }

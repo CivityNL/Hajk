@@ -43,8 +43,8 @@ class Location extends React.PureComponent {
         type="Location"
         custom={{
           icon: <MyLocationIcon />,
-          title: "Positionera",
-          description: "Visa min position i kartan",
+          title: "Locatie",
+          description: "Toon mijn locatie op de kaart",
           height: 450,
           width: 430,
           top: undefined,

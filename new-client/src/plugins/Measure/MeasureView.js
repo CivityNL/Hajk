@@ -34,28 +34,29 @@ class MeasureView extends React.PureComponent {
       <Grid container spacing={1}>
         <Grid item xs={12}>
           <Typography variant="body1">
-            Vid ritning av sträckor och arealer är det möjligt att hålla ner
-            Shift-tangenten. Då kan man rita sträckan/arealen på fri hand.
+            Bij het tekenen van afstanden en oppervlaktes is het mogelijk de
+            Shift-toets ingedrukt te houden. Vervolgens kunt u de lijn/het
+            gebied uit de vrije hand tekenen.
             <br />
             <br />
-            För att avsluta en mätning, klicka igen på sista punkten eller tryck
-            på Esc-tangenten.
+            Om een meting te beëindigen, dubbelklikt u op het laatste punt of
+            gebruikt u de Esc-toets.
           </Typography>
         </Grid>
         <Grid item xs={12}>
           <FormControl fullWidth>
             <InputLabel variant="standard" htmlFor="measure-native-helper">
-              Typ av mätning
+              Type meting
             </InputLabel>
             <NativeSelect
               value={this.state.shape}
               onChange={this.handleChange("shape")}
               input={<Input name="shape" id="measure-native-helper" />}
             >
-              <option value="Point">Punkt</option>
-              <option value="LineString">Sträcka</option>
+              <option value="Point">Punt</option>
+              <option value="LineString">Afstand</option>
               <option value="Circle">Cirkel</option>
-              <option value="Polygon">Areal</option>
+              <option value="Polygon">Oppervlakte</option>
             </NativeSelect>
           </FormControl>
         </Grid>
@@ -65,7 +66,7 @@ class MeasureView extends React.PureComponent {
             fullWidth
             onClick={this.model.clear}
           >
-            Rensa mätning
+            Metingen wissen
           </StyledButton>
         </Grid>
       </Grid>

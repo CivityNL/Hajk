@@ -51,8 +51,9 @@ class StreetViewView extends React.PureComponent {
     if (!this.props.displayPanorama) {
       return (
         <Typography>
-          Klicka i kartan för att aktivera street view. <br />
-          Förstora fönstret genom att trycka på symbolen i övre högra hörnet.
+          Klik in de kaart om Google Streetview te activeren. <br />
+          Vergroot het venster door middel van het symbool in de
+          rechterbovenhoek.
         </Typography>
       );
     }

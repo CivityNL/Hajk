@@ -369,7 +369,7 @@
           "name": "announcements",
           "headerText": "Nieuws",
           "icon": "announcement",
-          "text": "Voorbeeldmededeling. Gebruik HTML of Markdown met bijvoorbeeld [links](https://www.markdownguide.org/basic-syntax/) en afbeeldingen.\n",
+          "text": "Voorbeeldmededeling. Gebruik HTML of Markdown met bijvoorbeeld [links](https://www.markdownguide.org/basic-syntax/) en afbeeldingen.\n\n\n![Logo](https://vrbn.digitwin.app/assets/images/logo/tenant/vrbn.png)",
           "allowDangerousHtml": true,
           "useLegacyNonMarkdownRenderer": false,
           "buttonText": "OK, begrepen!",

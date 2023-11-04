@@ -167,7 +167,7 @@ class MeasureModel {
     let label;
 
     if (type === "point") {
-      label = "Nord: " + value.n + " Öst: " + value.e;
+      label = "X: " + value.e + " Y: " + value.n;
     }
 
     if (typeof value === "number") {

@@ -19,7 +19,6 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
 
 class AttributeEditor extends React.Component {
   constructor(props) {
-    console.log("Constructor");
     super(props);
     this.state = {
       formValues: undefined,
@@ -53,7 +52,6 @@ class AttributeEditor extends React.Component {
     let valueMap = {};
 
     editSource.editableFields.forEach((field) => {
-      console.log("Editable field: " + field.name);
       if (featureProps[field.name] !== null) {
         if (field.textType === "flerval" && featureProps[field.name] !== "") {
           valueMap[field.name] = field.values.map((value) => {
@@ -268,7 +266,6 @@ class AttributeEditor extends React.Component {
   }
 
   getValueMarkup(field, editable) {
-    console.log("getValueMarkup " + field.name);
     if (typeof field.alias === "undefined" || field.alias === "") {
       field.alias = field.name;
     }
