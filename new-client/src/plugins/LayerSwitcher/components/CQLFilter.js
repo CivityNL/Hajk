@@ -25,7 +25,7 @@ const CQLFilter = ({ layer }) => {
 
   return (
     <>
-      <InputLabel htmlFor="cqlfilter">Ange CQL-filter</InputLabel>
+      <InputLabel htmlFor="cqlfilter">Geef CQL-filter op</InputLabel>
       <OutlinedInput
         id="cqlfilter"
         type="text"
@@ -38,7 +38,8 @@ const CQLFilter = ({ layer }) => {
           <InputAdornment position="end">
             <Tooltip
               disableInteractive
-              title="Tryck för att ladda om lagret med angivet filter"
+              title="Druk op om de laag met het opgegeven filter opnieuw te
+              laden"
             >
               <IconButton edge="end" onClick={updateFilter} size="large">
                 <RefreshIcon />

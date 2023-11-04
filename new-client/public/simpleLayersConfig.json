@@ -122,11 +122,11 @@
       "infoClickSortProperty": "",
       "infoClickSortType": "string",
       "infoFormat": "application/json",
-      "infoOwner": "Källa: Stadsbyggnadskontoret Varberg",
-      "infoText": "Visar alla aktiva medlemsorganisationer i HAJK-samverkan.",
+      "infoOwner": "Veiligheidsregio Brabant-Noord",
+      "infoText": "Geboorde putten Veiligheidsregio Brabant-Noord",
       "infoTitle": "",
-      "infoUrl": "https://hajkmap.github.io/Hajk/",
-      "infoUrlText": "Välkomstsida",
+      "infoUrl": "https://www.vrbn.nl/",
+      "infoUrlText": "Website",
       "infoVisible": true,
       "layers": [
         "ckan_geboorde-putten"
@@ -135,6 +135,7 @@
         {
           "id": "ckan_geboorde-putten",
           "caption": "Geboorde putten",
+          "filterable": true,
           "legend": null,
           "legendIcon": null,
           "infobox": null,

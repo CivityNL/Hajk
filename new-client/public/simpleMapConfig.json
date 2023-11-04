@@ -21,7 +21,7 @@
         "baselayers": [
           {
             "id": "1",
-            "visibleAtStart": true,
+            "visibleAtStart": false,
             "drawOrder": 0,
             "visibleForGroups": null,
             "infobox": null
@@ -35,7 +35,7 @@
           },
           {
             "id": "3",
-            "visibleAtStart": false,
+            "visibleAtStart": true,
             "drawOrder": 0,
             "visibleForGroups": null,
             "infobox": null
@@ -61,7 +61,8 @@
                 "visibleAtStart": true,
                 "drawOrder": 4,
                 "visibleForGroups": null,
-                "infobox": null
+                "infobox": null,
+                "showAttributeTableButton": true
               }
             ]
           },
@@ -396,7 +397,7 @@
     "extent": [482.06, 306602.42, 284182.97, 637049.52],
     "constrainOnlyCenter": false,
     "constrainResolution": false,
-    "logo": "/civity.png",
+    "logo": "/hajk_vrbn.png",
     "geoserverLegendOptions": "",
     "mapselector": false,
     "mapcleaner": false,

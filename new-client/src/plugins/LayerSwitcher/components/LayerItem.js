@@ -302,7 +302,7 @@ class LayerItem extends React.PureComponent {
       this.state.status === "loaderror" && (
         <Tooltip
           disableInteractive
-          title="Lagret kunde inte laddas in. Kartservern svarar inte."
+          title="De laag kon niet worden geladen. De kaartserver reageert niet."
         >
           <LayerButtonWrapper>
             <IconWarning />
@@ -314,7 +314,7 @@ class LayerItem extends React.PureComponent {
 
   renderInfoButton = () => {
     return this.isInfoEmpty() ? null : (
-      <Tooltip title="Mer information om lagret">
+      <Tooltip title="Meer informatie over de kaartlaag">
         <LayerButtonWrapper>
           {this.state.infoVisible ? (
             <RemoveCircleIcon onClick={this.toggleInfo} />
@@ -639,7 +639,7 @@ class LayerItem extends React.PureComponent {
             {this.renderInfoButton()}
 
             {this.showAttributeTableButton && (
-              <Tooltip title="Visa lagrets attributtabell">
+              <Tooltip title="Geef de attributentabel van de laag weer">
                 <LayerButtonWrapper>
                   <TableViewIcon onClick={this.#showAttributeTable} />
                 </LayerButtonWrapper>

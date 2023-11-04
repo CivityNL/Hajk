@@ -62,7 +62,7 @@ class LayerSettings extends React.PureComponent {
     return (
       <SliderContainer>
         <SliderTextWrapper>
-          <Typography variant="subtitle2">Opacitet:</Typography>
+          <Typography variant="subtitle2">Opaciteit:</Typography>
         </SliderTextWrapper>
         <SliderWrapper>
           <Slider
