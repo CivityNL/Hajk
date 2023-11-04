@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[5806],{15806:(e,r,a)=>{a.r(r);r.default=class{constructor(e){this.olMap=e.map,this.observer=e.observer,this.globalObserver=e.app.globalObserver,this.layerMap=this.olMap.getLayers().getArray().reduce(((e,r)=>(e[r.get("name")]=r,e)),{})}getBaseLayers(){return this.olMap.getLayers().getArray().filter((e=>"base"===e.get("layerType"))).map((e=>e.getProperties()))}}}}]);
+//# sourceMappingURL=5806.4708b1bb.chunk.js.map

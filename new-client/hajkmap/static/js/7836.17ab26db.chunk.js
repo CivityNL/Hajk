@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[7836],{37836:(e,t,n)=>{n.r(t),n.d(t,{default:()=>u});var c=n(72791);function u(e,t){const n=(0,c.useRef)();(0,c.useEffect)((()=>{n.current=e}),[e]),(0,c.useEffect)((()=>{if(null!==t){const e=setInterval((function(){n.current()}),t);return()=>clearInterval(e)}}),[t])}}}]);
+//# sourceMappingURL=7836.17ab26db.chunk.js.map

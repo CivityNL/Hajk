@@ -225,7 +225,7 @@ class BackgroundSwitcher extends React.PureComponent {
         this.renderRadioButton(
           {
             name: WHITE_BACKROUND_LAYER_ID,
-            caption: "Vit",
+            caption: "Wit",
           },
           Number(WHITE_BACKROUND_LAYER_ID)
         )
@@ -236,7 +236,7 @@ class BackgroundSwitcher extends React.PureComponent {
         this.renderRadioButton(
           {
             name: BLACK_BACKROUND_LAYER_ID,
-            caption: "Svart",
+            caption: "Zwart",
           },
           Number(BLACK_BACKROUND_LAYER_ID)
         )

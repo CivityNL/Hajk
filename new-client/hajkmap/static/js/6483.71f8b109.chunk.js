@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[6483],{86483:(k,e,s)=>{s.r(e),s.d(e,{STORAGE_KEY:()=>c});const c="bookmarks"}}]);
+//# sourceMappingURL=6483.71f8b109.chunk.js.map

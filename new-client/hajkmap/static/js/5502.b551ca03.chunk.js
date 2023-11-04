@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[5502],{55502:(e,n,t)=>{t.r(n),t.d(n,{findMenuItemWithDocumentName:()=>u,getItemIdsToColor:()=>d,isExpandedTopLevelItem:()=>l});const d=(e,n)=>{const t=((e,n)=>e.parentId?Object.values(n).find((n=>n.allChildren.indexOf(e.id)>-1)):e)(e,n);return[t.id,...t.allChildren]},l=e=>e.hasSubMenu&&e.expandedSubMenu&&0===e.level,u=(e,n)=>Object.values(n).find((n=>n.document===e))}}]);
+//# sourceMappingURL=5502.b551ca03.chunk.js.map

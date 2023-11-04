@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[6127],{96127:(e,t,n)=>{n.r(t);var s=n(72791),r=n(61889),c=n(13239),h=n(80184);class i extends s.PureComponent{render(){return(0,h.jsx)(r.ZP,{alignItems:"center",justifyContent:"center",container:!0,sx:{height:"100%"},children:(0,h.jsx)(c.Z,{justify:"center",sx:{height:"100%"}})})}}t.default=i}}]);
+//# sourceMappingURL=6127.b24ca73a.chunk.js.map

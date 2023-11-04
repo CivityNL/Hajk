@@ -21,7 +21,7 @@ const AddView = (props) => {
       </Grid>
       <Grid item xs={12} style={{ marginTop: 16 }}>
         <Grid item xs={12} style={{ marginBottom: 4 }}>
-          <Typography align="center">Typ</Typography>
+          <Typography align="center">Type</Typography>
         </Grid>
         <Grid item xs={12}>
           <DrawTypeSelector

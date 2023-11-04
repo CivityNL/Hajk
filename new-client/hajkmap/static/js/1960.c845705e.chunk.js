@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhajk_client=self.webpackChunkhajk_client||[]).push([[1960,6542],{21960:(e,t,r)=>{r.r(t),r.d(t,{flattenChaptersTree:()=>h,getStringArray:()=>s,hasSubMenu:()=>a,splitAndTrimOnCommas:()=>n});const n=e=>e.split(",").map((e=>e.trim())),s=e=>n(e).join(" ").split(" "),a=e=>e.menu&&e.menu.length>0,h=e=>e.reduce(((e,t)=>{if(t.header){let r={...t};r.chapters=[],e=[...e,r]}return t.chapters&&t.chapters.length>0?[...e,...h(t.chapters)]:e}),[])}}]);
+//# sourceMappingURL=1960.c845705e.chunk.js.map

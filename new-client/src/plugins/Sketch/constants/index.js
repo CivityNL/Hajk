@@ -116,9 +116,9 @@ export const DRAW_TYPES = [
   },
   {
     type: "Polygon",
-    label: "Polygon",
+    label: "Vlak",
     tooltip:
-      "Teken een polygoon op de kaart door één keer per knooppunt te klikken, " +
+      "Teken een vlak op de kaart door één keer per knooppunt te klikken, " +
       "eindig met een dubbelklik.",
   },
   {

@@ -1,0 +1,423 @@
+{
+  "version": "3.12.1",
+  "projections": [
+    {
+      "code": "EPSG:28992",
+      "definition": "+proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.4171,50.3319,465.5524,1.9342,-1.6677,9.1019,4.0725 +units=m +no_defs +type=crs",
+      "extent": [482.06, 306602.42, 284182.97, 637049.52],
+      "units": null
+    },
+    {
+      "code": "http://www.opengis.net/gml/srs/epsg.xml#28992",
+      "definition": "+proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.4171,50.3319,465.5524,1.9342,-1.6677,9.1019,4.0725 +units=m +no_defs +type=crs",
+      "extent": [482.06, 306602.42, 284182.97, 637049.52],
+      "units": null
+    }
+  ],
+  "tools": [
+    {
+      "type": "layerswitcher",
+      "options": {
+        "baselayers": [
+          {
+            "id": "1",
+            "visibleAtStart": true,
+            "drawOrder": 0,
+            "visibleForGroups": null,
+            "infobox": null
+          },
+          {
+            "id": "2",
+            "visibleAtStart": false,
+            "drawOrder": 0,
+            "visibleForGroups": null,
+            "infobox": null
+          },
+          {
+            "id": "3",
+            "visibleAtStart": false,
+            "drawOrder": 0,
+            "visibleForGroups": null,
+            "infobox": null
+          },
+          {
+            "id": "4",
+            "visibleAtStart": false,
+            "drawOrder": 0,
+            "visibleForGroups": null,
+            "infobox": null
+          }
+        ],
+        "groups": [
+          {
+            "id": "9938c969-590c-8683-435c-1ecaca271096",
+            "parent": "-1",
+            "name": "Geboorde putten",
+            "toggled": true,
+            "expanded": false,
+            "layers": [
+              {
+                "id": "geboorde-putten",
+                "visibleAtStart": true,
+                "drawOrder": 4,
+                "visibleForGroups": null,
+                "infobox": null
+              }
+            ]
+          },
+          {
+            "id": "9938c969-590c-8683-435c-1ecaca274839",
+            "parent": "-1",
+            "name": "CBS wijken en buurten",
+            "toggled": true,
+            "expanded": false,
+            "layers": [
+              {
+                "id": "cbs-wijken-en-buurten-2022",
+                "visibleAtStart": false,
+                "drawOrder": 4,
+                "visibleForGroups": null,
+                "infobox": null
+              }
+            ]
+          }
+        ],
+        "active": true,
+        "visibleAtStart": false,
+        "visibleAtStartMobile": false,
+        "backgroundSwitcherBlack": true,
+        "backgroundSwitcherWhite": true,
+        "enableOSM": false,
+        "showBreadcrumbs": true,
+        "target": "toolbar",
+        "position": "left",
+        "width": 0,
+        "height": 0,
+        "title": "Beheer kaartlagen",
+        "description": "Vink aan wat u op de kaart wilt zien.",
+        "enableTransparencySlider": true,
+        "dropdownThemeMaps": true,
+        "themeMapHeaderCaption": "Standardkartan",
+        "instruction": "",
+        "visibleForGroups": []
+      },
+      "index": 1
+    },
+    {
+      "type": "infoclick",
+      "options": {
+        "target": "",
+        "displayPopup": false,
+        "markerImg": "/marker.png",
+        "anchor": [0.5, 1],
+        "imgSize": [32, 32],
+        "popupOffsetY": 0,
+        "visibleForGroups": []
+      },
+      "index": 2
+    },
+    {
+      "type": "sketch",
+      "options": {
+        "target": "left",
+        "position": "left",
+        "visibleForGroups": [],
+        "title": "Schetsen",
+        "description": "Schets uw eigen geometrieën."
+      },
+      "index": 3
+    },
+    {
+      "type": "edit",
+      "options": {
+        "target": "left",
+        "instruction": "",
+        "title": "Bewerken",
+        "description": "Bewerk objecten in de geodatabase.",
+        "sources": [
+          {
+            "url": "http://localhost:81/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+            "layers": ["workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten"],
+            "projection": "EPSG:28992",
+            "caption": "Geboorde putten"
+          }
+        ]
+      },
+      "index": 4
+    },
+    {
+      "type": "measure",
+      "options": {
+        "target": "control",
+        "position": "right",
+        "instruction": "",
+        "icons": "",
+        "title": "Meten",
+        "description": "meet lengtes en oppervlaktes"
+      },
+      "index": 4
+    },
+    {
+      "type": "streetview",
+      "options": {
+        "target": "control",
+        "position": "right",
+        "apiKey": "AIzaSyCb-bvLmybNb4QSERR43eGlvvQyUrBAQG4",
+        "instruction": "",
+        "visibleForGroups": [],
+        "title": "Streetview",
+        "description": "Bekijk hoe de omgeving eruit ziet met Google Streetview"
+      },
+      "index": 5
+    },
+    {
+      "type": "anchor",
+      "options": {
+        "target": "toolbar",
+        "position": "left",
+        "instruction": "",
+        "visibleForGroups": [],
+        "title": "Delen",
+        "description": "Maak een link en deel wat u op de kaart ziet met anderen"
+      },
+      "index": 7
+    },
+    {
+      "type": "search",
+      "options": {
+        "layers": [
+          {
+            "id": "geboorde-putten-wfs",
+            "visibleForGroups": []
+          }
+        ],
+        "title": "Zoeken",
+        "description": "Zoek in de kaart",
+        "visibleForGroups": [],
+        "maxResultsPerDataset": 100,
+        "anchor": ["", ""],
+        "scale": "",
+        "markerImg": "",
+        "delayBeforeAutoSearch": 300,
+        "searchBarPlaceholder": "Zoek in de kaart",
+        "autocompleteWildcardAtStart": false,
+        "enablePolygonSearch": true,
+        "enableRadiusSearch": true,
+        "enableSelectSearch": true,
+        "enableExtentSearch": true,
+        "enableResultsFiltering": true,
+        "enableResultsSorting": true,
+        "enableResultsSelectionClearing": true,
+        "enableResultsDownloading": true,
+        "enableFeaturePreview": true,
+        "enableLabelOnHighlight": true,
+        "enableSelectedFeaturesCollection": true,
+        "showResultFeaturesInMap": true,
+        "enableFeatureToggler": true,
+        "drawFillColor": "rgba(255,255,255,0.07)",
+        "drawStrokeColor": "rgba(74,74,74,0.5)",
+        "displayFillColor": "rgba(74,144,226,0.15)",
+        "displayStrokeColor": "rgba(74,144,226,0.4)",
+        "selectionTextStroke": "rgba(255,255,255,1)",
+        "selectionTextFill": "rgba(63,122,190,1)",
+        "selectionFillColor": "rgba(74,144,226,0.7)",
+        "selectionStrokeColor": "rgba(74,144,226,0.8)",
+        "highlightTextStroke": "rgba(255,255,255,1)",
+        "highlightTextFill": "rgba(214,143,28,1)",
+        "highlightFillColor": "rgba(245,166,35,0.7)",
+        "highlightStrokeColor": "rgba(245,166,35,0.8)"
+      },
+      "index": 11
+    },
+    {
+      "type": "routing",
+      "options": {
+        "target": "toolbar",
+        "apiKey": "AIzaSyCb-bvLmybNb4QSERR43eGlvvQyUrBAQG4",
+        "instruction": "",
+        "visibleForGroups": [],
+        "title": "Navigatie",
+        "description": "Navigatie"
+      },
+      "index": 12
+    },
+    {
+      "type": "location",
+      "options": {
+        "target": "control",
+        "position": "right",
+        "visibleForGroups": [],
+        "title": "Locatie",
+        "description": "Toon mijn locatie op de kaart"
+      },
+      "index": 13
+    },
+    {
+      "type": "preset",
+      "options": {
+        "presetList": [
+          {
+            "name": "Gemeente Rotterdam",
+            "presetUrl": "?m=simpleMapConfig&x=78266.29790000057&y=437823.7200000006&z=6.7339618545565125&l=1&f=%7B%7D&clean=false"
+          },
+          {
+            "name": "Veiligheidsregio Brabant-Noord",
+            "presetUrl": "?m=simpleMapConfig&x=165442.5&y=409840.0&z=6.7339618545565125&l=1&f=%7B%7D&clean=false"
+          }
+        ],
+        "visibleForGroups": [],
+        "title": "Snelkoppelingen",
+        "description": "Snelkoppelingen naar gebieden"
+      },
+      "index": 14
+    },
+    {
+      "type": "coordinates",
+      "options": {
+        "target": "control",
+        "position": "right",
+        "instruction": "",
+        "transformations": [
+          {
+            "code": "EPSG:28992",
+            "default": true,
+            "hint": "Rijksdriehoekstelsel",
+            "title": "Rijksdriehoekstelsel",
+            "xtitle": "E",
+            "ytitle": "N",
+            "inverseAxis": false
+          }
+        ],
+        "visibleForGroups": [],
+        "title": "Coördinaten",
+        "description": "Toon coördinaten op de kaart"
+      },
+      "index": 15
+    },
+    {
+      "type": "bookmarks",
+      "options": {
+        "target": "toolbar",
+        "instruction": "",
+        "visibleForGroups": [],
+        "title": "Bladwijzers",
+        "description": "Bladwijzers"
+      },
+      "index": 16
+    },
+    {
+      "type": "buffer",
+      "options": {
+        "target": "toolbar",
+        "instruction": "",
+        "varbergVer": false,
+        "geoserverUrl": "",
+        "notFeatureLayers": [],
+        "visibleForGroups": [],
+        "title": "Buffer",
+        "description": "Buffer maken om een object"
+      },
+      "index": 17
+    },
+    {
+      "type": "print",
+      "options": {
+        "target": "toolbar",
+        "position": "left",
+        "scales": "200, 400, 1000, 2000, 5000, 10000, 25000, 50000, 100000, 200000, 400000, 800000, 1000000, 5000000, 10000000",
+        "logo": "/logoLight.png",
+        "northArrow": "/north_arrow.png",
+        "copyright": "© Civity, Agaleo",
+        "disclaimer": "Aan de grenzen op de kaart kunnen geen juridische rechten ontleend worden.",
+        "mapTextColor": "#000000",
+        "includeNorthArrow": true,
+        "northArrowPlacement": "topLeft",
+        "includeScaleBar": true,
+        "scaleBarPlacement": "bottomLeft",
+        "includeLogo": true,
+        "logoPlacement": "topRight",
+        "date": "Uitgiftedatum: {date}",
+        "instruction": "",
+        "visibleAtStart": false,
+        "visibleForGroups": [],
+        "title": "Afdrukken",
+        "description": "PDF van de kaart aanmaken."
+      },
+      "index": 2
+    },
+    {
+      "type": "infodialog",
+      "index": 3,
+      "options": [
+        {
+          "target": "control",
+          "name": "help",
+          "icon": "helpcenter",
+          "headerText": "Example: InfoDialog with complex MarkDown",
+          "text": "# H1\n## H2\n### H3\n#### H4\n##### H5\n###### H6\n\nAlternatively, for H1 and H2, an underline-ish style:\n\nAlt-H1\n======\n\nAlt-H2\n------\n\nEmphasis, aka italics, with *asterisks* or _underscores_.\n\nStrong emphasis, aka bold, with **asterisks** or __underscores__.\n\nCombined emphasis with **asterisks and _underscores_**.\n\nStrikethrough uses two tildes. ~~Scratch this.~~\n\n# Lists\n\n1. First ordered list item\n2. Another item\n  * Unordered sub-list.\n1. Actual numbers don't matter, just that it's a number\n  1. Ordered sub-list\n4. And another item.\n\n    You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).\n\n    To have a line break without a paragraph, you will need to use two trailing spaces.\n    Note that this line is separate, but within the same paragraph.\n    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)\n\n* Unordered list can use asterisks\n- Or minuses\n+ Or pluses\n\n# Links\n[I'm an inline-style link](https://www.google.com)\n\n[I'm an inline-style link with title](https://www.google.com \"Google's Homepage\")\n\n[I'm a reference-style link][Arbitrary case-insensitive reference text]\n\n[I'm a relative reference to a repository file](../blob/master/LICENSE)\n\n[You can use numbers for reference-style link definitions][1]\n\nOr leave it empty and use the [link text itself].\n\nURLs and URLs in angle brackets will automatically get turned into links.\nhttp://www.example.com or <http://www.example.com> and sometimes\nexample.com (but not on Github, for example).\n\nSome text to show that the reference links can follow later.\n\n[arbitrary case-insensitive reference text]: https://www.mozilla.org\n[1]: http://slashdot.org\n[link text itself]: http://www.reddit.com\n\n# Images\nHere's our logo (hover to see the title text):\n\nInline-style:\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")\n\nReference-style:\n![alt text][logo]\n\n[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 2\"\n\n# Code\nInline `code` has `back-ticks around` it.\n\nYou can have blocks of code too, just use ``` and ``` on new lines.\n\n\n# Tables\nColons can be used to align columns.\n\n| Tables        | Are           | Cool  |\n| ------------- |:-------------:| -----:|\n| col 3 is      | right-aligned | $1600 |\n| col 2 is      | centered      |   $12 |\n| zebra stripes | are neat      |    $1 |\n\nThere must be at least 3 dashes separating each header cell.\nThe outer pipes (|) are optional, and you don't need to make the\nraw Markdown line up prettily. You can also use inline Markdown.\n\nMarkdown | Less | Pretty\n--- | --- | ---\n*Still* | `renders` | **nicely**\n1 | 2 | 3\n\n# Quotes\n> Blockquotes are very handy in email to emulate reply text.\n> This line is part of the same quote.\n\nQuote break.\n\n> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.\n\n# Breakes\nThree or more...\n\n---\n\nHyphens\n\n***\n\nAsterisks\n\n___\n\nUnderscores",
+          "allowDangerousHtml": false,
+          "useLegacyNonMarkdownRenderer": false,
+          "buttonText": "Sluiten",
+          "title": "Toon help",
+          "description": "Toon help-scherm",
+          "visibleAtStart": false,
+          "showOnlyOnce": true,
+          "visibleForGroups": []
+        },
+        {
+          "target": "toolbar",
+          "name": "announcements",
+          "headerText": "Nieuws",
+          "icon": "announcement",
+          "text": "Voorbeeldmededeling. Gebruik HTML of Markdown met bijvoorbeeld [links](https://www.markdownguide.org/basic-syntax/) en afbeeldingen.\n",
+          "allowDangerousHtml": true,
+          "useLegacyNonMarkdownRenderer": false,
+          "buttonText": "OK, begrepen!",
+          "title": "Nieuws",
+          "description": "Nieuws over de kaart. ",
+          "visibleAtStart": false,
+          "showOnlyOnce": true,
+          "visibleForGroups": []
+        }
+      ]
+    }
+  ],
+  "map": {
+    "target": "map",
+    "center": [155000.0, 463000.0],
+    "title": "Civity/Argaleo 2D kaart",
+    "projection": "EPSG:28992",
+    "zoom": 1.33,
+    "maxZoom": 16,
+    "minZoom": 0,
+    "resolutions": [3440.640, 1720.320, 860.160, 430.080, 215.040, 107.520, 53.760, 26.880, 13.440, 6.720, 3.360, 1.680, 0.840, 0.420, 0.210, 0.105],
+    "extraPrintResolutions": [],
+    "origin": [0, 0],
+    "extent": [482.06, 306602.42, 284182.97, 637049.52],
+    "constrainOnlyCenter": false,
+    "constrainResolution": false,
+    "logo": "/logoLight.png",
+    "geoserverLegendOptions": "",
+    "mapselector": false,
+    "mapcleaner": false,
+    "drawerVisible": false,
+    "drawerPermanent": false,
+    "drawerVisibleMobile": false,
+    "activeDrawerOnStart": "plugins",
+    "showThemeToggler": true,
+    "colors": {
+      "primaryColor": "#333333",
+      "secondaryColor": "#ffa000",
+      "preferredColorScheme": "user"
+    },
+    "defaultCookieNoticeMessage": "Deze website maakt gebruik van cookies. We gebruiken cookies om content te personaliseren en om gebruik te analyseren.",
+    "defaultCookieNoticeUrl": "https://pts.se/sv/bransch/regler/lagar/lag-om-elektronisk-kommunikation/kakor-cookies/",
+    "showCookieNotice": false,
+    "cookieUse3dPart": false,
+    "crossOrigin": "anonymous",
+    "introductionEnabled": true,
+    "introductionShowControlButton": true,
+    "introductionSteps": [],
+    "showRecentlyUsedPlugins": false
+  }
+}

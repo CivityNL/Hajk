@@ -158,10 +158,10 @@ class LayersSwitcherView extends React.PureComponent {
             variant="fullWidth"
             textColor="inherit"
           >
-            <Tab label="Kartlager" />
-            <Tab label="Bakgrund" />
+            <Tab label="Kaartlagen" />
+            <Tab label="Achtergrond" />
             {this.options.showActiveLayersView === true && (
-              <Tab label="Aktiva lager" />
+              <Tab label="Actieve laag" />
             )}
           </Tabs>
         </StyledAppBar>
