@@ -63,7 +63,7 @@ class SearchTools extends React.PureComponent {
                 searchModel={searchModel}
               />
             ),
-            headerText: "Sökinställningar",
+            headerText: "Zoekinstellingen",
             buttonText: "OK",
             useLegacyNonMarkdownRenderer: true,
           }}
@@ -87,7 +87,10 @@ class SearchTools extends React.PureComponent {
     return (
       <>
         {this.renderSettingsDialog()}
-        <Tooltip disableInteractive title="Fler sökverktyg och inställningar">
+        <Tooltip
+          disableInteractive
+          title="Meer zoekhulpmiddelen en instellingen"
+        >
           <IconButton
             aria-haspopup="true"
             aria-controls="lock-menu"
@@ -100,7 +103,7 @@ class SearchTools extends React.PureComponent {
             }
           >
             <span style={visuallyHidden}>
-              Öppna dialog med fler inställningar
+              Dialoog met meer zoekinstallingen openen
             </span>
             <MoreVertIcon />
           </IconButton>

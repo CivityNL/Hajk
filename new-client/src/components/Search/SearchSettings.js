@@ -144,7 +144,7 @@ class SearchSettings extends React.PureComponent {
                 opleveren als bijvoorbeeld 'snelweg'."
               >
                 <FormControlLabel
-                  label="Wildcard före"
+                  label="Wildcard voor"
                   control={
                     <Switch
                       checked={searchOptions.wildcardAtStart}
@@ -161,10 +161,11 @@ class SearchSettings extends React.PureComponent {
               </Tooltip>
               <Tooltip
                 disableInteractive
-                title="Om aktivt kommer en sökning på 'väg' även ge träffar på exempelvis 'vägen'."
+                title="Indien aktief zal een zoekopdracht naar 'weg' ook hits
+                opleveren als bijvoorbeeld 'wegen'. "
               >
                 <FormControlLabel
-                  label="Wildcard efter"
+                  label="Wildcard na"
                   control={
                     <Switch
                       checked={searchOptions.wildcardAtEnd}
@@ -181,10 +182,12 @@ class SearchSettings extends React.PureComponent {
               </Tooltip>
               <Tooltip
                 disableInteractive
-                title="Om aktivt kommer en sökning på 'a' inte ge träffar på 'A'. Inaktivera för att söka oberoende av gemener/versaler."
+                title="Schakel uit om hoofdlettergevoelig te zoeken. Indien
+                actief zal een zoekopdracht naar 'a' geen resultaten opleveren
+                voor 'A'. "
               >
                 <FormControlLabel
-                  label="Skiftlägeskänslighet"
+                  label="Hoofdlettergevoeligheid"
                   control={
                     <Switch
                       checked={searchOptions.matchCase}
@@ -205,14 +208,20 @@ class SearchSettings extends React.PureComponent {
 
         <Grid item xs>
           <FormControl component="fieldset">
-            <FormLabel component="legend">Spatiala sökinställningar</FormLabel>
+            <FormLabel component="legend">
+              Ruimtelijke zoekinstellingen
+            </FormLabel>
             <FormGroup>
               <Tooltip
                 disableInteractive
-                title="Om aktivt kommer hela objektet (exempelvis en fastigheten) behöva rymmas inom sökområdet för att komma med i resultatet. Om inaktivt räcker det att endast en liten del av objektet ryms inom, eller nuddar vid, sökområdet."
+                title="Indien actief zal het gehele object (bijvoorbeeld een
+                pand) binnen het zoekgebied moeten passen om in het resultaat te
+                  worden opgenomen. Indien inactief, is het voldoende dat
+                  slechts een klein deel van het object binnen het zoekgebied
+                  past of dit raakt."
               >
                 <FormControlLabel
-                  label="Kräv att hela objektet ryms inom sökområde"
+                  label="Vereisen dat het hele object binnen het zoekgebied past"
                   control={
                     <Switch
                       checked={searchOptions.activeSpatialFilter === "within"}
@@ -239,10 +248,11 @@ class SearchSettings extends React.PureComponent {
             <FormGroup>
               <Tooltip
                 disableInteractive
-                title="Om aktivt kommer en etikett att visas i kartan intill det markerade sökresultatet"
+                title="Indien actief verschijnt er een label op de kaart naast
+                het geselecteerde zoekresultaat"
               >
                 <FormControlLabel
-                  label="Visa textetikett i kartan"
+                  label="Toon tekstlabel op de kaart"
                   control={
                     <Switch
                       checked={searchOptions.enableLabelOnHighlight}

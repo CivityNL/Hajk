@@ -66,7 +66,7 @@ class Search extends React.PureComponent {
 
   defaultSearchTools = [
     {
-      name: "Sök med polygon",
+      name: "Zoek met vlak",
       icon: <EditIcon />,
       type: "Polygon",
       enabled: this.props.options.enablePolygonSearch ?? true,
@@ -75,7 +75,7 @@ class Search extends React.PureComponent {
       onClickEventName: "search.spatialSearchActivated",
     },
     {
-      name: "Sök med radie",
+      name: "Zoek met cirkel",
       icon: <RadioButtonUncheckedIcon />,
       type: "Circle",
       enabled: this.props.options.enableRadiusSearch ?? true,
@@ -83,7 +83,7 @@ class Search extends React.PureComponent {
       onClickEventName: "search.spatialSearchActivated",
     },
     {
-      name: "Sök med objekt",
+      name: "Zoek met object",
       icon: <TouchAppIcon />,
       type: "Select",
       enabled: this.props.options.enableSelectSearch ?? true,
@@ -92,7 +92,7 @@ class Search extends React.PureComponent {
       onClickEventName: "search.spatialSearchActivated",
     },
     {
-      name: "Sök inom vyn",
+      name: "Zoek in rechthoek",
       icon: <Crop54Icon />,
       type: "Extent",
       enabled: this.props.options.enableExtentSearch ?? true,
@@ -100,10 +100,10 @@ class Search extends React.PureComponent {
       onClickEventName: "search.spatialSearchActivated",
     },
     {
-      name: "Sökinställningar",
+      name: "Zoekinstellinegn",
       icon: <SettingsIcon />,
       type: "SETTINGS",
-      toolTipTitle: "Ändra sökinställningarna.",
+      toolTipTitle: "Overige zoekinstellingen.",
       onClickEventName: "",
     },
   ];
