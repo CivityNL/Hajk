@@ -613,12 +613,13 @@ class AppModel {
   }
 
   addLayers() {
+    console.log('adding layers on Init')
     const layerSwitcherConfig = this.config.mapConfig.tools.find(
-        (tool) => tool.type === "layerswitcher"
-      ),
-      infoclickConfig = this.config.mapConfig.tools.find(
-        (t) => t.type === "infoclick"
-      );
+      (tool) => tool.type === "layerswitcher"
+    );
+    const infoclickConfig = this.config.mapConfig.tools.find(
+      (t) => t.type === "infoclick"
+    );
 
     // Prepare layers
     this.layers = this.flattern(layerSwitcherConfig);
@@ -919,7 +920,7 @@ class AppModel {
               layers: [sl.id],
               searchFields:
                 typeof sl.searchPropertyName === "string" &&
-                sl.searchPropertyName.length > 0
+                  sl.searchPropertyName.length > 0
                   ? sl.searchPropertyName.split(",")
                   : [],
               infobox: sl.infobox || "",
@@ -927,17 +928,17 @@ class AppModel {
               aliasDict: "",
               displayFields:
                 typeof sl.searchDisplayName === "string" &&
-                sl.searchDisplayName.length > 0
+                  sl.searchDisplayName.length > 0
                   ? sl.searchDisplayName.split(",")
                   : [],
               secondaryLabelFields:
                 typeof sl.secondaryLabelFields === "string" &&
-                sl.secondaryLabelFields.length > 0
+                  sl.secondaryLabelFields.length > 0
                   ? sl.secondaryLabelFields.split(",")
                   : [],
               shortDisplayFields:
                 typeof sl.searchShortDisplayName === "string" &&
-                sl.searchShortDisplayName.length > 0
+                  sl.searchShortDisplayName.length > 0
                   ? sl.searchShortDisplayName.split(",")
                   : [],
               geometryField: sl.searchGeometryField || "geom",
@@ -1146,9 +1147,9 @@ class AppModel {
             wantedGl[layer] === undefined
               ? olLayer
               : {
-                  layer: olLayer,
-                  subLayersToShow: wantedGl[layer]?.split(","),
-                };
+                layer: olLayer,
+                subLayersToShow: wantedGl[layer]?.split(","),
+              };
           this.globalObserver.publish("layerswitcher.showLayer", param);
         }
       });

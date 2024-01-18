@@ -1,5 +1,5 @@
 import React from "react";
-
+import io from 'socket.io-client';
 import { PLUGINS_TO_IGNORE_IN_HASH_APP_STATE } from "constants";
 
 import PropTypes from "prop-types";
@@ -58,6 +58,10 @@ import LockIcon from "@mui/icons-material/Lock";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import MapIcon from "@mui/icons-material/Map";
 import ThemeToggler from "../controls/ThemeToggler";
+
+import getWindowMessage from "./MessageListener";
+import { getWebSocketResponse, processServerData } from "./MapServerHandler";
+import { getDataFromWebSocket } from "./WebSocket";
 
 // A global that holds our windows, for use see components/Window.js
 document.windows = [];
@@ -227,7 +231,7 @@ class App extends React.PureComponent {
       return (
         typeof activeDrawerContentFromLocalStorage === "string" &&
         tool.type.toLowerCase() ===
-          activeDrawerContentFromLocalStorage.toLowerCase()
+        activeDrawerContentFromLocalStorage.toLowerCase()
       );
     });
 
@@ -255,6 +259,29 @@ class App extends React.PureComponent {
   constructor(props) {
     super(props);
 
+    //KV connect to server-map via websocket TODO moves this to seperate script
+    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+    const { hostname } = window.location;
+    const proxyPort = new URL(window.location.href).searchParams.get('proxy');
+
+    this.socket = io.connect(`${protocol}://${hostname}:${proxyPort}`, {
+      transports: ['websocket', 'polling'],
+      path: '/map/ws',
+      reconnection: false,
+    });
+
+    this.socket.on('connect', () => {
+      console.log('Socket.io connection established.');
+    });
+
+    // Listen for server responses
+    // this.socket.on('message', (response) => {
+    //   console.log('Received server-map response')
+    //   //TODO rename function after success
+    //   getWebSocketResponse(response)
+    // });
+    //end KV
+
     const drawerPermanentFromLocalStorage =
       this.getDrawerPermanentFromLocalStorage();
     const activeDrawerContentFromLocalStorage =
@@ -278,8 +305,8 @@ class App extends React.PureComponent {
         ? activeDrawerContentFromLocalStorage
         : this.props.config.mapConfig.map.activeDrawerOnStart
       : canRenderDefaultDrawer
-      ? "plugins"
-      : null;
+        ? "plugins"
+        : null;
 
     // First check if we have anything to render at all and in case we haven't -> do not show drawer
     // If on a mobile device, the drawer should never be permanent.
@@ -291,12 +318,12 @@ class App extends React.PureComponent {
       activeDrawerContentState === null
         ? false
         : isMobile
-        ? false
-        : drawerPermanentFromLocalStorage !== null
-        ? drawerPermanentFromLocalStorage
-        : (props.config.mapConfig.map.drawerVisible &&
-            props.config.mapConfig.map.drawerPermanent) ||
-          false;
+          ? false
+          : drawerPermanentFromLocalStorage !== null
+            ? drawerPermanentFromLocalStorage
+            : (props.config.mapConfig.map.drawerVisible &&
+              props.config.mapConfig.map.drawerPermanent) ||
+            false;
 
     // First check if we have anything to render at all and in case we haven't -> do not show drawer
     // If on a mobile device, and a config property for if the drawer should initially be open is set, base the drawer state on this.
@@ -308,10 +335,10 @@ class App extends React.PureComponent {
         ? false
         : isMobile &&
           props.config.mapConfig.map.drawerVisibleMobile !== undefined
-        ? props.config.mapConfig.map.drawerVisibleMobile
-        : drawerPermanentFromLocalStorage !== null
-        ? drawerPermanentFromLocalStorage
-        : props.config.mapConfig.map.drawerVisible || false;
+          ? props.config.mapConfig.map.drawerVisibleMobile
+          : drawerPermanentFromLocalStorage !== null
+            ? drawerPermanentFromLocalStorage
+            : props.config.mapConfig.map.drawerVisible || false;
 
     this.state = {
       alert: false,
@@ -418,6 +445,13 @@ class App extends React.PureComponent {
   componentDidMount() {
     this.checkConfigForUnsupportedTools();
 
+    //KV communicate with search component (left side) data stream
+    window.addEventListener('message', getWindowMessage(this.socket));
+
+    getDataFromWebSocket(this.socket, data => {
+      processServerData(data)
+    });
+
     const promises = this.appModel
       .createMap()
       .addSearchModel()
@@ -473,7 +507,12 @@ class App extends React.PureComponent {
     this.bindHandlers();
   }
 
-  componentDidCatch(error) {}
+  componentWillUnmount() {
+    //KV listener to search window and websocket to server-map    
+    window.removeEventListener('message', getWindowMessage);
+    this.socket.disconnect();
+  }
+  componentDidCatch(error) { }
 
   bindHandlers() {
     // Extend the hajkPublicApi with a couple of things that are available now
@@ -580,7 +619,7 @@ class App extends React.PureComponent {
           // TODO: Also handle sources change, the s parameter
           if (
             mergedParams.get("q") !==
-              this.appModel.searchModel.lastSearchPhrase &&
+            this.appModel.searchModel.lastSearchPhrase &&
             mergedParams.get("q") !== null
           ) {
             this.globalObserver.publish(
@@ -967,7 +1006,6 @@ class App extends React.PureComponent {
 
     // If clean===true, some components won't be rendered below
     const clean = config.mapConfig.map.clean;
-
     // Let admin decide whether MapResetter should be shown, but show it
     // always on clean mode maps.
     const showMapResetter = clean === true || config.mapConfig.map.mapresetter;
@@ -1077,7 +1115,7 @@ class App extends React.PureComponent {
                 />
                 {clean === false &&
                   this.appModel.config.mapConfig.map.showUserAvatar ===
-                    true && (
+                  true && (
                     <User userDetails={this.appModel.config.userDetails} />
                   )}
                 <div id="plugin-control-buttons"></div>
@@ -1185,28 +1223,28 @@ class App extends React.PureComponent {
               {
                 // See #1336
                 config.mapConfig.map.linkInDrawer &&
-                  typeof config.mapConfig.map.linkInDrawer?.text === "string" &&
-                  typeof config.mapConfig.map.linkInDrawer?.href ===
-                    "string" && (
-                    <>
-                      <Divider />
-                      <Link
-                        align="center"
-                        variant="button"
-                        href={config.mapConfig.map.linkInDrawer.href}
-                        target={
-                          config.mapConfig.map.linkInDrawer.newWindow === true
-                            ? "_blank"
-                            : "_self"
-                        }
-                        sx={{
-                          p: 1,
-                        }}
-                      >
-                        {config.mapConfig.map.linkInDrawer.text}
-                      </Link>
-                    </>
-                  )
+                typeof config.mapConfig.map.linkInDrawer?.text === "string" &&
+                typeof config.mapConfig.map.linkInDrawer?.href ===
+                "string" && (
+                  <>
+                    <Divider />
+                    <Link
+                      align="center"
+                      variant="button"
+                      href={config.mapConfig.map.linkInDrawer.href}
+                      target={
+                        config.mapConfig.map.linkInDrawer.newWindow === true
+                          ? "_blank"
+                          : "_self"
+                      }
+                      sx={{
+                        p: 1,
+                      }}
+                    >
+                      {config.mapConfig.map.linkInDrawer.text}
+                    </Link>
+                  </>
+                )
               }
             </Drawer>
           )}

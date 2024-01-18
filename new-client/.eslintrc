@@ -1,11 +1,12 @@
 {
-  "extends": ["react-app", "react-app/jest", "prettier"],
-  "plugins": ["prettier"],
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
   "env": {
     "browser": true
   },
   "rules": {
-    "prettier/prettier": "error",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off"
   }

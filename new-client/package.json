@@ -33,7 +33,6 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.7",
     "react-app-rewired": "^2.2.1",
     "react-scripts": "5.0.1",
     "source-map-explorer": "^2.5.3"
@@ -83,6 +82,7 @@
     "recharts": "^2.1.16",
     "rehype-raw": "^6.1.1",
     "remark-gfm": "^3.0.1",
+    "socket.io-client": "^4.7.2",
     "x2js": "^3.4.4",
     "xlsx": "^0.18.5"
   }

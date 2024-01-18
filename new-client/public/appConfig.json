@@ -1,7 +1,7 @@
 {
   "appName": "Hajk",
   "version": "3.12.1",
-  "mapserviceBase": "/api/1.0/sandbox/hajkmap/",
+  "mapserviceBase": "",
   "proxy": "",
   "searchProxy": "",
   "defaultMap": "sandbox",

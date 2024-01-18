@@ -33,20 +33,20 @@ class EditModel {
     this.filty = false;
     this.removalToolMode = "off";
 
-    if (!this.options.sources || this.options.sources.length === 0) {
-      this.options.sources = [
-        {
-          id: "geboorde-putten-source",
-          url: "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
-          layers: [
-            "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
-          ],
-          projection: "EPSG:28992",
-          caption: "Geboorde putten",
-          uri: "http://www.opengis.net/wfs",
-        },
-      ];
-    }
+    // if (!this.options.sources || this.options.sources.length === 0) {
+    //   this.options.sources = [
+    //     {
+    //       id: "geboorde-putten-source",
+    //       url: "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+    //       layers: [
+    //         "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
+    //       ],
+    //       projection: "EPSG:28992",
+    //       caption: "Geboorde putten",
+    //       uri: "http://www.opengis.net/wfs",
+    //     },
+    //   ];
+    // }
 
     // Normalize the sources that come from options.
     this.options.sources = this.options.sources.map((s) => {
@@ -466,96 +466,96 @@ class EditModel {
 
   setLayer(serviceId, done) {
     this.source = this.sources.find((source) => source.id === serviceId);
-    if (!this.source) {
-      this.source = {
-        id: serviceId,
-        url: "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
-        layers: [
-          "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
-        ],
-        editPoint: true,
-        projection: "EPSG:28992",
-        caption: "Geboorde putten",
-        uri: "http://workspace_datastore_ckan_dataplatform_sandbox",
-        editableFields: [
-          {
-            alias: "putnummer",
-            name: "putnummer",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "straatnaam",
-            name: "straatnaam",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "huisnummer",
-            name: "huisnummer",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "type",
-            name: "type",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "lista", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-            values: ["Open", "Gesloten"],
-          },
-          {
-            alias: "plaats",
-            name: "plaats",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "gemeente",
-            name: "gemeente",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "aangelegd in/op",
-            name: "aangelegd_in_op",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "toegevoegd op",
-            name: "toegevoegd_op",
-            dataType: "date", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "datum", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "batch versie",
-            name: "batch_versie",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "x_coordinaat",
-            name: "x_coordinaat",
-            defaultValue: 155000,
-            dataType: "integer", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "heltal", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-          {
-            alias: "y_coordinaat",
-            name: "y_coordinaat",
-            defaultValue: 463000,
-            dataType: "integer", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "heltal", // heltal | nummer | datum | date-time | boolean
-          },
-          {
-            alias: "field14",
-            name: "field14",
-            dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
-            textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
-          },
-        ],
-      };
-    }
+    // if (!this.source) {
+    //   this.source = {
+    //     id: serviceId,
+    //     url: "https://hajkmap.dataplatform.nl/geoserver/workspace_datastore_ckan_dataplatform_sandbox/ckan_geboorde-putten/ows",
+    //     layers: [
+    //       "workspace_datastore_ckan_dataplatform_sandbox:ckan_geboorde-putten",
+    //     ],
+    //     editPoint: true,
+    //     projection: "EPSG:28992",
+    //     caption: "Geboorde putten",
+    //     uri: "http://workspace_datastore_ckan_dataplatform_sandbox",
+    //     editableFields: [
+    //       {
+    //         alias: "putnummer",
+    //         name: "putnummer",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "straatnaam",
+    //         name: "straatnaam",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "huisnummer",
+    //         name: "huisnummer",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "type",
+    //         name: "type",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "lista", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //         values: ["Open", "Gesloten"],
+    //       },
+    //       {
+    //         alias: "plaats",
+    //         name: "plaats",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "gemeente",
+    //         name: "gemeente",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "aangelegd in/op",
+    //         name: "aangelegd_in_op",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "toegevoegd op",
+    //         name: "toegevoegd_op",
+    //         dataType: "date", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "datum", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "batch versie",
+    //         name: "batch_versie",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "x_coordinaat",
+    //         name: "x_coordinaat",
+    //         defaultValue: 155000,
+    //         dataType: "integer", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "heltal", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //       {
+    //         alias: "y_coordinaat",
+    //         name: "y_coordinaat",
+    //         defaultValue: 463000,
+    //         dataType: "integer", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "heltal", // heltal | nummer | datum | date-time | boolean
+    //       },
+    //       {
+    //         alias: "field14",
+    //         name: "field14",
+    //         dataType: "text", // int | integer | number | decimal | date | date-time | dateTime | boolean
+    //         textType: "fritext", // heltal | nummer | datum | date-time | boolean | fritext | url | lista | flerval |
+    //       },
+    //     ],
+    //   };
+    // }
     this.filty = true;
     this.vectorSource = new VectorSource({
       loader: (extent) => this.loadData(this.source, extent, done),
