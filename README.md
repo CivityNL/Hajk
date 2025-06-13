@@ -9,5 +9,27 @@ Consists of hardcoded configurations, inside /public folder:
 
 <map_and_layer_config.json> can be explicitly selected to be loaded by providing in URL ?m=<map_and_layer_config>
 
+## Build
+Run commands:
+```
+   cd /apps/client
+   npm install
+   npm build
+```
+
+## Test locally
+Either run:
+```
+    npm start
+```
+and serve it under http://localhost:3000
+
+or test the current build, from inside client path:
+```
+   cd /build
+   python ..\noCacheHttp.py
+```
+and serve it under http://localhost:3333
+
 ## Release
-`npm build` and place inside apache server, under /var/www/hajkmap/ naming after it's version or release tag, ex. v4.0.0 and then hyperlink it to `current_release`
+Place `build` folder inside apache server, under /var/www/hajkmap/ naming after it's version or release tag, ex. v4.0.0 and then hyperlink it to `current_release`
