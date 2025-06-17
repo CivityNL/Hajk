@@ -138,16 +138,16 @@ class MapSwitcher extends React.PureComponent {
     const open = Boolean(anchorEl);
 
     const title =
-      this.props.appModel.config.mapConfig.map.title || "Karta utan titel";
+      this.props.appModel.config.mapConfig.map.title || "Untitled map";
 
     return (
       // Render only if config says so
       this.props.appModel.config.mapConfig.map.mapselector && (
         <>
-          <HajkToolTip title={`Nuvarande karta: ${title}`}>
+          <HajkToolTip title={`Current map: ${title}`}>
             <StyledPaper>
               <StyledIconButton
-                aria-label="Byt karta"
+                aria-label="Change map"
                 aria-owns={open ? "render-props-menu" : undefined}
                 aria-haspopup="true"
                 onClick={this.handleClick}

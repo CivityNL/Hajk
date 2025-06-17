@@ -47,7 +47,7 @@ export default function QuickAccessOptions({
         aria-expanded={optionsMenuIsOpen ? "true" : undefined}
         onClick={handleShowMoreOptionsClick}
       >
-        <Tooltip title="Fler val för snabbåtkomst">
+        <Tooltip title="More choices for quick access">
           <MoreVertOutlinedIcon />
         </Tooltip>
       </IconButton>
@@ -67,7 +67,7 @@ export default function QuickAccessOptions({
           <ListItemIcon>
             <AddOutlinedIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Lägg till tända lager</ListItemText>
+          <ListItemText>Add highlighted layers</ListItemText>
         </MenuItem>
         <MenuItem
           onClick={(e) => {
@@ -79,7 +79,7 @@ export default function QuickAccessOptions({
           <ListItemIcon>
             <DeleteOutlinedIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Rensa allt</ListItemText>
+          <ListItemText>Clear all</ListItemText>
         </MenuItem>
       </Menu>
     </>

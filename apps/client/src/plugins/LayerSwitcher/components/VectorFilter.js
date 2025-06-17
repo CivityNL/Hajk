@@ -169,23 +169,23 @@ function VectorFilter({ layer }) {
               sx={{ flexGrow: 1, flexBasis: "25%" }}
               variant="subtitle2"
             >
-              Attribut
+              Attribute
             </Typography>
             <Select
               value={filterAttribute}
               onChange={(e) => handleChange(e, "attribute")}
-              placeholder="Välj attribut"
+              placeholder="Select attributes"
               size="small"
               displayEmpty
               fullWidth
               inputProps={{
                 name: "filterAttribute",
-                placeholder: "Välj attributet",
+                placeholder: "Select the attribute",
                 id: "attribute",
               }}
             >
               <MenuItem key={-1} value={""}>
-                Välj attribut
+                Select attributes
               </MenuItem>
               {layerProperties.map((property, i) => {
                 return (
@@ -214,11 +214,11 @@ function VectorFilter({ layer }) {
                 id: "comparer",
               }}
             >
-              <MenuItem value={""}>Välj operator</MenuItem>
-              <MenuItem value="gt">Större än</MenuItem>
-              <MenuItem value="lt">Mindre än</MenuItem>
-              <MenuItem value="eq">Lika med</MenuItem>
-              <MenuItem value="not">Skilt från</MenuItem>
+              <MenuItem value={""}>Select operator</MenuItem>
+              <MenuItem value="gt">Greater than</MenuItem>
+              <MenuItem value="lt">Less than</MenuItem>
+              <MenuItem value="eq">Equal to</MenuItem>
+              <MenuItem value="not">Not equal to</MenuItem>
             </Select>
           </Stack>
           <Stack direction="row" spacing={2} alignItems="center" sx={{ pt: 1 }}>
@@ -226,17 +226,17 @@ function VectorFilter({ layer }) {
               sx={{ flexGrow: 1, flexBasis: "25%" }}
               variant="subtitle2"
             >
-              Värde
+              Value
             </Typography>
             <Input
               value={filterValue}
               onChange={(e) => handleChange(e, "value")}
-              placeholder="Filtervärde"
+              placeholder="Filter value"
               fullWidth
               size="small"
               inputProps={{
                 name: "filterValue",
-                "aria-label": "Värde",
+                "aria-label": "Value",
               }}
             />
           </Stack>
@@ -253,7 +253,7 @@ function VectorFilter({ layer }) {
               onClick={setFilter}
               disabled={!enableActivateButton()}
             >
-              Aktivera
+              Activate
             </Button>
           </Stack>
         </>

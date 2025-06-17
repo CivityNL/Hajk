@@ -115,7 +115,7 @@ const GroupInfoToggler = ({
   }
   // Render icons only if one of the states above has a value
   return (
-    <HajkToolTip title="Mer information om gruppen">
+    <HajkToolTip title="More information about the group">
       <IconButton
         sx={{
           padding: "0px",

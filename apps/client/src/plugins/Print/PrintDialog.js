@@ -18,21 +18,21 @@ class PrintDialog extends React.PureComponent {
     return createPortal(
       <Dialog disableEscapeKeyDown={true} open={open}>
         <LinearProgress />
-        <DialogTitle>Din {`${saveAsType}`} skapas</DialogTitle>
+        <DialogTitle>Your {`${saveAsType}`} is created</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Det här kan ta en stund, speciellt om du har valt ett stort format
-            (A2-A3) och hög upplösning (>72 dpi). Men när allt är klart kommer{" "}
-            {`${saveAsType}`}-filen att laddas ner till din dator.
+            This may take a while, especially if you have chosen a large format
+            (A2-A3) and high resolution (>72 dpi). But when everything is done, the{" "}
+            {`${saveAsType}`}-file will be downloaded to your computer.
             <br />
             <br />
-            Om du inte vill vänta längre kan du avbryta utskriften genom att
-            trycka på knappen nedan.
+            If you don't want to wait any longer, you can cancel the print by
+            pressing the button below.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button variant="contained" onClick={cancelPrint}>
-            Avbryt
+            Cancel
           </Button>
         </DialogActions>
       </Dialog>,

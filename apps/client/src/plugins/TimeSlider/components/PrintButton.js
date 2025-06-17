@@ -12,7 +12,7 @@ export default function PrintButton({ disabled, onClick }) {
       >
         <span>
           <Button variant="contained" onClick={onClick} disabled={disabled}>
-            Skriv ut
+            Print
           </Button>
         </span>
       </HajkToolTip>

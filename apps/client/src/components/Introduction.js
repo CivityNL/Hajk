@@ -27,43 +27,43 @@ class Introduction extends React.PureComponent {
 
   predefinedSteps = [
     {
-      title: "Välkommen till Hajk! 👋",
+      title: "Welcome to Hajk! 👋",
       intro:
-        "Här kommer en kort guide som visar dig runt i applikationen. <br /><br />Häng med!",
+        "Here is a short guide that will show you around the application. <br /><br />Stay tuned!",
     },
     {
-      title: "Verktygspanel",
+      title: "Toolbar",
       element: "header > div:first-child",
-      intro: "Med hjälp av knappen här uppe tar du fram verktygspanelen.",
+      intro: "Using the button above, you can bring up the tool panel.",
     },
     {
-      title: "Sökruta",
+      title: "Search box",
       element: '[class*="searchContainer"]',
       intro:
-        "Sökrutan hittar du här.<br /><br /> Med hjälp av sökverktyget hittar du enkelt till rätt ställe i kartan.",
+        "You can find the search box here.<br /><br /> Using the search tool, you can easily find the right place on the map.",
     },
     {
-      title: "Fler sökverktyg",
+      title: "More search tools",
       element: '[name="searchOptions"]',
-      intro: "Under den här knappen hittar du fler avancerade sökalternativ.",
+      intro: "Under this button you will find more advanced search options.",
     },
     {
-      title: "Kartkontroller",
+      title: "Map controls",
       element: "#controls-column",
       intro:
-        "Längst ut i den högra delen av skärmen finns olika kontroller som du använder för att navigera i kartan.",
+        "At the far right of the screen are various controls that you use to navigate the map.",
     },
     {
-      title: "Fönster",
+      title: "Window",
       element: '#windows-container > div[style*="display: block"]', // My favorite selector. Selects the first visible Window, so if there's a plugin Window open, we can add intro text to it.
       intro:
-        "Varje verktyg ritar ut ett eget fönster. Du kan flytta på fönstret och ändra dess storlek genom att dra i fönstrets sidor.",
+        "Each tool draws its own window. You can move the window and change its size by dragging the sides of the window.",
     },
     {
-      title: "Widget-knapp",
+      title: "Widget button",
       element: "#left-column > div > button",
       intro:
-        "Det här är en Widget-knapp. Genom att klicka på den öppnar du det verktyget som knappen är kopplad till. <br><br>Det var det hela. Hoppas du kommer tycka om att använda Hajk!",
+        "This is a Widget button. By clicking on it, you will open the tool that the button is linked to. <br><br>That's all. Hope you enjoy using Hajk!",
     },
   ];
 
@@ -149,8 +149,8 @@ class Introduction extends React.PureComponent {
         onClick={() => {
           this.showIntroduction();
         }}
-        title="Introduktionsguide"
-        abstract="Öppna guidad tour"
+        title="Introduction guide"
+        abstract="Open guided tour"
       />,
       document.getElementById("plugin-control-buttons")
     );
@@ -177,9 +177,9 @@ class Introduction extends React.PureComponent {
                 onExit={this.disableSteps}
                 options={{
                   exitOnOverlayClick: false,
-                  nextLabel: "Nästa",
-                  prevLabel: "Föregående",
-                  doneLabel: "Klart!",
+                  nextLabel: "Next",
+                  prevLabel: "Previous",
+                  doneLabel: "Ready!",
                 }}
               />
             )

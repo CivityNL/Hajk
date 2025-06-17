@@ -42,7 +42,7 @@ const LayerListFilter = ({
       }}
     >
       <HajkToolTip
-        title={`Skriv minst ${minFilterLength} tecken eller tryck enter`}
+        title={`Type at least ${minFilterLength} characters or press enter`}
         placement="right"
         enterDelay={MIN_FILTER_TOOLTIP_DELAY}
         open={showToolTip}
@@ -92,7 +92,7 @@ const LayerListFilter = ({
             }
           }}
           fullWidth
-          placeholder="Sök lager"
+          placeholder="Search warehouse"
           FormHelperTextProps={{
             color: "red",
           }}

@@ -154,9 +154,9 @@ function LayerItemDetails({
   const handleQuickAccess = () => {
     let snackbarMessage = "";
     if (!quickAccess) {
-      snackbarMessage = `${renderDetailTitle()} har nu lagts till i snabbåtkomst.`;
+      snackbarMessage = `${renderDetailTitle()} has now been added to quick access.`;
     } else {
-      snackbarMessage = `${renderDetailTitle()} har nu tagits bort från snabbåtkomst.`;
+      snackbarMessage = `${renderDetailTitle()} has now been removed from quick access.`;
     }
     enqueueSnackbar(snackbarMessage, {
       variant: "success",
@@ -215,7 +215,7 @@ function LayerItemDetails({
                 open={tooltipOpen}
                 onClose={handleClose}
                 onOpen={handleOpen}
-                title="Tillbaka"
+                title="Back"
                 TransitionProps={{ timeout: 0 }}
               >
                 <IconButton onClick={handleBackButtonClick}>
@@ -258,8 +258,8 @@ function LayerItemDetails({
                 <Tooltip
                   title={
                     legendIsActive
-                      ? "Dölj teckenförklaring"
-                      : "Visa teckenförklaring"
+                      ? "Hide legend"
+                      : "Show legend"
                   }
                 >
                   <IconButton
@@ -295,7 +295,7 @@ function LayerItemDetails({
                 <SettingsOutlinedIcon />
               </IconButton>
               <Box sx={{ flexGrow: 1 }}>
-                <Typography variant="subtitle1">Inställningar</Typography>
+                <Typography variant="subtitle1">Settings</Typography>
               </Box>
             </Stack>
             {showOpacitySlider !== false && showOpacity ? (
@@ -381,12 +381,12 @@ function LayerItemDetails({
                   {!quickAccess ? (
                     <>
                       <StarOutlineOutlinedIcon sx={{ marginRight: 1 }} />
-                      Lägg till i snabbåtkomst
+                      Add to quick access
                     </>
                   ) : (
                     <>
                       <DeleteOutlinedIcon sx={{ marginRight: 1 }} />
-                      Ta bort från snabbåtkomst
+                      Remove from quick access
                     </>
                   )}
                 </Button>

@@ -46,7 +46,7 @@ const ZoomControl = React.memo((props) => {
     props.map !== undefined && (
       <StyledPaper>
         <StyledIconButton
-          aria-label="Zooma in"
+          aria-label="Zoom in"
           onClick={() => {
             zoomByDelta(1);
           }}
@@ -54,7 +54,7 @@ const ZoomControl = React.memo((props) => {
           <AddIcon />
         </StyledIconButton>
         <StyledIconButton
-          aria-label="Zooma ut"
+          aria-label="Zoom out"
           onClick={() => {
             zoomByDelta(-1);
           }}

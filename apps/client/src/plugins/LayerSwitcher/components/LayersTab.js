@@ -132,7 +132,7 @@ const LayersTab = ({
             py: 1,
             px: 4,
           }}
-          primary="Inga resultat"
+          primary="No results"
           primaryTypographyProps={{
             pr: 5,
             overflow: "hidden",

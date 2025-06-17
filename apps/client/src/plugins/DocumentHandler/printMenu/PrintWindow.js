@@ -882,7 +882,7 @@ class PrintWindow extends React.PureComponent {
             style={{ marginRight: "20px", marginLeft: "20px" }}
             justify="center"
           >
-            Skriv ut
+            Print
           </Typography>
         </Button>
       </GridFooterContainer>
@@ -895,11 +895,10 @@ class PrintWindow extends React.PureComponent {
         {createPortal(
           <Dialog disableEscapeKeyDown={true} open={this.state.pdfLoading}>
             <LinearProgress />
-            <DialogTitle>Din PDF skapas</DialogTitle>
+            <DialogTitle>Your PDF is created</DialogTitle>
             <DialogContent>
               <DialogContentText>
-                Det här kan ta en stund, speciellt om du har valt att skriva ut
-                många dokument.
+                This may take a while, especially if you have chosen to print many documents.
                 <br />
                 <br />
               </DialogContentText>
@@ -923,14 +922,14 @@ class PrintWindow extends React.PureComponent {
     return (
       <>
         <Typography align="center" variant="h6">
-          Skapa PDF
+          Create PDF
         </Typography>
         <GridSettingsContainer container item>
-          <Typography variant="h6">Inställningar</Typography>
+          <Typography variant="h6">Settings</Typography>
 
           <Grid xs={12} item>
             <FormControlLabel
-              value="Välj alla dokument"
+              value="Select all documents"
               control={
                 <Checkbox
                   color="primary"
@@ -940,13 +939,13 @@ class PrintWindow extends React.PureComponent {
                   }
                 />
               }
-              label="Välj alla dokument"
+              label="Select all documents"
               labelPlacement="end"
             />
           </Grid>
         </GridSettingsContainer>
 
-        <Typography variant="h6">Valt innehåll</Typography>
+        <Typography variant="h6">Selected content</Typography>
 
         <GridMiddleContainer item container>
           <PrintList
@@ -1010,7 +1009,7 @@ class PrintWindow extends React.PureComponent {
           </StyledDialogContent>
           <DialogActions>
             <Button variant="contained" onClick={() => closeAttachmentModal()}>
-              <Typography variant="body2">Stäng</Typography>
+              <Typography variant="body2">Close</Typography>
             </Button>
           </DialogActions>
         </Dialog>
@@ -1033,8 +1032,8 @@ class PrintWindow extends React.PureComponent {
       const hasName = pdfLink.name !== "";
       const hasLink = pdfLink.link !== "";
       const disabled = !hasLink;
-      const name = hasName ? pdfLink.name : "Namn saknas";
-      const linkText = hasLink ? "Öppna" : "Länk saknas";
+      const name = hasName ? pdfLink.name : "Name missing";
+      const linkText = hasLink ? "Open" : "Link missing";
       const linkColor = hasLink ? "primary" : "text.secondary";
       const linkIcon = hasLink ? (
         <OpenInNewIcon sx={{ width: "15px" }} />
@@ -1071,7 +1070,7 @@ class PrintWindow extends React.PureComponent {
               </Button>
             )}
             {!hasLink && (
-              <Typography sx={{ fontStyle: "italic" }}>Länk saknas</Typography>
+              <Typography sx={{ fontStyle: "italic" }}>Link missing</Typography>
             )}
           </StyledListItemButton>
         </div>
@@ -1081,9 +1080,9 @@ class PrintWindow extends React.PureComponent {
     return (
       <>
         <Typography align="center" variant="h6">
-          Bilagor
+          Attachments
         </Typography>
-        <Typography variant="h6">Innehåll</Typography>
+        <Typography variant="h6">Content</Typography>
         <GridMiddleContainer>
           <List>{pdfLinks.map(renderAttachment)}</List>
         </GridMiddleContainer>
@@ -1113,7 +1112,7 @@ class PrintWindow extends React.PureComponent {
                   startIcon={<ArrowBackIcon />}
                   onClick={togglePrintWindow}
                 >
-                  <Typography justify="center">Tillbaka</Typography>
+                  <Typography justify="center">Back</Typography>
                 </Button>
               </Grid>
               <StyledGrid item xs={4}>
@@ -1124,7 +1123,7 @@ class PrintWindow extends React.PureComponent {
                     endIcon={<ArrowForwardIcon />}
                     onClick={() => this.toggleDocumentsAttachments()}
                   >
-                    <Typography justify="center">Bilagor</Typography>
+                    <Typography justify="center">Attachments</Typography>
                   </Button>
                 )}
               </StyledGrid>
@@ -1146,7 +1145,7 @@ class PrintWindow extends React.PureComponent {
                   startIcon={<ArrowBackIcon />}
                   onClick={() => this.toggleDocumentsAttachments()}
                 >
-                  <Typography justify="center">Skapa Pdf</Typography>
+                  <Typography justify="center">Create PDF</Typography>
                 </Button>
               </Grid>
             </GridHeaderContainer>

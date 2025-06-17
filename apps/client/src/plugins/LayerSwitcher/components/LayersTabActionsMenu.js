@@ -51,7 +51,7 @@ const LayersTabActionsMenu = ({ scrollToTop, scrollToBottom }) => {
         aria-expanded={menuIsOpen ? "true" : undefined}
         onClick={handleShowMoreOptionsClick}
       >
-        <Tooltip title="Fler funktioner för Lagerhanteraren">
+        <Tooltip title="More features for Warehouse Manager">
           <MoreVertOutlinedIcon />
         </Tooltip>
       </IconButton>
@@ -72,7 +72,7 @@ const LayersTabActionsMenu = ({ scrollToTop, scrollToBottom }) => {
           <ListItemIcon>
             <VisibilityOffIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Dölj alla aktiva lager</ListItemText>
+          <ListItemText>Hide all active layers</ListItemText>
         </MenuItem>
         <MenuItem
           onClick={(e) => {
@@ -85,7 +85,7 @@ const LayersTabActionsMenu = ({ scrollToTop, scrollToBottom }) => {
           <ListItemIcon>
             <KeyboardDoubleArrowUpIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Scrolla till toppen</ListItemText>
+          <ListItemText>Scroll to the top</ListItemText>
         </MenuItem>
         <MenuItem
           onClick={(e) => {
@@ -98,7 +98,7 @@ const LayersTabActionsMenu = ({ scrollToTop, scrollToBottom }) => {
           <ListItemIcon>
             <KeyboardDoubleArrowDownIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Scrolla till botten</ListItemText>
+          <ListItemText>Scroll to the bottom</ListItemText>
         </MenuItem>
       </Menu>
     </>

@@ -90,7 +90,7 @@ const LayerLegendIcon = ({
   return (
     <Tooltip
       placement="left"
-      title={legendIsActive ? "Dölj teckenförklaring" : "Visa teckenförklaring"}
+      title={legendIsActive ? "Hide legend" : "Show legend"}
     >
       <IconButton
         sx={{ p: 0.25, mr: "5px" }}
@@ -212,7 +212,7 @@ function LayerItem({
         <IconButton disableRipple>
           <HajkToolTip
             disableInteractive
-            title="Lagret kunde inte laddas in. Kartservern svarar inte."
+            title="The layer could not be loaded. The map server is not responding."
           >
             <WarningAmberOutlinedIcon fontSize="small" />
           </HajkToolTip>
@@ -283,7 +283,7 @@ function LayerItem({
             }}
             className="dragInidcatorIcon"
           >
-            <Tooltip placement="left" title="Dra för att ändra ritordning">
+            <Tooltip placement="left" title="Drag to change drawing order">
               <DragIndicatorOutlinedIcon fontSize={"small"} />
             </Tooltip>
           </IconButton>
@@ -331,7 +331,7 @@ function LayerItem({
               {renderStatusIcon()}
               {!toggleable && !draggable ? (
                 <IconButton size="small" disableTouchRipple>
-                  <Tooltip title="Bakgrundskartan ligger låst längst ner i ritordningen">
+                  <Tooltip title="The background map is locked at the bottom of the drawing order">
                     <LockOutlinedIcon />
                   </Tooltip>
                 </IconButton>

@@ -111,7 +111,7 @@ export default function LayerItemOptions({
       console.error(this);
       const caption = layer.get("caption");
       enqueueSnackbar(
-        `Serverfel: attributtabellen för lagret "${caption}" kunde inte visas`,
+        `Server error: attribute table for layer "${caption}" could not be displayed`,
         {
           variant: "error",
           anchorOrigin: { vertical: "bottom", horizontal: "center" },
@@ -129,7 +129,7 @@ export default function LayerItemOptions({
         aria-expanded={optionsMenuIsOpen ? "true" : undefined}
         onClick={handleShowMoreOptionsClick}
       >
-        <Tooltip title="Val för lager">
+        <Tooltip title="Choice for stock">
           <MoreVertOutlinedIcon />
         </Tooltip>
       </IconButton>
@@ -144,7 +144,7 @@ export default function LayerItemOptions({
             <ListItemIcon>
               <TableViewOutlinedIcon fontSize="small" />
             </ListItemIcon>
-            <ListItemText>Visa attributtabell</ListItemText>
+            <ListItemText>Show attribute table</ListItemText>
           </MenuItem>
         )}
         {isDownloadable() && (
@@ -152,7 +152,7 @@ export default function LayerItemOptions({
             <ListItemIcon>
               <FileDownloadOutlinedIcon fontSize="small" />
             </ListItemIcon>
-            <ListItemText>Ladda ner</ListItemText>
+            <ListItemText>Download</ListItemText>
           </MenuItem>
         )}
       </Menu>

@@ -275,10 +275,10 @@ class LayersSwitcherView extends React.PureComponent {
             textColor="inherit"
             sx={{ "& .MuiBadge-badge": { right: -16, top: 8 } }}
           >
-            <Tab label="Kartlager" />
-            <Tab label="Bakgrund" />
+            <Tab label="Map layers" />
+            <Tab label="Background layers" />
             {this.options.showDrawOrderView === true && (
-              <Tab label={"Ritordning"} />
+              <Tab label={"Drawing order"} />
             )}
           </Tabs>
         </StyledAppBar>
