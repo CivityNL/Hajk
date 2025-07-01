@@ -188,14 +188,13 @@ class BreadCrumbs extends Component {
                 sx={{ marginTop: 1, marginBottom: 1 }}
               >
                 <Button variant="contained" onClick={this.clear}>
-                  Ta bort allt innehåll
+                  Delete all content
                   <VisibilityOffIcon sx={{ marginLeft: 2 }} />
                 </Button>
               </Grid>
             ) : (
               <Typography>
-                Använd sökfunktionen eller innehållsmenyn för att visa
-                information i kartan.
+                Use the search function or the content menu to view information in the map.
               </Typography>
             )}
             {layers.map((layer, index) => (

@@ -95,7 +95,7 @@ class ScaleLineControl extends React.PureComponent {
 
   renderScaleBadge() {
     return (
-      <HajkToolTip title="Nuvarande skala">
+      <HajkToolTip title="Current scale">
         <StyledPaper elevation={4}>1:{this.state.scale}</StyledPaper>
       </HajkToolTip>
     );

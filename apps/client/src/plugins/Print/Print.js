@@ -130,8 +130,8 @@ class Print extends React.PureComponent {
         type="Print"
         custom={{
           icon: <PrintIcon />,
-          title: "Skriv ut",
-          description: "Skapa en PDF av kartan",
+          title: "Print",
+          description: "Create a PDF of the map",
           height: "dynamic",
           width: 350,
           onWindowShow: this.onWindowShow,

@@ -27,7 +27,7 @@ export default function LegendImage({ open, src }) {
     >
       <ColumnContainer>
         {urlArray.map((url) => (
-          <Image key={url} loading="lazy" alt="Teckenförklaring" src={url} />
+          <Image key={url} loading="lazy" alt="Legend" src={url} />
         ))}
       </ColumnContainer>
     </Collapse>

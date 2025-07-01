@@ -20,6 +20,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security -->
+## [civity-v4.0.1] - 2025-06-26
+- replace swedish texts with english for `client` app in:
+  - components
+  - controls
+  - plugins (exposome active)  - [CIVDEV-1552](https://civity.atlassian.net/browse/CIVDEV-1552)
 
 ## [4.0.0] - 2025-04-04
 

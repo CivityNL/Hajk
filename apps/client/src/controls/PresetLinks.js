@@ -44,7 +44,7 @@ class Preset extends React.PureComponent {
     // Else, if we're still here, go on.
     this.options = this.config.options;
     this.map = props.appModel.getMap();
-    this.title = this.options.title || "Snabbval";
+    this.title = this.options.title || "Preset list";
 
     this.location = null;
     this.zoom = null;
@@ -108,17 +108,17 @@ class Preset extends React.PureComponent {
     } // If the provided url is not a valid map-link, warn the user.
     else {
       this.props.enqueueSnackbar(
-        "Länken till platsen är tyvärr felaktig. Kontakta administratören av karttjänsten för att åtgärda felet.",
+        "Unfortunately, the link to the location is incorrect. Please contact the administrator of the map service to fix the error.",
         {
           variant: "warning",
         }
       );
       console.error(
-        "Fel i verktyget Snabbval. Länken til : \n" +
-          item.name +
+        "Error in the Preset Select tool. Link to : \n" +
+        item.name +
           "\n" +
           item.presetUrl +
-          "\när tyvärr felaktig. Någon av följande parametrar saknas: &x=, &y=, &z= eller innehåller fel."
+          "\nis unfortunately incorrect. One of the following parameters is missing: &x=, &y=, &z= or contains errors."
       );
     }
   };
@@ -199,10 +199,10 @@ class Preset extends React.PureComponent {
       return createPortal(
         <Dialog
           options={{
-            text: "Alla tända lager i kartan kommer nu att släckas. Snabbvalets fördefinierade lager tänds istället.",
-            headerText: "Visa snabbval",
+            text: "All hgihlighted layers in the map will now be turned off. The quick selection's predefined layer will be lit instead.",
+            headerText: "Show preset selection",
             buttonText: "OK",
-            abortText: "Avbryt",
+            abortText: "Cancel",
             useLegacyNonMarkdownRenderer: true,
           }}
           open={this.state.dialogOpen}

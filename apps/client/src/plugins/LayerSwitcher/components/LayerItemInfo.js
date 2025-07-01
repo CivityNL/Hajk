@@ -57,8 +57,7 @@ export default function LayerItemInfo({ layer, app, chapters }) {
         return (
           <>
             <Typography>
-              Innehåll från denna kategori finns benämnt i följande kapitel i
-              översiktsplanen:
+              Content from this category is listed in the following chapters of the master plan:
             </Typography>
             <List>
               {chaptersWithLayer.map((chapter, i) => {
@@ -122,7 +121,7 @@ export default function LayerItemInfo({ layer, app, chapters }) {
           {renderChapterLinks()}
         </Box>
       ) : (
-        <Typography>Ingen information tillgänglig</Typography>
+        <Typography>No information available</Typography>
       )}
     </>
   );

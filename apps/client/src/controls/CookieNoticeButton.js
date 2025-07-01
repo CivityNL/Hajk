@@ -22,7 +22,7 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 const CookieNoticeButton = React.memo((props) => {
   return (
     props.appModel.config.mapConfig.map.showCookieNoticeButton && (
-      <HajkToolTip title="Visa cookie meddelande">
+      <HajkToolTip title="Show cookie message">
         <StyledPaper>
           <StyledIconButton
             aria-label="CookieNoticeButton"

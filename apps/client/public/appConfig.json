@@ -1,20 +1,8 @@
 {
   "mapserviceBase": "",
-  "defaultMap": "map_1",
-  "loadErrorTitle": "Ett fel har inträffat",
-  "loadErrorMessage": "Fel när applikationen skulle läsas in. Du kan försöka att återställa applikationen genom att trycka på knappen nedan. Om felet kvarstår kan du kontakta systemansvarig.",
-  "loadErrorReloadButtonText": "Återställ applikationen",
-  "announcements": [
-    {
-      "id": 1,
-      "active": true,
-      "text": "Hi, this is **Hajk**! 😃 \n\nWe hope you enjoy it. 🚀💯",
-      "showOnlyOnce": true,
-      "maps": ["map_1", "simpleMapAndLayersConfig"],
-      "timeout": 5000,
-      "startTime": "2020-06-29",
-      "stopTime": "2099-12-31",
-      "type": "info"
-    }
-  ]
+  "defaultMap": "exposome",
+  "loadErrorTitle": "An error occurred.",
+  "loadErrorMessage": "Error loading the application. You can try resetting the application by pressing the button below. If the error persists, please contact your system administrator.",
+  "loadErrorReloadButtonText": "Reset the application",
+  "announcements": []
 }

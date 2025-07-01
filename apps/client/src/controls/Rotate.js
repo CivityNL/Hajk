@@ -56,10 +56,10 @@ const RotateControl = React.memo((props) => {
 
   return (
     (props.map && rotation !== 0 && (
-      <HajkToolTip title="Återställ rotation">
+      <HajkToolTip title="Reset rotation">
         <StyledPaper>
           <StyledIconButton
-            aria-label="Återställ rotation"
+            aria-label="Reset rotation"
             onClick={rotateNorth}
           >
             <NavigationIcon style={{ transform: `rotate(${rotation}rad)` }} />

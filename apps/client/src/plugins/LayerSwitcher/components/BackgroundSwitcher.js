@@ -231,7 +231,7 @@ const BackgroundSwitcher = ({
           selected={selectedLayerId === WHITE_BACKROUND_LAYER_ID}
           layer={createFakeMapLayer({
             name: WHITE_BACKROUND_LAYER_ID,
-            caption: "Vit",
+            caption: "White",
             checked: selectedLayerId === WHITE_BACKROUND_LAYER_ID,
           })}
           globalObserver={globalObserver}
@@ -248,7 +248,7 @@ const BackgroundSwitcher = ({
           selected={selectedLayerId === BLACK_BACKROUND_LAYER_ID}
           layer={createFakeMapLayer({
             name: BLACK_BACKROUND_LAYER_ID,
-            caption: "Svart",
+            caption: "Black",
             checked: selectedLayerId === BLACK_BACKROUND_LAYER_ID,
           })}
           globalObserver={globalObserver}

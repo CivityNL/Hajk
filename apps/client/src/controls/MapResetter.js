@@ -32,10 +32,10 @@ class MapResetter extends React.PureComponent {
 
   render() {
     return (
-      <HajkToolTip title="Återställ kartan till startläget">
+      <HajkToolTip title="Reset the map to the initial state">
         <StyledPaper>
           <StyledIconButton
-            aria-label="Återställ kartan till startläget"
+            aria-label="Reset the map to the initial state"
             onClick={this.handleClick}
           >
             <HomeIcon />

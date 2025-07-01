@@ -113,8 +113,8 @@ class GeneralOptions extends React.PureComponent {
           id: "useMargin",
         }}
       >
-        <MenuItem value={true}>Ja</MenuItem>
-        <MenuItem value={false}>Nej</MenuItem>
+        <MenuItem value={true}>Yes</MenuItem>
+        <MenuItem value={false}>No</MenuItem>
       </Select>
     );
   };
@@ -132,8 +132,8 @@ class GeneralOptions extends React.PureComponent {
           id: "useTextIconsInMargin",
         }}
       >
-        <MenuItem value={true}>Ja</MenuItem>
-        <MenuItem value={false}>Nej</MenuItem>
+        <MenuItem value={true}>Yes</MenuItem>
+        <MenuItem value={false}>No</MenuItem>
       </Select>
     );
   };
@@ -150,8 +150,8 @@ class GeneralOptions extends React.PureComponent {
           id: "orientation",
         }}
       >
-        <MenuItem value={"landscape"}>Liggande</MenuItem>
-        <MenuItem value={"portrait"}>Stående</MenuItem>
+        <MenuItem value={"landscape"}>Landscape</MenuItem>
+        <MenuItem value={"portrait"}>Portrait</MenuItem>
       </Select>
     );
   };
@@ -167,7 +167,7 @@ class GeneralOptions extends React.PureComponent {
       ...scales.map((s) => {
         return { value: s, label: model.getUserFriendlyScale(s) };
       }),
-      { value: "CUSTOM_SCALE", label: "Ange annan skala" },
+      { value: "CUSTOM_SCALE", label: "Specify a different scale" },
     ];
     return (
       <Select
@@ -199,7 +199,7 @@ class GeneralOptions extends React.PureComponent {
         startAdornment={<InputAdornment position="start">1:</InputAdornment>}
         endAdornment={
           <InputAdornment position="end">
-            <HajkToolTip title="Visa fördefinerade val">
+            <HajkToolTip title="Show predefined choices">
               <IconButton
                 aria-label="toggle custom scale selector"
                 onClick={this.handleDisableCustomScaleInput}
@@ -249,39 +249,39 @@ class GeneralOptions extends React.PureComponent {
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="useMargin">
-              Marginaler runt kartbilden
+              Margins around the map image
             </InputLabel>
             {this.renderUseMarginSelector()}
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="useMargin">
-              Rubriktext m.m. i marginalerna
+              Heading text etc. in the margins
             </InputLabel>
             {this.renderTextIconInMarginsSelector()}
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="orientation">
-              Orientering
+              Orientation
             </InputLabel>
             {this.renderOrientationSelector()}
           </StyledFormControl>
           <StyledFormControl error={!printOptionsOk}>
             <InputLabel variant="standard" htmlFor="scale">
-              Skala
+              Scale
             </InputLabel>
             {this.state.useCustomScale
               ? this.renderScaleInput()
               : this.renderScaleSelector()}
             {!printOptionsOk && (
               <FormHelperText>
-                Bilden kommer inte kunna skrivas ut korrekt. Testa med en lägre
-                upplösning eller mindre skala.
+                The image will not print correctly. Try using a lower
+                resolution or smaller scale.
               </FormHelperText>
             )}
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="saveAsType">
-              Spara som
+              Save as
             </InputLabel>
             {this.renderSaveAsTypeSelector()}
           </StyledFormControl>

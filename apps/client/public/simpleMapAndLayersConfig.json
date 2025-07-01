@@ -960,7 +960,7 @@
       "zoomDelta": null,
       "zoomDuration": null,
       "mapresetter": false,
-      "introductionEnabled": false,
+      "introductionEnabled": true,
       "introductionShowControlButton": false,
       "introductionSteps": [],
       "drawerStatic": false,

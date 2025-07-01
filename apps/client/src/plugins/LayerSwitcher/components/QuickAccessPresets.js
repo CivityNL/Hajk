@@ -193,7 +193,7 @@ function QuickAccessPresets({
       }
     });
 
-    enqueueSnackbar(`${title} har nu laddats till snabbåtkomst.`, {
+    enqueueSnackbar(`${title} has now been loaded for quick access.`, {
       variant: "success",
       anchorOrigin: { vertical: "bottom", horizontal: "center" },
     });
@@ -265,7 +265,7 @@ function QuickAccessPresets({
 
   // Function that finds a layer by id and returns caption
   const getBaseLayerName = (layers) => {
-    let backgroundLayerName = "Bakgrundskarta hittades inte";
+    let backgroundLayerName = "Background map not found";
     layers.forEach((layer) => {
       const mapLayer = map
         .getAllLayers()
@@ -350,9 +350,9 @@ function QuickAccessPresets({
           </Stack>
           <Divider sx={{ mt: 2 }} />
           <Typography sx={{ mt: 2, mb: 1 }}>
-            Vid laddning kommer aktuella lager i snabbåtkomst att ersättas med
-            temat. Alla tända lager i kartan släcks och ersätts med temats tända
-            lager.
+            When loading, the current layers in quick access will be replaced 
+            with the theme. All highlighted layers in the map will be turned off and 
+            replaced with the theme's highlighted layers.    
           </Typography>
         </DialogContent>
         <DialogActions>
@@ -384,7 +384,7 @@ function QuickAccessPresets({
         <DialogContent>
           <Typography>
             {loadLpConfirmation
-              ? `Aktuella lager i snabbåtkomst kommer nu att ersättas med tema "${loadLpConfirmation.title}". Alla tända lager i kartan släcks och ersätts med temats tända lager.`
+              ? `Current layers in quick access will now be replaced with the theme "${loadLpConfirmation.title}". All lit layers in the map will be turned off and replaced with the theme's lit layers.`
               : ""}
             <br></br>
           </Typography>
@@ -414,11 +414,11 @@ function QuickAccessPresets({
           e.stopPropagation();
         }}
       >
-        <DialogTitle>Lager saknas</DialogTitle>
+        <DialogTitle>Layer missing</DialogTitle>
         <DialogContent>
           <Typography>
             {missingLayersConfirmation &&
-              `Följande lagerid:n kan inte hittas i kartans lagerlista:`}
+              `The following layer ID cannot be found in the map's layer list:`}
             <br></br>
           </Typography>
           <ul>
@@ -428,12 +428,12 @@ function QuickAccessPresets({
           </ul>
           <Typography>
             {missingLayersConfirmation &&
-              `Det kan bero på att lagret har utgått. Vänligen kontrollera och uppdatera lagerpaketet eller kontakta administratören av kartan.`}
+              `This may be due to the layer being expired. Please check and update the layer package or contact the map administrator.`}
             <br></br>
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleMissingLayersConfirmationAbort}>Avbryt</Button>
+          <Button onClick={handleMissingLayersConfirmationAbort}>Cancel</Button>
           <Button
             onClick={() =>
               loadLayers(
@@ -443,7 +443,7 @@ function QuickAccessPresets({
             }
             variant="contained"
           >
-            Fortsätt
+            Continue
           </Button>
         </DialogActions>
       </Dialog>,
@@ -470,7 +470,7 @@ function QuickAccessPresets({
               open={tooltipOpen}
               onClose={handleClose}
               onOpen={handleOpen}
-              title="Tillbaka"
+              title="Back"
               TransitionProps={{ timeout: 0 }}
             >
               <IconButton onClick={handleBackButtonClick}>
@@ -478,10 +478,10 @@ function QuickAccessPresets({
               </IconButton>
             </HajkToolTip>
             <Box sx={{ flexGrow: 1, textAlign: "center" }}>
-              <Typography variant="subtitle1">Teman</Typography>
+              <Typography variant="subtitle1">Themes</Typography>
             </Box>
             <IconButton onClick={handleInfoButtonClick}>
-              <HajkToolTip title={infoIsActive ? "Dölj info" : "Visa info"}>
+              <HajkToolTip title={infoIsActive ? "Hide info" : "Show details"}>
                 <InfoOutlinedIcon />
               </HajkToolTip>
             </IconButton>
@@ -524,7 +524,7 @@ function QuickAccessPresets({
               value={filter.query}
               onChange={(event) => handleFilterChange(event.target.value)}
               fullWidth
-              placeholder="Filtrera"
+              placeholder="Filter"
               variant="outlined"
               sx={{
                 background: (theme) =>
@@ -538,9 +538,9 @@ function QuickAccessPresets({
             {!filter.list.length ? (
               <Typography sx={{ p: 2 }}>
                 {quickAccessPresetsArray.length === 0 ? (
-                  <span>Inga lagerpaket är konfigurerade</span>
+                  <span>No storage packages are configured.</span>
                 ) : (
-                  <span>Din filtrering gav inga resultat</span>
+                  <span>Your filter did not return any results.</span>
                 )}
               </Typography>
             ) : (

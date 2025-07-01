@@ -338,10 +338,10 @@ class PrintView extends React.PureComponent {
               variant="fullWidth"
               textColor="inherit"
             >
-              <HajkToolTip title="Generella inställningar">
+              <HajkToolTip title="General settings">
                 <Tab icon={<PrintIcon />} {...this.a11yProps(0)} />
               </HajkToolTip>
-              <HajkToolTip title="Avancerade inställningar">
+              <HajkToolTip title="Advanced settings">
                 <Tab icon={<SettingsIcon />} {...this.a11yProps(1)} />
               </HajkToolTip>
             </Tabs>
@@ -357,7 +357,7 @@ class PrintView extends React.PureComponent {
                 onClick={this.initiatePrint}
                 disabled={printInProgress || !printOptionsOk}
               >
-                Skriv ut
+                Print
               </Button>
             </PrintButtonContainer>
           </TabContent>

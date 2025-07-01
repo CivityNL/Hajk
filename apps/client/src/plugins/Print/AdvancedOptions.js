@@ -133,12 +133,12 @@ class AdvancedOptions extends React.PureComponent {
           id: name,
         }}
       >
-        <MenuItem value={"topLeft"}>Uppe till vänster</MenuItem>
-        <MenuItem value={"topRight"}>Uppe till höger</MenuItem>
+        <MenuItem value={"topLeft"}>Top left</MenuItem>
+        <MenuItem value={"topRight"}>Top right</MenuItem>
         {this.allowBottomRightPlacement() && (
-          <MenuItem value={"bottomRight"}>Nere till höger</MenuItem>
+          <MenuItem value={"bottomRight"}>Bottom right</MenuItem>
         )}
-        <MenuItem value={"bottomLeft"}>Nere till vänster</MenuItem>
+        <MenuItem value={"bottomLeft"}>Bottom left</MenuItem>
       </Select>
     );
   };
@@ -154,8 +154,8 @@ class AdvancedOptions extends React.PureComponent {
           id: name,
         }}
       >
-        <MenuItem value={true}>Ja</MenuItem>
-        <MenuItem value={false}>Nej</MenuItem>
+        <MenuItem value={true}>Yes</MenuItem>
+        <MenuItem value={false}>No</MenuItem>
       </Select>
     );
   };
@@ -188,8 +188,8 @@ class AdvancedOptions extends React.PureComponent {
                 value={mapTitle}
                 fullWidth={true}
                 onChange={handleChange}
-                label="Valfri titel"
-                placeholder="Kan lämnas tomt"
+                label="Optional title"
+                placeholder="Can be left blank"
                 variant="standard"
                 InputProps={{
                   id: "mapTitle",
@@ -205,7 +205,7 @@ class AdvancedOptions extends React.PureComponent {
                         badgeContent=" "
                         variant="dot"
                       >
-                        <HajkToolTip title="Titelfärg påverkar inte kartans etiketter utan styr endast färgen för kringliggande texter, så som titel, copyrighttext, etc.">
+                        <HajkToolTip title="Title color does not affect the map labels but only controls the color of surrounding text, such as title, copyright text, etc.">
                           <IconButton
                             id="mapTextColor"
                             onClick={this.toggleColorPicker}
@@ -229,8 +229,8 @@ class AdvancedOptions extends React.PureComponent {
                 value={printComment}
                 fullWidth={true}
                 onChange={handleChange}
-                label="Valfri kommentar"
-                placeholder="Kan lämnas tomt"
+                label="Optional comment"
+                placeholder="Can be left blank"
                 variant="standard"
                 InputProps={{
                   id: "printComment",
@@ -242,7 +242,7 @@ class AdvancedOptions extends React.PureComponent {
           <FormControlContainer item xs={12}>
             <FormControl fullWidth={true} error={!printOptionsOk}>
               <InputLabel variant="standard" htmlFor="resolution">
-                Upplösning (DPI)
+                Resolution (DPI)
               </InputLabel>
               <Select
                 variant="standard"
@@ -263,8 +263,8 @@ class AdvancedOptions extends React.PureComponent {
               </Select>
               {!printOptionsOk && (
                 <FormHelperText>
-                  Bilden kommer inte kunna skrivas ut korrekt. Testa med en
-                  lägre upplösning eller mindre skala.
+                  The image will not print correctly. 
+                  Try using a lower resolution or smaller scale.
                 </FormHelperText>
               )}
             </FormControl>
@@ -273,7 +273,7 @@ class AdvancedOptions extends React.PureComponent {
             <Grid item xs={6} sx={{ paddingRight: "10px" }}>
               <FormControl fullWidth={true}>
                 <InputLabel variant="standard" htmlFor="includeNorthArrow">
-                  Inkludera norrpil
+                  Include north arrow
                 </InputLabel>
                 {this.renderIncludeSelect(
                   includeNorthArrow,
@@ -288,7 +288,7 @@ class AdvancedOptions extends React.PureComponent {
                 error={this.placementOverlaps.northArrow}
               >
                 <InputLabel variant="standard" htmlFor="northArrowPlacement">
-                  Placering
+                  North arrow placement
                 </InputLabel>
                 {this.renderPlacementSelect(
                   northArrowPlacement,
@@ -303,7 +303,7 @@ class AdvancedOptions extends React.PureComponent {
             <Grid item xs={6} sx={{ paddingRight: "10px" }}>
               <FormControl fullWidth={true}>
                 <InputLabel variant="standard" htmlFor="includeScaleBar">
-                  Inkludera skalstock
+                  Include scale bar
                 </InputLabel>
                 {this.renderIncludeSelect(
                   includeScaleBar,
@@ -318,7 +318,7 @@ class AdvancedOptions extends React.PureComponent {
                 error={this.placementOverlaps.scaleBar}
               >
                 <InputLabel variant="standard" htmlFor="scaleBarPlacement">
-                  Placering
+                  Scale bar placement
                 </InputLabel>
                 {this.renderPlacementSelect(
                   scaleBarPlacement,
@@ -333,7 +333,7 @@ class AdvancedOptions extends React.PureComponent {
             <Grid item xs={6} sx={{ paddingRight: "10px" }}>
               <FormControl fullWidth={true}>
                 <InputLabel variant="standard" htmlFor="includeLogo">
-                  Inkludera logotyp
+                  Include logo
                 </InputLabel>
                 {this.renderIncludeSelect(
                   includeLogo,
@@ -348,7 +348,7 @@ class AdvancedOptions extends React.PureComponent {
                 error={this.placementOverlaps.logoType}
               >
                 <InputLabel variant="standard" htmlFor="logoPlacement">
-                  Placering
+                  Logo placement
                 </InputLabel>
                 {this.renderPlacementSelect(
                   logoPlacement,
@@ -365,7 +365,7 @@ class AdvancedOptions extends React.PureComponent {
               <Grid item xs={6} sx={{ paddingRight: "10px" }}>
                 <FormControl fullWidth={true}>
                   <InputLabel variant="standard" htmlFor="includeQrCode">
-                    Inkludera qr-kod
+                    Include QR code
                   </InputLabel>
                   {this.renderIncludeSelect(
                     includeQrCode,
@@ -380,7 +380,7 @@ class AdvancedOptions extends React.PureComponent {
                   error={this.placementOverlaps.qrCode}
                 >
                   <InputLabel variant="standard" htmlFor="qrCodePlacement">
-                    Placering
+                    QR code placement
                   </InputLabel>
                   {this.renderPlacementSelect(
                     qrCodePlacement,
@@ -393,8 +393,8 @@ class AdvancedOptions extends React.PureComponent {
               <Grid item xs={12}>
                 {showOverlapWarning && (
                   <FormHelperText error={true}>
-                    Bilden kommer inte kunna skrivas ut korrekt. Placeringsvalen
-                    överlappar.
+                    The image will not be printed correctly. 
+                    The placement choices overlap.
                   </FormHelperText>
                 )}
               </Grid>

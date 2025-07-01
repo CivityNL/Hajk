@@ -70,7 +70,7 @@ const QuickAccessView = ({
 
     // Show snackbar
     enqueueSnackbar &&
-      enqueueSnackbar(`Tända lager har nu lagts till i snabbåtkomst.`, {
+      enqueueSnackbar(`Highlighted layers have now been added to quick access.`, {
         variant: "success",
         anchorOrigin: { vertical: "bottom", horizontal: "center" },
       });
@@ -176,10 +176,10 @@ const QuickAccessView = ({
 
       <ConfirmationDialog
         open={showDeleteConfirmation === true}
-        titleName="Rensa allt"
-        contentDescription="Alla lager i snabbåtkomst kommer nu att tas bort."
-        cancel="Avbryt"
-        confirm="Rensa"
+        titleName="Clear all"
+        contentDescription="All layers in quick access will now be removed."
+        cancel="Cancel"
+        confirm="Clear"
         handleConfirm={handleClearQuickAccessLayers}
         handleAbort={() => {
           setShowDeleteConfirmation(false);

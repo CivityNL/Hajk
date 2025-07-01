@@ -50,12 +50,12 @@ class PrintListItem extends React.PureComponent {
 
     return expanded ? (
       <StyledCollapseIcon>
-        {!title && <span style={visuallyHidden}>Minimera submeny</span>}
+        {!title && <span style={visuallyHidden}>Minimize submenu</span>}
         <ExpandLess />
       </StyledCollapseIcon>
     ) : (
       <StyledCollapseIcon>
-        {!title && <span style={visuallyHidden}>Maximera submeny</span>}
+        {!title && <span style={visuallyHidden}>Maximize submenu</span>}
         <ExpandMore />
       </StyledCollapseIcon>
     );

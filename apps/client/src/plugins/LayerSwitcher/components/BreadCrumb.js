@@ -191,7 +191,7 @@ class BreadCrumb extends Component {
             <IconButton
               size="small"
               onClick={this.setLayerOpacity(layer)}
-              aria-label="Visa/dölj lagret tillfälligt"
+              aria-label="Show/hide the layer temporarily"
             >
               {!hidden ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </IconButton>
@@ -210,7 +210,7 @@ class BreadCrumb extends Component {
             <IconButton
               size="small"
               onClick={this.setLayerVisibility(layer)}
-              aria-label="Ta bort lagret från kartan"
+              aria-label="Remove the layer from the map"
             >
               <CloseIcon />
             </IconButton>

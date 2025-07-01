@@ -416,11 +416,11 @@ class Informative extends React.PureComponent {
             <MenuIconRightIcon color="primary" />
           </Button>
           <IconButtonButton
-            aria-label="Skriv ut"
+            aria-label="Print"
             onClick={this.print}
             size="large"
           >
-            <PrintIcon color="primary" title="Skriv ut" />
+            <PrintIcon color="primary" title="Print" />
           </IconButtonButton>
         </DivTocHeader>
         <div>

@@ -21,10 +21,10 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 const ThemeToggler = React.memo((props) => {
   return (
     (props.showThemeToggler && (
-      <HajkToolTip title="Växla mellan mörkt och ljust färgtema">
+      <HajkToolTip title="Switch between dark and light color themes">
         <StyledPaper>
           <StyledIconButton
-            aria-label="Växla färgtema"
+            aria-label="Switch color theme"
             onClick={(e) => {
               props.toggleMUITheme();
             }}
