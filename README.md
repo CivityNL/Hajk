@@ -24,12 +24,5 @@ Either run:
 ```
 and serve it under http://localhost:3000
 
-or test the current build, from inside client path:
-```
-   cd /build
-   python ..\noCacheHttp.py
-```
-and serve it under http://localhost:3333
-
 ## Release
 Place `build` folder inside apache server, under /var/www/hajkmap/ naming after it's version or release tag, ex. v4.0.0 and then hyperlink it to `current_release`

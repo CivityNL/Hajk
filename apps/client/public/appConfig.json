@@ -1,8 +1,8 @@
 {
   "mapserviceBase": "",
   "defaultMap": "exposome",
-  "loadErrorTitle": "Er is een fout opgetreden.",
-  "loadErrorMessage": "Fout bij het laden van de applicatie. U kunt proberen de applicatie te resetten door op de onderstaande knop te drukken. Als de fout zich blijft voordoen, neem dan contact op met de systeembeheerder.",
-  "loadErrorReloadButtonText": "De applicatie resetten",
+  "loadErrorTitle": "An error occurred.",
+  "loadErrorMessage": "Error loading the application. You can try resetting the application by pressing the button below. If the error persists, please contact your system administrator.",
+  "loadErrorReloadButtonText": "Reset the application",
   "announcements": []
 }
